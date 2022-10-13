@@ -1,5 +1,6 @@
 ---
-import HelloWorld from "../components/HelloWorld.vue"
+import HelloWorld from "../components/HelloWorld.vue";
+import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
 <html lang="en">
@@ -10,6 +11,8 @@ import HelloWorld from "../components/HelloWorld.vue"
     <title>Portfolio</title>
   </head>
   <body>
-    <HelloWorld msg={"Hello World"} client:load />
+    <DefaultLayout >
+      <HelloWorld msg={"Hello World"} client:load />
+    </DefaultLayout>
   </body>
 </html>
