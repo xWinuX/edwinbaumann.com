@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+---
+import HelloWorld from "../components/HelloWorld.vue"
+---
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +10,6 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <HelloWorld msg={"Hello World"} client:load />
   </body>
 </html>
