@@ -1,18 +1,11 @@
 ---
+import TheWrapper from "../components/core/TheWrapper.vue"
+import DefaultLayout from "../components/layouts/DefaultLayout.vue";
 import HelloWorld from "../components/HelloWorld.vue";
-import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <DefaultLayout >
+<TheWrapper title={"Portfolio"}>
+    <DefaultLayout>
       <HelloWorld msg={"Hello World"} client:load />
     </DefaultLayout>
-  </body>
-</html>
+</TheWrapper>
