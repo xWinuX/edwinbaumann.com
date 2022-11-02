@@ -1,11 +1,15 @@
 ---
-import TheWrapper from "../components/core/TheWrapper.vue"
-import DefaultLayout from "../components/layouts/DefaultLayout.vue";
+import TheHead from "../components/core/TheHead.vue";
+import DefaultLayout from "../components/layouts/DefaultLayout.astro";
 import HelloWorld from "../components/HelloWorld.vue";
 ---
 
-<TheWrapper title={"Portfolio"}>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <TheHead title={"Portfolio"} />
+    </head>
     <DefaultLayout>
-      <HelloWorld msg={"Hello World"} client:load />
+        <HelloWorld msg={"Hello World"} client:load />
     </DefaultLayout>
-</TheWrapper>
+</html>

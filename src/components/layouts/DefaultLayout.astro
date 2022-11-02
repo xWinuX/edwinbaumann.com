@@ -1,0 +1,14 @@
+---
+import TheBody from "../core/TheBody.vue";
+import TheNavBar from "../core/nav-bar/TheNavBar.vue";
+import TheFooter from "../core/TheFooter.vue";
+---
+
+<TheBody>
+    <TheNavBar client:load/>
+    <main>
+        <slot/>
+    </main>
+    <TheFooter/>
+</TheBody>
+
