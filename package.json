@@ -13,6 +13,7 @@
     "@astrojs/tailwind": "^2.0.2",
     "@astrojs/vue": "^1.1.0",
     "@types/three": "^0.144.0",
+    "animated-tailwindcss": "^3.3.0",
     "astro": "^1.4.7",
     "eslint-plugin-astro": "^0.20.0",
     "three": "^0.145.0",
