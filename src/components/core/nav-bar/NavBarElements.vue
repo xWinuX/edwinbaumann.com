@@ -10,7 +10,7 @@
             :class="fadeInAnimationDelayClasses[index]"
         >
             <NavBarElement>
-                <p><b>{{ element }}</b></p>
+                <p class="text-zinc-100 group-hover:text-zinc-50"><b>{{ element }}</b></p>
             </NavBarElement>
         </span>
     </li>
