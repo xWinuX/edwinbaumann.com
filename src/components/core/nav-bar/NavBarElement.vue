@@ -1,5 +1,5 @@
 ﻿<template>
-    <div class="text-center p-3 rounded-2xl  hover:scale-105  transition ease-in-out bg-opacity-30 group">
+    <div class="text-center p-3 rounded-2xl  hover:scale-105  transition ease-in-out bg-opacity-30 group cursor-pointer">
         <div class="
             opacity-0 group-hover:opacity-100 pointer-events-none
             before:content-[''] before:-z-10 before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 before:blur-3xl before:bg-gradient-to-r before:from-emerald-400 before:to-blue-600
