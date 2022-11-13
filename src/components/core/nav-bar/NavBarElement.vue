@@ -4,7 +4,7 @@
         <slot  />
         
         <!-- Underline -->
-        <div class="absolute transition bottom-0 left-0 w-full h-0.5 group-hover:scale-[0.975] group-hover:scale-y-[2] from-emerald-400 to-blue-600 bg-gradient-to-r animate-slideInDown"/>
+        <AppUnderline class="transition group-hover:scale-[0.975] group-hover:scale-y-[2] animate-slideInDown" />
 
         <!-- Background -->
         <div class="
@@ -15,3 +15,7 @@
     </div>
 
 </template>
+<script setup lang="ts">
+import AppUnderline from "../../base/AppGradientLine.vue";
+
+</script>

@@ -10,7 +10,7 @@
 
             <Wrapper class="animate-slideInUp">
                 <div class="text-center m-auto w-full h-full overflow-clip">
-                    <div class="absolute -top-4 w-full sm:left-1/4 sm:w-1/2 h-0.5 from-emerald-400 to-blue-600 bg-gradient-to-r"/>
+                    <AppGradientLine class=" -top-4 w-full sm:left-1/4 sm:w-1/2 h-0.5"></AppGradientLine>
                     <p class="overflow-clip">Edwin Baumann 2022</p>
                 </div>
             </Wrapper>
@@ -19,5 +19,6 @@
 </template>
 
 <script setup lang="ts">
-import Wrapper from "../base/Wrapper.vue";
+import Wrapper         from "../base/AppWrapper.vue";
+import AppGradientLine from "../base/AppGradientLine.vue";
 </script>

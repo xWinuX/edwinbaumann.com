@@ -1,5 +1,5 @@
 ﻿<template>
-    <ul class="m-auto hidden w-full grid-cols-4 gap-10 sm:grid">
+    <ul class="m-auto hidden w-full grid grid-cols-4 gap-10 sm:grid">
         <NavBarElements/>
     </ul>
 </template>
