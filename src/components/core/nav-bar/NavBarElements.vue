@@ -5,14 +5,16 @@
         v-for="(element, index) in navElements"
         v-bind:key="index"
     >
-        <span
-            class="animate-fadeIn animate-normal"
-            :class="fadeInAnimationDelayClasses[index]"
-        >
-            <NavBarElement>
-                <p class="text-zinc-100 group-hover:text-zinc-50"><b>{{ element }}</b></p>
-            </NavBarElement>
-        </span>
+        <a :href="navElementLinks[index]">
+            <span
+                class="animate-fadeIn animate-normal"
+                :class="fadeInAnimationDelayClasses[index]"
+            >
+                <NavBarElement>
+                    <p class="text-zinc-100 group-hover:text-zinc-50"><b>{{ element }}</b></p>
+                </NavBarElement>
+            </span>
+        </a>
     </li>
 </template>
 
@@ -25,6 +27,13 @@ const navElements: string[] = [
     "Projects",
     "About Me",
     "Contact"
+];
+
+const navElementLinks: string[] = [
+    "/",
+    "/projects",
+    "/about-me",
+    "/contact"
 ];
 
 const slideInAnimationDelayClasses: string[] = [

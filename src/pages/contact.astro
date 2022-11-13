@@ -1,7 +1,7 @@
 ---
 import TheHead from "../components/core/TheHead.vue";
 import DefaultLayout from "../components/layouts/DefaultLayout.astro";
-import HelloWorld from "../components/page-content/HelloWorld.vue";
+import ContactPageContent from "../components/page-content/ContactPageContent.vue";
 ---
 
 <!DOCTYPE html>
@@ -10,6 +10,6 @@ import HelloWorld from "../components/page-content/HelloWorld.vue";
         <TheHead title={"Portfolio"} />
     </head>
     <DefaultLayout>
-        <HelloWorld msg={"Hello World"} client:load />
+        <ContactPageContent />
     </DefaultLayout>
 </html>
