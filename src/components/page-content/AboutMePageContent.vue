@@ -3,24 +3,37 @@
         <img src="src/assets/images/me.png" width="400" height="400" class="m-auto"/>
         <AppTable class="m-auto" :table-data="generalTableData"/>
     </div>
-    <div class="grid grid-cols-1 place-items-center lg:grid-cols-2 mb-20">
-        <div class="mb-5 lg:m-auto">
-            <h2 class="text-xl underline mb-2">Core Skills:</h2>
-            <AppTable :table-data="coreSkillsTableData"/>
+    <div class="w-[96%] m-auto">
+        <div class="relative m-auto mb-3">
+            <AppGradientLine class="-top-5"/>
+            <h2 class="text-xl text-center col-span-0">Hard Skills:</h2>
         </div>
-        <div class="mb-5 lg:m-auto">
-            <h2 class="text-xl underline mb-2">Minor Skills:</h2>
-            <AppTable :table-data="minorSkillsTableData"/>
+        <div class=" grid-cols-1 w-full place-items-center hidden lg:grid lg:grid-cols-2 mb-10">
+            <div class="mb-5 lg:m-auto">
+                <AppTable :table-data="coreSkillsTableData"/>
+            </div>
+            <div class="mb-5 lg:m-auto">
+                <AppTable :table-data="minorSkillsTableData"/>
+            </div>
         </div>
-        <div class="pt-5 lg:m-auto lg:col-span-2">
-            <h2 class="text-xl underline mb-2">Soft Skills:</h2>
-            <AppTable :table-data="softSkillsTableData"/>
+        <div class="grid grid-cols-1 place-items-center mb-12 lg:hidden">
+            <AppTable :table-data="{...coreSkillsTableData, ...minorSkillsTableData}"/>
+        </div>
+        <div class="grid grid-cols-1 w-full place-items-center mb-20">
+            <div class="w-full lg:w-1/2">
+                <div class="relative mb-5">
+                    <AppGradientLine class="-top-5"/>
+                    <h2 class="text-xl text-center">Soft Skills:</h2>
+                </div>
+                <AppTable class="m-auto" :table-data="softSkillsTableData"/>
+            </div>
         </div>
     </div>
 
 </template>
 <script setup lang="ts">
-import AppTable from "../base/AppTable.vue";
+import AppTable        from "../base/AppTable.vue";
+import AppGradientLine from "../base/AppGradientLine.vue";
 
 const generalTableData = {
     Name: "Edwin Baumann",
@@ -42,6 +55,7 @@ const coreSkillsTableData = {
 const minorSkillsTableData = {
     "3D Art": "Simple modelling/rigging/texturing in Blender",
     "Spriting": "Simple spriting/animation in Asesprite",
+    "Content Creation": "Basic use of Photoshop/Premiere",
     "Audio": "Basic music/sfx production in FL Studio, FMOD",
     "Version Control": "Git CLI, GitHub Desktop",
     "Automation": "Ansible, PowerShell",

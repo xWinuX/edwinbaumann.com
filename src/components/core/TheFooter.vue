@@ -10,7 +10,7 @@
 
             <Wrapper class="animate-slideInUp">
                 <div class="text-center m-auto w-full h-full overflow-clip">
-                    <AppGradientLine class=" -top-4 w-full sm:left-1/4 sm:w-1/2 h-0.5"></AppGradientLine>
+                    <AppGradientLine class=" -top-4 w-full sm:left-1/4 sm:w-1/2 h-0.5" />
                     <p class="overflow-clip">Edwin Baumann 2022</p>
                 </div>
             </Wrapper>
