@@ -1,15 +1,15 @@
 ﻿---
 import TheHead from "../components/core/TheHead.vue";
 import DefaultLayout from "../components/layouts/DefaultLayout.astro";
-import AboutMePageContent from "../components/page-content/AboutMePageContent.vue";
+import ProjectsPageContent from "../components/page-content/ProjectsPageContent.vue";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="box-sizing: border-box">
     <head>
         <TheHead title={"Portfolio"}/>
     </head>
     <DefaultLayout>
-        <AboutMePageContent/>
+        <ProjectsPageContent client:load />
     </DefaultLayout>
 </html>
