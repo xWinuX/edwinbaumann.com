@@ -1,15 +1,4 @@
 {
-  // this aligns with Vue's browser support
-  "target": "es5",
-  // this enables stricter inference for data properties on `this`
-  "strict": true,
-  // if using webpack 2+ or rollup, to leverage tree shaking:
-  "module": "es2015",
-  "moduleResolution": "node",
-  "extends": "astro/tsconfigs/base",
-  "compilerOptions": {
-    "types": ["astro/client"],
-    "jsx": "preserve"
-  },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json"
 }
