@@ -27,6 +27,7 @@ body {
 }
 
 .ps__thumb-y {
+    width: 0.5rem !important;
     opacity: 1 !important;
     margin-right: 3px !important;
     background: linear-gradient(0deg, #2563eb 0%, #34d399 100%) !important;
