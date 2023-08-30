@@ -1,13 +1,10 @@
 <template>
-  <div class="m-auto flex h-screen flex-col justify-between ">
-    <div class="relative w-full p-5 overflow-x-clip animate-in fade-in duration-1000">
-      <AppGradientBackdrop class="" />
-      <AppWrapper class="m-auto grid grid-cols-1 gap-4 lg:flex">
-        <AppHeader />
-        <AppNavbar />
-      </AppWrapper>
+  <div class="m-auto flex flex-col min-h-[100vh] justify-between">
+    <div class="glow opacity-80" />
+    <div class="relative w-full overflow-x-clip animate-in fade-in duration-1000">
+      <AppHeader />
     </div>
-    <main>
+    <main class="flex-grow">
       <AppWrapper>
         <slot />
       </AppWrapper>

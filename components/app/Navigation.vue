@@ -2,8 +2,8 @@
   <nav class="z-10 w-full lg:w-4/6 m-auto lg:flex-none">
     <ul class="grid w-full rid-cols-1 sm:grid-cols-4">
       <li class="sm:hidden">
-        <AppNavbarElement class="p-0">
-          <button class="h-full w-full p-3" @click="onMenuClick">
+        <AppNavbarElement class="mt-3">
+          <button class="h-full w-full" @click="onMenuClick">
             <svg class="m-auto fill-white p-0" width="20px" height="20px" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
               <path d="M17 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2z" />
             </svg>

@@ -8,6 +8,7 @@ export default defineNuxtConfig({
         "@nuxtjs/tailwindcss",
         "@tresjs/nuxt",
         "@nuxtjs/eslint-module",
+        "@davestewart/nuxt-scrollbar",
     ],
     app: {
         head: {

@@ -3,34 +3,32 @@
     <img src="/me.png" width="400" height="400" class="m-auto">
     <AppTable class="m-auto" :table-data="generalTableData" />
   </div>
-  <div class="w-[96%] m-auto">
-    <div class="relative m-auto mb-3">
-      <AppGradientLine class="-top-5" />
-      <h2 class="text-xl text-center col-span-0">
-        Hard Skills:
-      </h2>
+  <div class="relative m-auto mb-3">
+    <AppGradientLine class="mb-5" />
+    <h2 class="text-xl text-center col-span-0">
+      Hard Skills:
+    </h2>
+  </div>
+  <div class="grid-cols-1 w-full place-items-center hidden lg:grid lg:grid-cols-2 mb-10">
+    <div class="mb-5 lg:m-auto">
+      <AppTable :table-data="coreSkillsTableData" />
     </div>
-    <div class="grid-cols-1 w-full place-items-center hidden lg:grid lg:grid-cols-2 mb-10">
-      <div class="mb-5 lg:m-auto">
-        <AppTable :table-data="coreSkillsTableData" />
-      </div>
-      <div class="mb-5 lg:m-auto">
-        <AppTable :table-data="minorSkillsTableData" />
-      </div>
+    <div class="mb-5 lg:m-auto">
+      <AppTable :table-data="minorSkillsTableData" />
     </div>
-    <div class="grid grid-cols-1 place-items-center mb-12 lg:hidden">
-      <AppTable :table-data="{...coreSkillsTableData, ...minorSkillsTableData}" />
-    </div>
-    <div class="grid grid-cols-1 w-full place-items-center mb-20">
-      <div class="w-full lg:w-1/2">
-        <div class="relative mb-5">
-          <AppGradientLine class="-top-5" />
-          <h2 class="text-xl text-center">
-            Soft Skills:
-          </h2>
-        </div>
-        <AppTable class="m-auto" :table-data="softSkillsTableData" />
+  </div>
+  <div class="grid grid-cols-1 place-items-center mb-12 lg:hidden">
+    <AppTable :table-data="{...coreSkillsTableData, ...minorSkillsTableData}" />
+  </div>
+  <div class="grid grid-cols-1 w-full place-items-center mb-20">
+    <div class="w-full lg:w-1/2">
+      <div class="relative mb-5">
+        <AppGradientLine class="mb-5" />
+        <h2 class="text-xl text-center">
+          Soft Skills:
+        </h2>
       </div>
+      <AppTable class="m-auto" :table-data="softSkillsTableData" />
     </div>
   </div>
 </template>
