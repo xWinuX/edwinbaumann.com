@@ -1,6 +1,6 @@
 <template>
-  <Body class="min-h-[100vh] m-0 p-0 bg-gray-900 text-white">
-    <NuxtScrollbar class="h-[100vh] overflow-y-hidden">
+  <Body class="m-0 bg-gray-900 p-0 text-white min-h-[100vh]">
+    <NuxtScrollbar class="overflow-y-hidden h-[100vh]">
       <NuxtLayout>
         <NuxtLoadingIndicator />
         <NuxtPage />
@@ -8,5 +8,3 @@
     </NuxtScrollbar>
   </Body>
 </template>
-<script setup lang="ts">
-</script>

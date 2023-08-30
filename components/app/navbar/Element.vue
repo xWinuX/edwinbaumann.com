@@ -3,10 +3,10 @@
     <!-- Content -->
     <slot />
 
-    <div class="relative glow opacity-0 group-hover:opacity-20" />
+    <div class="relative opacity-0 transition glow group-hover:opacity-20" />
 
     <!-- Underline -->
-    <AppGradientLine class="transition group-hover:scale-[0.975] group-hover:scale-y-[1.3] mt-3 mb-3 sm:m-3" />
+    <AppGradientLine class="mt-3 mb-3 transition group-hover:scale-[0.975] group-hover:scale-y-[1.3] sm:m-3" />
 
     <!-- Background -->
   </div>

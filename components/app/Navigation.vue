@@ -1,5 +1,5 @@
 <template>
-  <nav class="z-10 w-full lg:w-4/6 m-auto lg:flex-none">
+  <nav class="z-10 m-auto w-full lg:w-4/6 lg:flex-none">
     <ul class="grid w-full rid-cols-1 sm:grid-cols-4">
       <li class="sm:hidden">
         <AppNavbarElement class="mt-3">

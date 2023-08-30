@@ -1,15 +1,15 @@
 <template>
-  <div class="p-10 grid grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-2">
+  <div class="grid grid-cols-1 grid-rows-1 gap-2 sm:grid-cols-2">
     <img src="/me.png" width="400" height="400" class="m-auto">
     <AppTable class="m-auto" :table-data="generalTableData" />
   </div>
   <div class="relative m-auto mb-3">
     <AppGradientLine class="mb-5" />
-    <h2 class="text-xl text-center col-span-0">
+    <h2 class="text-center text-xl col-span-0">
       Hard Skills:
     </h2>
   </div>
-  <div class="grid-cols-1 w-full place-items-center hidden lg:grid lg:grid-cols-2 mb-10">
+  <div class="mb-10 hidden w-full grid-cols-1 place-items-center lg:grid lg:grid-cols-2">
     <div class="mb-5 lg:m-auto">
       <AppTable :table-data="coreSkillsTableData" />
     </div>
@@ -17,14 +17,14 @@
       <AppTable :table-data="minorSkillsTableData" />
     </div>
   </div>
-  <div class="grid grid-cols-1 place-items-center mb-12 lg:hidden">
+  <div class="mb-12 grid grid-cols-1 place-items-center lg:hidden">
     <AppTable :table-data="{...coreSkillsTableData, ...minorSkillsTableData}" />
   </div>
-  <div class="grid grid-cols-1 w-full place-items-center mb-20">
+  <div class="mb-20 grid w-full grid-cols-1 place-items-center">
     <div class="w-full lg:w-1/2">
       <div class="relative mb-5">
         <AppGradientLine class="mb-5" />
-        <h2 class="text-xl text-center">
+        <h2 class="text-center text-xl">
           Soft Skills:
         </h2>
       </div>

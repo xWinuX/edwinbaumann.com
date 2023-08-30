@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[0.2rem] rounded-xl from-emerald-400 to-blue-600 bg-gradient-to-r smaller-glow" />
+  <div class="rounded-xl bg-gradient-to-r from-emerald-400 to-blue-600 h-[0.2rem] smaller-glow" />
 </template>
 
 <style scoped>

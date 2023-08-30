@@ -1,11 +1,11 @@
 <template>
-  <div class="m-auto flex flex-col min-h-[100vh] justify-between">
-    <div class="glow opacity-80" />
-    <div class="relative w-full overflow-x-clip animate-in fade-in duration-1000">
+  <div class="m-auto flex flex-col justify-between min-h-[100vh]">
+    <div class="opacity-80 glow" />
+    <div class="relative w-full overflow-x-clip duration-1000 animate-in fade-in">
       <AppHeader />
     </div>
     <main class="flex-grow">
-      <AppWrapper>
+      <AppWrapper class="mt-10">
         <slot />
       </AppWrapper>
     </main>
