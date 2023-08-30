@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Variable definitions */
 :root {
     --glow-inner-color: #34d399;
     --glow-middle-color: #2563eb;
     --glow-outer-color: #312e81;
 }
 
+/* Global accessible classes */
 .glow {
     z-index: -100000;
     border-radius: 50%;
@@ -15,10 +17,11 @@
     box-shadow: 0 0 60px 30px var(--glow-inner-color), 0 0 100px 60px var(--glow-middle-color), 0 0 140px 90px var(--glow-outer-color);
 }
 
+
+/* JS scrollbar */
 .ps__rail-x {
     background-color: transparent !important;
 }
-
 
 .ps__rail-y {
     opacity: 0.5 !important;
@@ -36,6 +39,14 @@
 
 }
 
+@screen sm {
+    .ps__rail-y {
+        opacity: 1.0 !important;
+    }
+}
+
+
+/* Webkit scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -46,8 +57,28 @@
     box-shadow: inset 0 0 6px var(--glow-outer-color);
 }
 
-@screen sm {
-    .ps__rail-y {
-        opacity: 1.0 !important;
-    }
+
+/* Page transitions */
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+    transition: all 0.4s;
+}
+
+.slide-right-enter-from,
+.slide-right-leave-to,
+.slide-left-enter-from,
+.slide-left-leave-to {
+    opacity: 0;
+    filter: blur(1rem);
+}
+
+.slide-right-enter-from,
+.slide-left-leave-to {
+    transform: translateX(2000px);
+}
+.slide-right-leave-to,
+.slide-left-enter-from {
+    transform: translateX(-2000px);
 }

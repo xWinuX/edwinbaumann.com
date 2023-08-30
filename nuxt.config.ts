@@ -11,6 +11,7 @@ export default defineNuxtConfig({
         "@davestewart/nuxt-scrollbar",
     ],
     app: {
+        pageTransition: { name: "slide-right", mode: "out-in" },
         head: {
             htmlAttrs: {
                 lang: "en",

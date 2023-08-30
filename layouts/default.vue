@@ -5,7 +5,7 @@
       <AppHeader />
     </div>
     <main class="flex-grow">
-      <AppWrapper class="mt-10">
+      <AppWrapper class="mt-10 mb-10">
         <slot />
       </AppWrapper>
     </main>
