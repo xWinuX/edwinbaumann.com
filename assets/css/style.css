@@ -1,13 +1,11 @@
+@import "v-tooltip.css";
+@import "perfect-scrollbar.css";
+@import "page-transitions.css";
+@import "variables.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Variable definitions */
-:root {
-    --glow-inner-color: #34d399;
-    --glow-middle-color: #2563eb;
-    --glow-outer-color: #312e81;
-}
 
 /* Global accessible classes */
 .glow {
@@ -17,34 +15,26 @@
     box-shadow: 0 0 60px 30px var(--glow-inner-color), 0 0 100px 60px var(--glow-middle-color), 0 0 140px 90px var(--glow-outer-color);
 }
 
-
-/* JS scrollbar */
-.ps__rail-x {
-    background-color: transparent !important;
+.project-image {
+    border-radius: 0.75rem/* 12px */;
+    box-shadow: 0 0 6px var(--glow-outer-color);
 }
 
-.ps__rail-y {
-    opacity: 0.5 !important;
-    background-color: transparent !important;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.glow-md {
+    box-shadow: 0 0 30px 15px var(--glow-inner-color), 0 0 50px 30px var(--glow-middle-color), 0 0 70px 45px var(--glow-outer-color);
 }
 
-.ps__thumb-y {
-    width: 0.5rem !important;
-    opacity: 1 !important;
-    margin-right: 3px !important;
-    background: linear-gradient(0deg, var(--glow-inner-color) 0%, var(--glow-middle-color) 100%) !important;
-    box-shadow: 0 0 5px var(--glow-outer-color);
-
+.gradient-text  {
+    background-color: var(--glow-inner-color);
+    background-clip: text;
+    background-size: 100%;
+    background-image: linear-gradient(90deg, var(--glow-inner-color) 0%, var(--glow-middle-color) 100%);
+    filter: drop-shadow(1px 1px var(--glow-outer-color));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 }
-
-@screen sm {
-    .ps__rail-y {
-        opacity: 1.0 !important;
-    }
-}
-
 
 /* Webkit scrollbar */
 ::-webkit-scrollbar {
@@ -55,30 +45,4 @@
     border-radius: 10px;
     background: linear-gradient(0deg, var(--glow-inner-color) 0%, var(--glow-middle-color) 100%);
     box-shadow: inset 0 0 6px var(--glow-outer-color);
-}
-
-
-/* Page transitions */
-.slide-right-enter-active,
-.slide-right-leave-active,
-.slide-left-enter-active,
-.slide-left-leave-active {
-    transition: all 0.4s;
-}
-
-.slide-right-enter-from,
-.slide-right-leave-to,
-.slide-left-enter-from,
-.slide-left-leave-to {
-    opacity: 0;
-    filter: blur(1rem);
-}
-
-.slide-right-enter-from,
-.slide-left-leave-to {
-    transform: translateX(2000px);
-}
-.slide-right-leave-to,
-.slide-left-enter-from {
-    transform: translateX(-2000px);
 }

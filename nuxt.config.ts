@@ -9,6 +9,7 @@ export default defineNuxtConfig({
         "@tresjs/nuxt",
         "@nuxtjs/eslint-module",
         "@davestewart/nuxt-scrollbar",
+        "nuxt-icon",
     ],
     app: {
         pageTransition: { name: "slide-right", mode: "out-in" },

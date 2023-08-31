@@ -1,0 +1,25 @@
+.ps__rail-x {
+    background-color: transparent !important;
+}
+
+.ps__rail-y {
+    opacity: 0.5 !important;
+    background-color: transparent !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ps__thumb-y {
+    width: 0.5rem !important;
+    opacity: 1 !important;
+    margin-right: 3px !important;
+    background: linear-gradient(0deg, var(--glow-inner-color) 0%, var(--glow-middle-color) 100%) !important;
+    box-shadow: 0 0 5px var(--glow-outer-color);
+
+}
+
+@screen sm {
+    .ps__rail-y {
+        opacity: 1.0 !important;
+    }
+}

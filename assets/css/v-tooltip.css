@@ -1,0 +1,28 @@
+.v-popper--theme-tooltip .v-popper__inner {
+    background: linear-gradient(90deg, #34d399cc 0%, #2563ebcc 100%) !important;
+    box-shadow: 0 0 5px #312e81;
+}
+
+.v-popper--theme-tooltip .v-popper__arrow-inner {
+    visibility: visible;
+}
+
+.v-popper--theme-tooltip .v-popper__arrow-outer {
+   visibility: hidden;
+}
+
+/* Transition */
+.v-popper--theme-tooltip.v-popper__popper--hidden {
+
+    transition: opacity .25s, visibility .25s !important;
+    filter: blur(1rem) !important;
+}
+
+.v-popper--theme-tooltip.v-popper__popper--shown {
+
+    transition: opacity .15s !important;
+}
+
+.v-popper--theme-tooltip.v-popper__popper--skip-transition {
+    transition: none !important;
+}

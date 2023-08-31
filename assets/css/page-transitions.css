@@ -1,0 +1,24 @@
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+    transition: all 0.4s;
+}
+
+.slide-right-enter-from,
+.slide-right-leave-to,
+.slide-left-enter-from,
+.slide-left-leave-to {
+    opacity: 0;
+    filter: blur(1rem);
+}
+
+.slide-right-enter-from,
+.slide-left-leave-to {
+    transform: translateX(2000px);
+}
+.slide-right-leave-to,
+.slide-left-enter-from {
+    transform: translateX(-2000px);
+}
+

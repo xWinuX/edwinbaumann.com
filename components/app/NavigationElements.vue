@@ -5,11 +5,11 @@
     :class="'animate-in fill-mode-backwards fade-in slide-in-from-top duration-100 sm:slide-in-from-bottom lg:slide-in-from-top sm:duration-1000 ' + slideInAnimationDelayClasses[index]"
   >
     <NuxtLink :href="navElementLinks[index]">
-      <AppNavbarElement>
+      <AppNavigationElement>
         <p class="text-zinc-100 group-hover:text-zinc-50">
           <b>{{ element }}</b>
         </p>
-      </AppNavbarElement>
+      </AppNavigationElement>
     </NuxtLink>
   </li>
 </template>

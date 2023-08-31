@@ -5,9 +5,9 @@
       <AppHeader />
     </div>
     <main class="flex-grow">
-      <AppWrapper class="mt-10 mb-10">
+      <BaseWrapper class="mt-10 mb-10">
         <slot />
-      </AppWrapper>
+      </BaseWrapper>
     </main>
     <AppFooter />
   </div>
