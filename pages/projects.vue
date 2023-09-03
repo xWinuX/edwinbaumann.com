@@ -1,5 +1,16 @@
 <template>
   <div>
+    <div class="flex flex-row flex-wrap place-content-center gap-10">
+      <ProjectTile />
+      <ProjectTile
+        class="grow-animation"
+        :class="clickedProject ? 'w-full h-[90vh]' : ''"
+        @click="onClick"
+      />
+      <ProjectTile />
+      <ProjectTile />
+    </div>
+
     <!--div>
     <div class="project-box">
       <Suspense>
@@ -19,7 +30,7 @@
       </Suspense>
     </div-->
 
-    <section>
+    <!--section>
       <h2 class="text-center font-bold font">
         C++ Game Engine
       </h2>
@@ -56,14 +67,21 @@
           </BaseTable>
         </div>
       </div>
-    </section>
+    </section-->
   </div>
 </template>
 
 <script setup lang="ts">
 import { Vector3 } from "three";
+import ProjectTile from "~/components/base/ProjectTile.vue";
 
 const { onLoop, resume } = useRenderLoop();
+
+const clickedProject: Ref<boolean> = ref(false);
+
+function onClick() {
+    clickedProject.value = !clickedProject.value;
+}
 
 /*
     - Game jams
@@ -82,6 +100,10 @@ const { onLoop, resume } = useRenderLoop();
     height: 350px;
     margin: 0 0 50px 0;
 
+}
+
+.grow-animation {
+    transition: width 1s, height 1s;
 }
 
 </style>

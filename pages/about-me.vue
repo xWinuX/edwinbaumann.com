@@ -47,8 +47,8 @@ const coreSkillsTableData = {
     "C#": "3 years of study and hobby experience",
     "C++": "Started Learning",
     VueJs: "2 years of job and hobby experience",
-    "Javascript/Typescript": "2 years of job and hobby experience",
-    "Python/Bash": "2 years of job and hobby experience",
+    "Javascript / Typescript": "2 years of job and hobby experience",
+    "Python / Bash": "2 years of job and hobby experience",
     "IT System Engineer": "6 years of job experience",
 };
 

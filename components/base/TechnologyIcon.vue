@@ -1,5 +1,7 @@
 <template>
-  <BaseTooltipIcon :name="technologyLookup[technology].iconName" :tooltip="technologyLookup[technology].tooltip" size="3rem" />
+  <BaseProjectTileContent class="p-1">
+    <BaseTooltipIcon :name="technologyLookup[technology].iconName" :tooltip="technologyLookup[technology].tooltip" size="3rem" />
+  </BaseProjectTileContent>
 </template>
 
 <script setup lang="ts">

@@ -20,8 +20,22 @@
     box-shadow: 0 0 6px var(--glow-outer-color);
 }
 
+.glow-shadow {
+    box-shadow: 0 0 6px var(--glow-outer-color);
+}
+
+.normal-shadow {
+    box-shadow: 0 0 6px var(--body-color);
+}
+
 .glow-md {
     box-shadow: 0 0 30px 15px var(--glow-inner-color), 0 0 50px 30px var(--glow-middle-color), 0 0 70px 45px var(--glow-outer-color);
+}
+
+.glow-project-tile {
+    transform: rotate(90deg) scaleY(5);
+    margin-top: -60%;
+    box-shadow: 0 0 60px 30px var(--glow-inner-color), 0 0 100px 60px var(--glow-middle-color), 0 0 140px 90px var(--glow-outer-color);
 }
 
 .gradient-text  {

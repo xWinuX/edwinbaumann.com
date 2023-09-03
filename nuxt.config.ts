@@ -10,7 +10,12 @@ export default defineNuxtConfig({
         "@nuxtjs/eslint-module",
         "@davestewart/nuxt-scrollbar",
         "nuxt-icon",
+        "@nuxt/image",
+        "@vueuse/nuxt",
     ],
+    image: {
+        dir: "assets/images",
+    },
     app: {
         pageTransition: { name: "slide-right", mode: "out-in" },
         head: {
