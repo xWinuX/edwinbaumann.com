@@ -4,6 +4,9 @@ export default defineNuxtConfig({
     css: [
         "@/assets/css/style.css",
     ],
+    imports: {
+        dirs: ["stores"],
+    },
     modules: [
         "@nuxtjs/tailwindcss",
         "@tresjs/nuxt",
@@ -12,6 +15,12 @@ export default defineNuxtConfig({
         "nuxt-icon",
         "@nuxt/image",
         "@vueuse/nuxt",
+        [
+            "@pinia/nuxt",
+            {
+                autoImports: ["defineStore", "acceptHMRUpdate"],
+            },
+        ],
     ],
     image: {
         dir: "assets/images",

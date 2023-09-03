@@ -1,5 +1,13 @@
 <template>
-  <div class="rounded-xl backdrop-blur-md bg-gray-900/70 normal-shadow">
+  <div ref="content" class="rounded-xl bg-gray-900/50 backdrop-blur-md normal-shadow">
     <slot />
   </div>
 </template>
+
+<script setup lang="ts">
+const content = ref<HTMLElement>();
+
+defineExpose({
+    content,
+});
+</script>

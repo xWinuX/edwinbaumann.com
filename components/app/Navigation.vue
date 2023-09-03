@@ -48,9 +48,3 @@ onMounted(() => {
 });
 
 </script>
-
-<style scoped>
-.height-transition {
-    transition: height 2s;
-}
-</style>

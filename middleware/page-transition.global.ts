@@ -13,4 +13,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
     to.meta.pageTransition = { name: transitionName };
     from.meta.pageTransition = { name: transitionName };
+
+    useGlobalStore().enablePageScroll();
 });
