@@ -1,21 +1,24 @@
 <template>
   <Body class="m-0 bg-gray-900 p-0 text-white min-h-[100vh]">
-    <NuxtScrollbar class="overflow-y-hidden h-[100vh]" watch-options :options="scrollOptions">
+    <OverlayScrollbarsComponent
+      :options="{
+        scrollbars: {
+          theme: 'os-theme-custom'
+        }
+      }"
+      class="overflow-y-hidden h-[100vh] scroll-smooth"
+      defer
+    >
       <NuxtLayout>
         <NuxtLoadingIndicator />
         <NuxtPage />
       </NuxtLayout>
-    </NuxtScrollbar>
+    </OverlayScrollbarsComponent>
   </Body>
 </template>
 
 <script setup lang="ts">
+import "overlayscrollbars/overlayscrollbars.css";
+import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
 
-const scrollOptions = computed(() => {
-    return {
-        // suppressScrollY: !useGlobalStore().pageScrollEnabled,
-        wheelSpeed: useGlobalStore().pageScrollEnabled ? 1 : 0,
-        maxScrollbarLength: useGlobalStore().pageScrollEnabled ? null : "0px",
-    };
-});
 </script>

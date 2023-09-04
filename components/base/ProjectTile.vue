@@ -1,5 +1,5 @@
 <template>
-  <div class="group w-[400px] h-[500px]">
+  <div class="group w-[500px] h-[600px]">
     <div
       ref="card"
       class="h-full w-full rounded-xl bg-cover bg-top bg-no-repeat card group glow-shadow"
@@ -23,14 +23,9 @@
           class="mt-auto mr-2 mb-auto ml-2 flex-shrink flex-grow overflow-y-hidden transition duration-500"
           :class="isExpanded ? 'opacity-100  delay-500': 'opacity-0'"
         >
-          <NuxtScrollbar
+          <OverlayScrollbarsComponent
             ref="scroll"
             class="overflow-y-hidden"
-            watch-options
-            :options="{
-              suppressScrollX: true,
-              suppressScrollY: !isExpanded
-            }"
           >
             <div class="p-5">
               <div class="flex flex-col gap-5 md:flex-row">
@@ -98,7 +93,7 @@
                 </div>
               </div>
             </div>
-          </NuxtScrollbar>
+          </OverlayScrollbarsComponent>
         </BaseProjectTileContent>
 
         <!-- Icons and duration -->
@@ -111,14 +106,18 @@
         </div>
       </div>
     </div>
-    <div class="relative opacity-0 glow glow-project-tile group-hover:opacity-20" />
+    <div
+      class="relative opacity-0 glow glow-project-tile "
+      :class="isExpanded ? 'group-hover:opacity-0' : 'group-hover:opacity-20'"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import thumbnail from "assets/images/projects/cpp-game-engine/main.png";
 
-import { BaseProjectTileContent, NuxtScrollbar } from "#components";
+import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
+import { BaseProjectTileContent } from "#components";
 
 export interface Props {
     isExpanded: boolean;
@@ -127,7 +126,7 @@ export interface Props {
 const loaded: Ref<boolean> = ref(false);
 
 const container = ref<InstanceType<typeof BaseProjectTileContent> | null>(null);
-const scroll = ref<InstanceType<typeof NuxtScrollbar> | null>();
+const scroll = ref<InstanceType<typeof OverlayScrollbarsComponent> | null>(null);
 
 const props = withDefaults(defineProps<Props>(), {
     isExpanded: false,
@@ -160,7 +159,7 @@ onMounted(() => {
 
     setInterval(() => {
         if (container.value && container.value.content) {
-            scroll.value.$el.nextElementSibling.style.height = getScrollHeight();
+            scroll.value.getElement().style.height = getScrollHeight();
         }
     });
 });

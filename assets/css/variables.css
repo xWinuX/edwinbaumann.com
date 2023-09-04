@@ -1,6 +1,8 @@
 :root {
-    --glow-inner-color: #34d399;
-    --glow-middle-color: #2563eb;
-    --glow-outer-color: #312e81;
-    --body-color: #111827;
+    --glow-inner-color: #34d399FF;
+    --glow-middle-color: #2563ebFF;
+    --glow-outer-color: #312e81FF;
+    --body-color: #111827FF;
+
+
 }

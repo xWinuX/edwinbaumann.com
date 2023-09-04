@@ -11,16 +11,9 @@ export default defineNuxtConfig({
         "@nuxtjs/tailwindcss",
         "@tresjs/nuxt",
         "@nuxtjs/eslint-module",
-        "@davestewart/nuxt-scrollbar",
         "nuxt-icon",
         "@nuxt/image",
         "@vueuse/nuxt",
-        [
-            "@pinia/nuxt",
-            {
-                autoImports: ["defineStore", "acceptHMRUpdate"],
-            },
-        ],
     ],
     image: {
         dir: "assets/images",

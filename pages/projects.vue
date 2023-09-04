@@ -1,12 +1,14 @@
 <template>
   <div>
-    <div class="flex flex-row flex-wrap place-content-center gap-10">
+    <div class="flex flex-col flex-shrink gap-10">
       <ProjectTile
-        id="tile"
-        class="relative grow-animation"
-        :class="clickedProject ? 'w-full h-[80vh]' : 'delay-grow-animation cursor-pointer'"
-        :is-expanded="clickedProject"
-        @click="() => { if (!clickedProject) { onClick(); } }"
+        v-for="(project, index) in projects"
+        :key="index"
+        ref="projectTiles"
+        class="grow-animation m-auto"
+        :class="project.isExpanded ? 'w-full h-[80vh]' : 'delay-grow-animation cursor-pointer'"
+        :is-expanded="project.isExpanded"
+        @click="onClick(index)"
       />
     </div>
 
@@ -34,27 +36,60 @@
 <script setup lang="ts">
 import { Vector3 } from "three";
 import ProjectTile from "~/components/base/ProjectTile.vue";
+import { BaseProjectTileContent } from "#components";
 
 const { onLoop, resume } = useRenderLoop();
 
 const clickedProject: Ref<boolean> = ref(false);
 
-function onClick() {
-    clickedProject.value = !clickedProject.value;
+const projectTiles = ref<(InstanceType<typeof ProjectTile> | null)[]>();
 
-    useGlobalStore().setPageScrollState(!clickedProject.value);
+const previousSelectedIndex = ref(-1);
+
+const projects = ref([
+    { isExpanded: false },
+    { isExpanded: false },
+    { isExpanded: false },
+    { isExpanded: false },
+    { isExpanded: false },
+    { isExpanded: false },
+    { isExpanded: false },
+    { isExpanded: false },
+]);
+
+function onClick(selectedIndex: number) {
+    let delay = 0;
+    if (previousSelectedIndex.value === -1) {
+        delay = 550;
+    }
+
+    for (let i = 0; i < projects.value.length; i++) {
+        if (projects.value[i].isExpanded) {
+            delay = 1050;
+            break;
+        }
+    }
+
+    setTimeout(() => {
+        if (!projectTiles.value) { return; }
+        projectTiles.value[selectedIndex].$el.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "center",
+        });
+    }, delay);
+
+    if (!projects.value[selectedIndex].isExpanded) {
+        for (let i = 0; i < projects.value.length; i++) {
+            projects.value[i].isExpanded = i === selectedIndex ? !projects.value[i].isExpanded : false;
+        }
+    }
+
+    previousSelectedIndex.value = selectedIndex;
 }
 
 onMounted(() => {
-    setInterval(() => {
-        if (clickedProject.value) {
-            document.getElementById("tile")?.scrollIntoView({
-                behavior: "auto",
-                block: "center",
-                inline: "center",
-            });
-        }
-    });
+
 });
 
 /*
