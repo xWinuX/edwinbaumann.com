@@ -1,14 +1,15 @@
 <template>
   <div>
-    <div class="flex flex-col flex-shrink gap-10">
-      <ProjectTile
+    <div class="flex flex-shrink flex-col gap-10">
+      <BaseProjectTile
         v-for="(project, index) in projects"
         :key="index"
         ref="projectTiles"
-        class="grow-animation m-auto"
-        :class="project.isExpanded ? 'w-full h-[80vh]' : 'delay-grow-animation cursor-pointer'"
+        class="m-auto grow-animation"
+        :class="project.isExpanded ? '!w-full !h-[80vh]' : 'delay-grow-animation cursor-pointer'"
         :is-expanded="project.isExpanded"
         @click="onClick(index)"
+        @close="onClose(index)"
       />
     </div>
 
@@ -34,13 +35,6 @@
 </template>
 
 <script setup lang="ts">
-import { Vector3 } from "three";
-import ProjectTile from "~/components/base/ProjectTile.vue";
-import { BaseProjectTileContent } from "#components";
-
-const { onLoop, resume } = useRenderLoop();
-
-const clickedProject: Ref<boolean> = ref(false);
 
 const projectTiles = ref<(InstanceType<typeof ProjectTile> | null)[]>();
 
@@ -64,7 +58,7 @@ function onClick(selectedIndex: number) {
     }
 
     for (let i = 0; i < projects.value.length; i++) {
-        if (projects.value[i].isExpanded) {
+        if (i !== selectedIndex && projects.value[i].isExpanded) {
             delay = 1050;
             break;
         }
@@ -79,6 +73,10 @@ function onClick(selectedIndex: number) {
         });
     }, delay);
 
+    if (previousSelectedIndex.value === selectedIndex) {
+        return;
+    }
+
     if (!projects.value[selectedIndex].isExpanded) {
         for (let i = 0; i < projects.value.length; i++) {
             projects.value[i].isExpanded = i === selectedIndex ? !projects.value[i].isExpanded : false;
@@ -86,6 +84,14 @@ function onClick(selectedIndex: number) {
     }
 
     previousSelectedIndex.value = selectedIndex;
+}
+
+function onClose(selectedIndex: number) {
+    projects.value[selectedIndex].isExpanded = false;
+
+    setTimeout(() => {
+        previousSelectedIndex.value = -1;
+    }, 500);
 }
 
 onMounted(() => {

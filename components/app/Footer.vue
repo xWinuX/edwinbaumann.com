@@ -11,5 +11,4 @@
       </BaseWrapper>
     </div>
   </footer>
-  <div class="opacity-80 glow" />
 </template>

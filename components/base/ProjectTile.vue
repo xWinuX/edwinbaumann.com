@@ -1,8 +1,8 @@
 <template>
-  <div class="group w-[500px] h-[600px]">
+  <div class="group w-[90vw] h-[50vh] sm:w-[500px] sm:h-[600px]">
     <div
       ref="card"
-      class="h-full w-full rounded-xl bg-cover bg-top bg-no-repeat card group glow-shadow"
+      class="h-full w-full rounded-xl bg-cover bg-top bg-no-repeat card group shadow-glow"
       :style="{
         transform: cardTransform,
         transition: 'transform 0.25s ease-out',
@@ -11,16 +11,26 @@
     >
       <div class="flex h-full flex-col">
         <!-- Title -->
-        <BaseProjectTileContent class="m-2 flex-row p-5 text-center">
-          <h2 class="mb-2 font-bold">
-            Cpp Game Engine
-          </h2>
-          <BaseGradientLine />
+        <BaseProjectTileContent class="m-2 flex-col p-5 text-center">
+          <div class="flex flex-row">
+            <Icon
+              class="transition absolute text-emerald-400 top-[1.1rem] svg-shadow-normal"
+              :class="isExpanded ? 'scale-100 cursor-pointer': 'scale-0'"
+              name="mingcute:large-arrow-left-fill"
+              size="1.8rem"
+              @click="() => {if (isExpanded) {emit('close'); console.log('HHHHHHHHH')}}"
+            />
+            <h2 class="m-auto mb-2 text-shadow-normal font-bold">
+              Cpp Game Engine
+            </h2>
+          </div>
+
+          <BaseGradientLine shadow-type="normal" />
         </BaseProjectTileContent>
 
         <BaseProjectTileContent
           ref="container"
-          class="mt-auto mr-2 mb-auto ml-2 flex-shrink flex-grow overflow-y-hidden transition duration-500"
+          class="mr-2 mb-2 ml-2 flex-shrink flex-grow overflow-y-hidden transition duration-500"
           :class="isExpanded ? 'opacity-100  delay-500': 'opacity-0'"
         >
           <OverlayScrollbarsComponent
@@ -37,7 +47,7 @@
                   habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                 </p>
                 <div class="m-auto flex basis-1 flex-col md:basis-1/3">
-                  <img class="m-auto project-image" src="~/assets/images/projects/cpp-game-engine/main.png" alt="CPP Game Engine main image">
+                  <img class="m-auto shadow-normal rounded-xl" src="~/assets/images/projects/cpp-game-engine/main.png" alt="CPP Game Engine main image">
                   <BaseTable
                     class="m-auto mt-10"
                     :table-data="{
@@ -80,8 +90,12 @@
                   >
                     <template #technologies>
                       <div class="flex flex-row gap-2">
-                        <BaseTechnologyIcon technology="Cpp" />
-                        <BaseTechnologyIcon technology="OpenGL" />
+                        <BaseProjectTileContent class="p-1">
+                          <BaseTechnologyIcon technology="Cpp" />
+                        </BaseProjectTileContent>
+                        <BaseProjectTileContent class="p-1">
+                          <BaseTechnologyIcon technology="OpenGL" />
+                        </BaseProjectTileContent>
                       </div>
                     </template>
                     <template #sourceCode>
@@ -97,17 +111,24 @@
         </BaseProjectTileContent>
 
         <!-- Icons and duration -->
-        <div class="mt-auto flex flex-row place-items-end justify-end gap-3 p-2">
+        <div
+          class="mt-auto flex flex-row place-items-end justify-end gap-3 transition duration-500"
+          :class="(isExpanded ? 'overflow-visible opacity-0' : 'delay-500 opacity-100') + ' ' + bottomHeightClasses"
+        >
           <BaseProjectTileContent class="mr-auto p-4 text-center font-bold">
             3 Months
           </BaseProjectTileContent>
-          <BaseTechnologyIcon technology="Cpp" />
-          <BaseTechnologyIcon technology="OpenGL" />
+          <BaseProjectTileContent class="p-1">
+            <BaseTechnologyIcon technology="Cpp" />
+          </BaseProjectTileContent>
+          <BaseProjectTileContent class="p-1">
+            <BaseTechnologyIcon technology="OpenGL" />
+          </BaseProjectTileContent>
         </div>
       </div>
     </div>
     <div
-      class="relative opacity-0 glow glow-project-tile "
+      class="relative opacity-0 glow glow-project-tile"
       :class="isExpanded ? 'group-hover:opacity-0' : 'group-hover:opacity-20'"
     />
   </div>
@@ -132,6 +153,8 @@ const props = withDefaults(defineProps<Props>(), {
     isExpanded: false,
 });
 
+const emit = defineEmits(["close"]);
+
 const card = ref();
 const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(card);
 const cardTransform = computed(() => {
@@ -152,7 +175,23 @@ function getScrollHeight() {
     } else {
         return "0px";
     }
-};
+}
+
+const defaultBottomHeightClasses = "p-2";
+const bottomHeightClasses = ref(defaultBottomHeightClasses);
+
+watch(() => props.isExpanded, (previous, current) => {
+    if (previous) {
+        bottomHeightClasses.value = "h-0 p-2";
+        setTimeout(() => {
+            bottomHeightClasses.value = "h-0";
+        }, 500);
+    } else {
+        setTimeout(() => {
+            bottomHeightClasses.value = defaultBottomHeightClasses;
+        }, 500);
+    }
+});
 
 onMounted(() => {
     loaded.value = true;

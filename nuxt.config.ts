@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     css: [
         "@/assets/css/style.css",
+        "overlayscrollbars/overlayscrollbars.css",
     ],
     imports: {
         dirs: ["stores"],

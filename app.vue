@@ -1,12 +1,10 @@
 <template>
   <Body class="m-0 bg-gray-900 p-0 text-white min-h-[100vh]">
     <OverlayScrollbarsComponent
-      :options="{
-        scrollbars: {
-          theme: 'os-theme-custom'
-        }
-      }"
       class="overflow-y-hidden h-[100vh] scroll-smooth"
+      :options="{
+        overflow: {x: 'hidden'}
+      }"
       defer
     >
       <NuxtLayout>

@@ -25,4 +25,20 @@
     }
 }
 
+.os-scrollbar-handle {
+    background: linear-gradient(0deg, var(--glow-inner-color) 0%, var(--glow-middle-color) 100%) !important;
+    box-shadow: 0 0 5px var(--glow-outer-color);
+    opacity: 0.6;
+}
 
+.os-scrollbar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 5px !important;
+}
+
+@screen sm {
+    .os-scrollbar-handle{
+        opacity: 1.0 !important;
+    }
+}

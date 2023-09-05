@@ -10,5 +10,6 @@
       </BaseWrapper>
     </main>
     <AppFooter />
+    <div class="opacity-80 glow" />
   </div>
 </template>
