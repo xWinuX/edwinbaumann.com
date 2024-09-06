@@ -1,36 +1,17 @@
 <template>
   <div>
-    <div class="flex flex-shrink flex-col gap-10">
+    <div class="flex flex-shrink flex-row flex-wrap gap-10">
       <BaseProjectTile
         v-for="(project, index) in projects"
         :key="index"
         ref="projectTiles"
         class="m-auto grow-animation"
-        :class="project.isExpanded ? '!w-full !h-[80vh]' : 'delay-grow-animation cursor-pointer'"
+        :class="project.isExpanded ? '!w-full !h-[90vh]' : 'delay-grow-animation cursor-pointer'"
         :is-expanded="project.isExpanded"
         @click="onClick(index)"
         @close="onClose(index)"
       />
     </div>
-
-    <!--div>
-    <div class="project-box">
-      <Suspense>
-        <TresCanvas alpha shadows>
-          <TresPerspectiveCamera :position="new Vector3(0, 0, -5)" />
-          <OrbitControls
-            :auto-rotate="true"
-            :enable-pan="false"
-            :enable-zoom="false"
-            :auto-rotate-speed="2"
-          />
-          <TresAmbientLight :intensity="0.5" />
-          <Suspense>
-            <GLTFModel :position="new Vector3(0, -1.0, 0)" path="/TimeWizard.glb" />
-          </Suspense>
-        </TresCanvas>
-      </Suspense>
-    </div-->
   </div>
 </template>
 
@@ -97,14 +78,6 @@ function onClose(selectedIndex: number) {
 onMounted(() => {
 
 });
-
-/*
-    - Game jams
-    - "Finished" school games
-    - Portfolio project
-    - CPP Game Engine
-    - Website
- */
 
 </script>
 

@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref } from "vue";
+import { ref } from "vue";
 
 import { Collapse } from "vue-collapsed";
 
