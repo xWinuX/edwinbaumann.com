@@ -1,16 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     devtools: { enabled: true },
-
+    ssr: false,
     css: [
-        "@/assets/css/style.css",
+        "vue-select/dist/vue-select.css",
         "overlayscrollbars/overlayscrollbars.css",
+        "vue-final-modal/style.css",
+        "@/assets/css/style.css",
     ],
-
     imports: {
         dirs: ["stores"],
     },
-
     modules: [
         "@nuxtjs/tailwindcss",
         "@tresjs/nuxt",
@@ -20,12 +20,24 @@ export default defineNuxtConfig({
         "@vueuse/nuxt",
         "vue3-carousel-nuxt",
         "floating-vue/nuxt",
+        "@nuxt/content",
+        "@nuxtjs/i18n",
     ],
-
+    i18n: {
+        legacy: false,
+        locale: "en",
+        defaultLocale: "en",
+        langDir: "locales/",
+        fallbackLocale: "en",
+        locales: [
+            { code: "en", language: "en-US", file: "en-US.yml" },
+            { code: "de", language: "de-CH", file: "de-CH.yml" },
+        ],
+        strategy: "no_prefix",
+    },
     image: {
         dir: "assets/images",
     },
-
     app: {
         pageTransition: { name: "slide-right", mode: "out-in" },
         head: {
@@ -47,6 +59,5 @@ export default defineNuxtConfig({
             ],
         },
     },
-
     compatibilityDate: "2024-09-02",
 });

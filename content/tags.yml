@@ -1,0 +1,49 @@
+- name: csharp
+  displayName: C#
+  category: language
+  icon: vscode-icons:file-type-cpp3
+
+- name: cpp
+  displayName: C++
+  category: language
+  icon: vscode-icons:file-type-cpp3
+
+- name: gml
+  displayName: GML
+  category: language
+  icon: vscode-icons:file-type-cpp3
+
+- name: js
+  displayName: Javascript
+  category: language
+  icon: vscode-icons:file-type-cpp3
+
+- name: ts
+  displayName: Typescript
+  category: language
+  icon: vscode-icons:file-type-cpp3
+
+- name: unity
+  displayName: Unity
+  category: gameEngine
+  icon: vscode-icons:file-type-cpp3
+
+- name: unreal
+  displayName: Unreal Engine
+  category: gameEngine
+  icon: vscode-icons:file-type-cpp3
+
+- name: gamemaker
+  displayName: Game Maker Studio
+  category: gameEngine
+  icon: vscode-icons:file-type-cpp3
+
+- name: nuxtjs
+  displayName: NuxtJS
+  category: webFramework
+  icon: vscode-icons:file-type-cpp3
+
+- name: opengl
+  displayName: OpenGL
+  category: rendering
+  icon: logos:opengl

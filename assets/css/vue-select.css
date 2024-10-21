@@ -1,0 +1,21 @@
+:root {
+    --vs-controls-color: white;
+    --vs-border-color: transparent;
+
+    --vs-dropdown-bg: transparent;
+    --vs-dropdown-color: transparent;
+    --vs-dropdown-option-color: white;
+
+    --vs-selected-bg: transparent;
+    --vs-selected-color: white;
+
+    --vs-search-input-color: transparent;
+
+    --vs-dropdown-option--active-bg: transparent;
+    --vs-dropdown-option--active-color: white;
+}
+
+/* Do not make selected option darker */
+.vs--single.vs--open .vs__selected, .vs--single.vs--loading .vs__selected {
+    opacity: 1;
+}

@@ -7,7 +7,7 @@
     <NuxtLink :href="navElementLinks[index]">
       <AppNavigationElement>
         <p class="text-zinc-100 group-hover:text-zinc-50">
-          <b>{{ element }}</b>
+          <b>{{ $t(element) }}</b>
         </p>
       </AppNavigationElement>
     </NuxtLink>
@@ -15,11 +15,14 @@
 </template>
 
 <script setup lang="ts">
+
+const { t } = useI18n();
+
 const navElements: string[] = [
-    "Home",
-    "Projects",
-    "About Me",
-    "Contact",
+    "navbar.home",
+    "navbar.projects",
+    "navbar.aboutMe",
+    "navbar.contact",
 ];
 
 const navElementLinks: string[] = [

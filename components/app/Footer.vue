@@ -4,11 +4,19 @@
       <BaseWrapper class="overflow-clip duration-1000 animate-in slide-in-from-bottom-5">
         <div class="m-auto h-full w-full overflow-clip text-center">
           <BaseGradientLine />
-          <p class="z-10 pt-5">
-            <b>Edwin Baumann 2022 - 2023</b>
-          </p>
+          <div class="grid grid-cols-3 pt-5 z-10">
+            <div />
+            <p>
+              <b>Edwin Baumann 2022 - 2023</b>
+            </p>
+            <div class="w-full">
+              <AppLanguageSelection />
+            </div>
+          </div>
         </div>
       </BaseWrapper>
     </div>
   </footer>
 </template>
+<script setup lang="ts">
+</script>

@@ -2,6 +2,7 @@
 @import "perfect-scrollbar.css";
 @import "page-transitions.css";
 @import "variables.css";
+@import "vue-select.css";
 
 @tailwind base;
 @tailwind components;

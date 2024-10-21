@@ -13,82 +13,31 @@
       />
     </div>
   </div>
+  <ModalsContainer />
 </template>
 
 <script setup lang="ts">
+import { ModalsContainer, useModal } from "vue-final-modal";
+import type { ParsedContent } from "@nuxt/content";
+import ProjectModal from "~/components/base/ProjectModal.vue";
 
-const projectTiles = ref<(InstanceType<typeof ProjectTile> | null)[]>();
+interface ProjectContent extends Project, ParsedContent {}
 
-const previousSelectedIndex = ref(-1);
+const { data }: { data: Ref<ProjectContent[]> } = await useAsyncData("projects", () => queryContent("projects").find());
 
-const projects = ref([
-    { isExpanded: false },
-    { isExpanded: false },
-    { isExpanded: false },
-    { isExpanded: false },
-    { isExpanded: false },
-    { isExpanded: false },
-    { isExpanded: false },
-    { isExpanded: false },
-]);
+console.log(data.value[0]._path.split("/").at(-1));
+console.log(data.value[0].tags);
 
-function onClick(selectedIndex: number) {
-    let delay = 0;
-    if (previousSelectedIndex.value === -1) {
-        delay = 550;
-    }
-
-    for (let i = 0; i < projects.value.length; i++) {
-        if (i !== selectedIndex && projects.value[i].isExpanded) {
-            delay = 1050;
-            break;
-        }
-    }
-
-    setTimeout(() => {
-        if (!projectTiles.value) { return; }
-        projectTiles.value[selectedIndex].$el.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "center",
-        });
-    }, delay);
-
-    if (previousSelectedIndex.value === selectedIndex) {
-        return;
-    }
-
-    if (!projects.value[selectedIndex].isExpanded) {
-        for (let i = 0; i < projects.value.length; i++) {
-            projects.value[i].isExpanded = i === selectedIndex ? !projects.value[i].isExpanded : false;
-        }
-    }
-
-    previousSelectedIndex.value = selectedIndex;
-}
-
-function onClose(selectedIndex: number) {
-    projects.value[selectedIndex].isExpanded = false;
-
-    setTimeout(() => {
-        previousSelectedIndex.value = -1;
-    }, 500);
-}
-
-onMounted(() => {
-
+const { open: openModal, close: closeModal } = useModal({
+    component: ProjectModal,
 });
 
+async function onClick(selectedIndex: number) {
+    await openModal();
+}
+
+async function onClose(selectedIndex: number) {
+    await closeModal();
+}
+
 </script>
-
-<style scoped>
-
-.grow-animation {
-    transition: width 0.5s, height 0.5s;
-}
-
-.delay-grow-animation {
-    transition-delay: 0.5s;
-}
-
-</style>
