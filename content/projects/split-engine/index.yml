@@ -1,0 +1,8 @@
+name: Split Engine
+description:
+  en: A game engine made with Vulkan and C++ and a custom made ECS.
+  de: Eine C++ und Vulkan Game Engine mit einem selbstgeschriebenen ECS.
+technologies:
+  - cpp
+  - vulkan
+duration: 6m

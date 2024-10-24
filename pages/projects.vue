@@ -1,32 +1,35 @@
 <template>
   <div>
     <div class="flex flex-shrink flex-row flex-wrap gap-10">
-      <BaseProjectTile
-        v-for="(project, index) in projects"
-        :key="index"
-        ref="projectTiles"
-        class="m-auto grow-animation"
-        :class="project.isExpanded ? '!w-full !h-[90vh]' : 'delay-grow-animation cursor-pointer'"
-        :is-expanded="project.isExpanded"
-        @click="onClick(index)"
-        @close="onClose(index)"
-      />
+      <div v-for="project in projects" :key="project.name">
+        <BaseProjectTile
+          :project="project"
+          class="m-auto cursor-pointer"
+          @click="onClick(index)"
+          @close="onClose(index)"
+        />
+      </div>
+      <ModalsContainer />
     </div>
   </div>
-  <ModalsContainer />
 </template>
 
 <script setup lang="ts">
 import { ModalsContainer, useModal } from "vue-final-modal";
 import type { ParsedContent } from "@nuxt/content";
 import ProjectModal from "~/components/base/ProjectModal.vue";
+import type { Project } from "~/types/project";
 
 interface ProjectContent extends Project, ParsedContent {}
 
-const { data }: { data: Ref<ProjectContent[]> } = await useAsyncData("projects", () => queryContent("projects").find());
+const { data: projects }: { data: Ref<ProjectContent[]> } = await useAsyncData("projects", () => queryContent("projects").find());
 
-console.log(data.value[0]._path.split("/").at(-1));
-console.log(data.value[0].tags);
+// Get path for thumbnail
+projects.value.forEach((item) => {
+    item.path = item._path.split("/").pop() as string;
+});
+
+console.log(projects.value);
 
 const { open: openModal, close: closeModal } = useModal({
     component: ProjectModal,

@@ -9,7 +9,7 @@
       :style="{
         transform: cardTransform,
         transition: 'transform 0.25s ease-out',
-        backgroundImage: `url(${thumbnail})`
+        backgroundImage: `url(content/projects/cpp-game-engine/media/thumbnail.png)`
       }"
     >
       <div class="flex flex-col h-full ">
@@ -56,7 +56,7 @@
                     habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                   </p>
                   <div class="m-auto flex basis-1 flex-col md:basis-1/3">
-                    <img class="m-auto shadow-normal rounded-xl" src="~/assets/images/projects/cpp-game-engine/main.png" alt="CPP Game Engine main image">
+                    <img class="m-auto shadow-normal rounded-xl" src="~/assets/images/projects/cpp-game-engine/thumbnail.png" alt="CPP Game Engine main image">
                     <BaseTable
                       class="m-auto mt-10"
                       :table-data="{
@@ -92,7 +92,7 @@
                     habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                   </p>
                   <div class="m-auto flex basis-1 flex-col md:basis-1/3">
-                    <img class="m-auto project-image" src="~/assets/images/projects/cpp-game-engine/main.png" alt="CPP Game Engine main image">
+                    <img class="m-auto project-image" src="~/assets/images/projects/cpp-game-engine/thumbnail.png" alt="CPP Game Engine main image">
                     <BaseTable
                       class="m-auto mt-10"
                       :table-data="{

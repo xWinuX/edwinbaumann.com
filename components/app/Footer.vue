@@ -7,9 +7,13 @@
           <div class="grid grid-cols-3 pt-5 z-10">
             <div />
             <p>
-              <b>Edwin Baumann 2022 - 2023</b>
+              <b>
+                <span class="inline-block">Edwin Baumann&nbsp;</span>
+
+                <span class="inline-block">2022 - 2023</span>
+              </b>
             </p>
-            <div class="w-full">
+            <div class="w-full text-right my-auto">
               <AppLanguageSelection />
             </div>
           </div>
