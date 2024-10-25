@@ -35,7 +35,7 @@
         <!-- Icons and duration -->
         <div class="flex flex-row gap-3 justify-self-end p-2">
           <BaseProjectTileContent class="mr-auto p-4 text-center font-bold">
-            {{ project.duration }}
+            {{ duration }}
           </BaseProjectTileContent>
           <BaseProjectTileContent v-for="technology in project.technologies" :key="technology" class="p-1">
             <BaseTechnologyIcon :technology="technology" />
@@ -49,7 +49,9 @@
 
 <script setup lang="ts">
 import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
+import humanizeDuration from "humanize-duration";
 import type { Project } from "~/types/project";
+import { dateToECMAFormat } from "~/utils/date";
 
 export interface ProjectTileProps {
   project: Project;
@@ -90,6 +92,13 @@ const defaultBottomHeightClasses = "p-2";
 const bottomHeightClasses = ref(defaultBottomHeightClasses);
 
 const description = computed(() => props.project.description[locale.value]);
+
+const duration = computed(() => {
+    const dateStart = new Date(dateToECMAFormat(props.project.dateStart));
+    const dateEnd = new Date(dateToECMAFormat(props.project.dateEnd));
+    const diffTime = Math.abs(dateEnd - dateStart);
+    return humanizeDuration(diffTime, { language: locale.value, units: ["mo"], round: true });
+});
 
 onMounted(() => {
     loaded.value = true;

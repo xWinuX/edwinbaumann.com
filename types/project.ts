@@ -29,6 +29,7 @@ export interface Project {
     name: string;
     description: Record<string, string>;
     technologies: TechnologyKey[]
-    duration: string;
+    dateStart: Date;
+    dateEnd: Date;
     path: string;
 }
