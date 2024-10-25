@@ -6,7 +6,7 @@
       :style="{
         transform: cardTransform,
         transition: 'transform 0.25s ease-out',
-        backgroundImage: `url(${project.path}/media/thumbnail.png)`
+        backgroundImage: `url(/projects/${project.path}/media/thumbnail.png)`
       }"
     >
       <div class="flex flex-col h-full ">
