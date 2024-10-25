@@ -6,12 +6,12 @@
       :style="{
         transform: cardTransform,
         transition: 'transform 0.25s ease-out',
-        backgroundImage: `url(/projects/${project.path}/media/thumbnail.png)`
+        backgroundImage: `url(/projects/${project.path}/media/thumbnail.${project.thumbnailFormat})`
       }"
     >
-      <div class="flex flex-col h-full ">
+      <div class="flex flex-col h-full mr-2 ml-2 pb-2 pt-2">
         <!-- Title -->
-        <BaseProjectTileContent class="m-2 flex-col p-5 text-center">
+        <BaseProjectTileContent class="flex-col p-5 text-center">
           <div class="flex flex-row">
             <Icon
               class="transition absolute text-emerald-400 top-[1.1rem] svg-shadow-glow scale-0"
@@ -26,14 +26,19 @@
           <BaseGradientLine shadow-type="glow" />
         </BaseProjectTileContent>
 
+        <div class="mt-auto mb-2 flex">
+          <BaseProjectTileContent class="font-bold p-2">
+            {{ yearSpan }}
+          </BaseProjectTileContent>
+        </div>
         <BaseProjectTileContent
-          class="flex-row mr-2 mb-2 ml-2 mt-auto p-4 justify-items-end justify-end align-bottom transition duration-500"
+          class="flex-row mb-2 p-4 justify-items-end justify-end align-bottom transition duration-500"
         >
           {{ description }}
         </BaseProjectTileContent>
 
         <!-- Icons and duration -->
-        <div class="flex flex-row gap-3 justify-self-end p-2">
+        <div class="flex flex-row gap-2 justify-self-end">
           <BaseProjectTileContent class="mr-auto p-4 text-center font-bold">
             {{ duration }}
           </BaseProjectTileContent>
@@ -48,7 +53,6 @@
 </template>
 
 <script setup lang="ts">
-import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
 import humanizeDuration from "humanize-duration";
 import type { Project } from "~/types/project";
 import { dateToECMAFormat } from "~/utils/date";
@@ -60,11 +64,6 @@ export interface ProjectTileProps {
 const { locale } = useI18n();
 
 const props = defineProps<ProjectTileProps>();
-
-const loaded: Ref<boolean> = ref(false);
-
-const container = ref<InstanceType<typeof BaseProjectTileContent> | null>(null);
-const scroll = ref<InstanceType<typeof OverlayScrollbarsComponent> | null>(null);
 
 const card = ref();
 const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(card);
@@ -80,34 +79,27 @@ const cardTransform = computed(() => {
     return `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`;
 });
 
-function getScrollHeight() {
-    if (container.value && container.value.content) {
-        return container.value.content.clientHeight.toString() + "px";
-    } else {
-        return "0px";
-    }
-}
-
-const defaultBottomHeightClasses = "p-2";
-const bottomHeightClasses = ref(defaultBottomHeightClasses);
-
 const description = computed(() => props.project.description[locale.value]);
+
+const yearSpan = computed(() => {
+    const dateStart = new Date(dateToECMAFormat(props.project.dateStart));
+    const dateEnd = new Date(dateToECMAFormat(props.project.dateEnd));
+    const yearStart = dateStart.toLocaleString(locale.value, { month: "long" }) + " " + dateStart.getFullYear().toString();
+    const yearEnd = dateEnd.toLocaleString(locale.value, { month: "long" }) + " " + dateEnd.getFullYear().toString();
+    return yearStart !== yearEnd ? yearStart + " - " + yearEnd : yearStart;
+});
 
 const duration = computed(() => {
     const dateStart = new Date(dateToECMAFormat(props.project.dateStart));
     const dateEnd = new Date(dateToECMAFormat(props.project.dateEnd));
     const diffTime = Math.abs(dateEnd - dateStart);
-    return humanizeDuration(diffTime, { language: locale.value, units: ["mo"], round: true });
-});
+    let unit = "mo";
+    const numDays = diffTime / 1000 / 60 / 60 / 24;
+    if (numDays < 30) {
+        unit = "d";
+    }
 
-onMounted(() => {
-    loaded.value = true;
-
-    setInterval(() => {
-        if (container.value && container.value.content) {
-            scroll.value.getElement().style.height = getScrollHeight();
-        }
-    });
+    return humanizeDuration(diffTime, { language: locale.value, units: [unit], round: true });
 });
 
 </script>

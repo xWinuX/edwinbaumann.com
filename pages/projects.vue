@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex-shrink flex-row flex-wrap gap-10">
+    <div class="flex flex-shrink flex-row flex-wrap gap-10 justify-evenly">
       <div v-for="project in projects" :key="project.name">
         <BaseProjectTile
           :project="project"

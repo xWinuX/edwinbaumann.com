@@ -1,10 +1,9 @@
-name: Split Engine
+name: Time Wizard
 description:
   en: A game engine made with Vulkan and C++ and a custom made ECS.
   de: Eine C++ und Vulkan Game Engine mit einem selbstgeschriebenen ECS.
 technologies:
-  - cpp
-  - vulkan
-dateStart: 10.09.2023
-dateEnd: 16.08.2024
-thumbnailFormat: png
+  - gamemaker
+dateStart: 21.07.2018
+dateEnd: 23.07.2018
+thumbnailFormat: gif

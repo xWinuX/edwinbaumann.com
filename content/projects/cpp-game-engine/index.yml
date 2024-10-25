@@ -2,8 +2,11 @@ name: C++ Game Engine
 description:
   en: A game engine and showcase made with OpenGL and C++
   de: Eine C++ und OpenGL Game Engine mit Showcase
+tags:
+  - gameEngine
 technologies:
   - cpp
   - opengl
 dateStart: 07.11.2022
 dateEnd: 14.02.2023
+thumbnailFormat: png

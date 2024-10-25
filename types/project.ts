@@ -16,6 +16,10 @@ export const Technology: Record<string, TechnologyEntry> = {
         iconName: "logos:vulkan",
         tooltip: "Vulkan",
     },
+    gamemaker: {
+        iconName: "simple-icons:gamemaker",
+        tooltip: "Game Maker Studio",
+    },
 } as const;
 
 export type TechnologyKey = keyof typeof technologyLookup;
@@ -32,4 +36,5 @@ export interface Project {
     dateStart: Date;
     dateEnd: Date;
     path: string;
+    thumbnailFormat: "png" | "gif";
 }
