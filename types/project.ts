@@ -1,3 +1,5 @@
+import type { ParsedContent } from "@nuxt/content";
+
 interface TechnologyEntry {
     iconName: string;
     tooltip: string;
@@ -30,11 +32,13 @@ export interface Tag {
 }
 
 export interface Project {
-    name: string;
+    displayName: string;
     description: Record<string, string>;
     technologies: TechnologyKey[]
     dateStart: Date;
     dateEnd: Date;
-    path: string;
+    name: string;
     thumbnailFormat: "png" | "gif";
 }
+
+export interface ProjectContent extends Project, ParsedContent {}

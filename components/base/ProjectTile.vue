@@ -6,7 +6,7 @@
       :style="{
         transform: cardTransform,
         transition: 'transform 0.25s ease-out',
-        backgroundImage: `url(/projects/${project.path}/media/thumbnail.${project.thumbnailFormat})`
+        backgroundImage: `url(/projects/${project.name}/media/thumbnail.${project.thumbnailFormat})`
       }"
     >
       <div class="flex flex-col h-full mr-2 ml-2 pb-2 pt-2">
@@ -19,7 +19,7 @@
               size="1.8rem"
             />
             <h2 class="m-auto mb-2 text-shadow-normal font-bold">
-              {{ project.name }}
+              {{ project.displayName }}
             </h2>
           </div>
 

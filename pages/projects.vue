@@ -5,7 +5,7 @@
         <BaseProjectTile
           :project="project"
           class="m-auto cursor-pointer"
-          @click="onClick(index)"
+          @click="onClick(project)"
           @close="onClose(index)"
         />
       </div>
@@ -18,24 +18,29 @@
 import { ModalsContainer, useModal } from "vue-final-modal";
 import type { ParsedContent } from "@nuxt/content";
 import ProjectModal from "~/components/base/ProjectModal.vue";
-import type { Project } from "~/types/project";
+import type { ProjectContent } from "~/types/project";
 
-interface ProjectContent extends Project, ParsedContent {}
+const { data: projects }: { data: Ref<ProjectContent[]> } = await useAsyncData("projects", () => queryContent("projects").where({ _partial: false }).find());
 
-const { data: projects }: { data: Ref<ProjectContent[]> } = await useAsyncData("projects", () => queryContent("projects").find());
+const projectData : Ref<ProjectContent> = ref(null);
 
 // Get path for thumbnail
 projects.value.forEach((item) => {
-    item.path = item._path.split("/").pop() as string;
+    item.name = item._path.split("/").pop() as string;
 });
 
 console.log(projects.value);
 
 const { open: openModal, close: closeModal } = useModal({
     component: ProjectModal,
+    attrs: {
+        projectData,
+    },
+
 });
 
-async function onClick(selectedIndex: number) {
+async function onClick(project: ProjectContent) {
+    projectData.value = project;
     await openModal();
 }
 

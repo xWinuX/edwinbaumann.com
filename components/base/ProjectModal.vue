@@ -1,15 +1,13 @@
 <template>
   <VueFinalModal
     class="flex justify-center items-center"
-    content-class="group w-[400px] h-[600px]"
+    content-class="group"
   >
     <div
-      ref="card"
-      class="h-full w-full rounded-xl bg-cover bg-top bg-no-repeat card group shadow-glow"
+      :class="isExpanded ? 'w-[80vw] h-[95vh] opacity-100' : 'w-[0px] h-[0px] opacity-0' "
+      class="rounded-xl bg-cover bg-top bg-no-repeat card group shadow-glow grow-animation"
       :style="{
-        transform: cardTransform,
-        transition: 'transform 0.25s ease-out',
-        backgroundImage: `url(content/projects/cpp-game-engine/media/thumbnail.png)`
+        backgroundImage: `url(/projects/cpp-game-engine/media/thumbnail.png)`
       }"
     >
       <div class="flex flex-col h-full ">
@@ -33,160 +31,64 @@
           <BaseGradientLine shadow-type="glow" />
         </BaseProjectTileContent>
 
-        <!--BaseProjectTileContent
-            ref="container"
-            class="mr-2 mb-2 ml-2 flex-shrink flex-grow overflow-y-hidden transition duration-500"
-            :class="isExpanded ? 'opacity-100  delay-500': 'opacity-0'"
-          >
-            <OverlayScrollbarsComponent
-              ref="scroll"
-              class="overflow-y-hidden"
-            >
-              <div class="p-5">
-                <div class="flex flex-col gap-5 md:flex-row">
-                  <p class="m-auto basis-1 md:basis-2/3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id enim et metus blandit auctor ac vitae justo. Praesent dui purus, lacinia quis ultrices vel,
-                    vulputate ac nibh. Quisque
-                    tincidunt nisi accumsan diam pretium, quis imperdiet nisi maximus. Proin ut est odio. Integer ut auctor eros, ac dictum ante. Aenean luctus, urna eget sagittis
-                    vehicula, turpis nisi
-                    congue quam, eget semper leo quam a elit. Cras lacinia euismod lectus, id egestas diam efficitur in. Nullam ultrices pellentesque congue. Mauris risus sapien,
-                    gravida vitae ipsum non,
-                    fringilla lobortis felis. Donec ultricies, ex suscipit euismod consequat, velit dolor facilisis elit, id tincidunt elit sapien ac felis. Praesent sagittis congue
-                    pharetra. Pellentesque
-                    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                  </p>
-                  <div class="m-auto flex basis-1 flex-col md:basis-1/3">
-                    <img class="m-auto shadow-normal rounded-xl" src="~/assets/images/projects/cpp-game-engine/thumbnail.png" alt="CPP Game Engine main image">
-                    <BaseTable
-                      class="m-auto mt-10"
-                      :table-data="{
-                        'technologies': { key: 'Technologies', value: '' },
-                        'Duration': '3.5 Months',
-                        'sourceCode': { key: 'Source Code', value: ''},
-                      }"
-                    >
-                      <template #technologies>
-                        <div class="flex flex-row gap-2">
-                          <BaseTechnologyIcon technology="Cpp" />
-                          <BaseTechnologyIcon technology="OpenGL" />
-                        </div>
-                      </template>
-                      <template #sourceCode>
-                        <BaseLink link="https://github.com/xWinuX/CppGameEngine">
-                          https://github.com/xWinuX/CppGameEngine
-                        </BaseLink>
-                      </template>
-                    </BaseTable>
-                  </div>
-                </div>
-                <div class="flex flex-col gap-5 md:flex-row">
-                  <p class="m-auto basis-1 md:basis-2/3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id enim et metus blandit auctor ac vitae justo. Praesent dui purus, lacinia quis ultrices vel,
-                    vulputate ac nibh. Quisque
-                    tincidunt nisi accumsan diam pretium, quis imperdiet nisi maximus. Proin ut est odio. Integer ut auctor eros, ac dictum ante. Aenean luctus, urna eget sagittis
-                    vehicula, turpis nisi
-                    congue quam, eget semper leo quam a elit. Cras lacinia euismod lectus, id egestas diam efficitur in. Nullam ultrices pellentesque congue. Mauris risus sapien,
-                    gravida vitae ipsum non,
-                    fringilla lobortis felis. Donec ultricies, ex suscipit euismod consequat, velit dolor facilisis elit, id tincidunt elit sapien ac felis. Praesent sagittis congue
-                    pharetra. Pellentesque
-                    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                  </p>
-                  <div class="m-auto flex basis-1 flex-col md:basis-1/3">
-                    <img class="m-auto project-image" src="~/assets/images/projects/cpp-game-engine/thumbnail.png" alt="CPP Game Engine main image">
-                    <BaseTable
-                      class="m-auto mt-10"
-                      :table-data="{
-                        'technologies': { key: 'Technologies', value: '' },
-                        'Duration': '3.5 Months',
-                        'sourceCode': { key: 'Source Code', value: ''},
-                      }"
-                    >
-                      <template #technologies>
-                        <div class="flex flex-row gap-2">
-                          <BaseProjectTileContent class="p-1">
-                            <BaseTechnologyIcon technology="Cpp" />
-                          </BaseProjectTileContent>
-                          <BaseProjectTileContent class="p-1">
-                            <BaseTechnologyIcon technology="OpenGL" />
-                          </BaseProjectTileContent>
-                        </div>
-                      </template>
-                      <template #sourceCode>
-                        <BaseLink link="https://github.com/xWinuX/CppGameEngine">
-                          https://github.com/xWinuX/CppGameEngine
-                        </BaseLink>
-                      </template>
-                    </BaseTable>
-                  </div>
-                </div>
-              </div>
-            </OverlayScrollbarsComponent>
-          </BaseProjectTileContent-->
-
         <BaseProjectTileContent
-          class="flex-row mr-2 mb-2 ml-2 mt-auto p-4 justify-items-end justify-end align-bottom transition duration-500"
+          ref="container"
+          class="mr-2 mb-2 ml-2 flex-shrink flex-grow overflow-y-hidden transition duration-500"
+          :class="isExpanded ? 'opacity-100  delay-500': 'opacity-0'"
         >
-          A game engine + showcase made with OpenGL and C++
+          <OverlayScrollbarsComponent
+            ref="scroll"
+            class="overflow-y-hidden"
+          >
+            <div class="mx-4 mt-4 prose prose-invert max-w-full text-white">
+              <ContentRenderer :value="markdownData">
+                <ContentRendererMarkdown :value="markdownData" />
+              </ContentRenderer>
+            </div>
+          </OverlayScrollbarsComponent>
         </BaseProjectTileContent>
 
         <!-- Icons and duration -->
         <div
           class="flex flex-row gap-3 justify-self-end transition duration-500"
-          :class="(isExpanded ? 'overflow-visible opacity-0' : 'delay-500 opacity-100') + ' ' + bottomHeightClasses"
+          :class="bottomHeightClasses"
         >
           <BaseProjectTileContent class="mr-auto p-4 text-center font-bold">
             3 Months
           </BaseProjectTileContent>
           <BaseProjectTileContent class="p-1">
-            <BaseTechnologyIcon technology="Cpp" />
+            <BaseTechnologyIcon technology="cpp" />
           </BaseProjectTileContent>
           <BaseProjectTileContent class="p-1">
-            <BaseTechnologyIcon technology="OpenGL" />
+            <BaseTechnologyIcon technology="opengl" />
           </BaseProjectTileContent>
         </div>
       </div>
     </div>
-    <div
-      class="relative opacity-0 glow glow-project-tile"
-      :class="isExpanded ? 'group-hover:opacity-0' : 'group-hover:opacity-20'"
-    />
   </VueFinalModal>
 </template>
 
 <script setup lang="ts">
 import { VueFinalModal } from "vue-final-modal";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
-import thumbnail from "assets/images/projects/cpp-game-engine/main.png";
 import { BaseProjectTileContent } from "#components";
+import type { ProjectContent } from "~/types/project";
+
+const { locale } = useI18n();
 
 const emit = defineEmits<{(e: "close"): void}>();
 
 export interface Props {
-  isExpanded: boolean;
+  projectData: ProjectContent;
 }
+
+const props = defineProps<Props>();
 
 const loaded: Ref<boolean> = ref(false);
 
 const container = ref<InstanceType<typeof BaseProjectTileContent> | null>(null);
 const scroll = ref<InstanceType<typeof OverlayScrollbarsComponent> | null>(null);
-
-const props = withDefaults(defineProps<Props>(), {
-    isExpanded: true,
-});
-
-const card = ref();
-const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(card);
-const cardTransform = computed(() => {
-    if (isOutside.value || props.isExpanded) {
-        return "";
-    }
-
-    const maxRotation = 6;
-    const rX = (maxRotation / 2 - (elementY.value / elementHeight.value) * maxRotation);
-    const rY = ((elementX.value / elementWidth.value) * maxRotation - maxRotation / 2);
-
-    return `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`;
-});
+const isExpanded = ref(false);
 
 function getScrollHeight() {
     if (container.value && container.value.content) {
@@ -199,18 +101,11 @@ function getScrollHeight() {
 const defaultBottomHeightClasses = "p-2";
 const bottomHeightClasses = ref(defaultBottomHeightClasses);
 
-watch(() => props.isExpanded, (previous, current) => {
-    if (previous) {
-        bottomHeightClasses.value = "h-0 p-2";
-        setTimeout(() => {
-            bottomHeightClasses.value = "h-0";
-        }, 500);
-    } else {
-        setTimeout(() => {
-            bottomHeightClasses.value = defaultBottomHeightClasses;
-        }, 500);
-    }
-});
+const markdownPath = computed(() => `/projects/cpp-game-engine/_locales/${locale.value}`);
+
+const { data: markdownData } = await useAsyncData("projectSpecific", () => queryContent("projects").where({ _partial: true, _path: markdownPath.value }).findOne());
+
+console.log(markdownData.value);
 
 onMounted(() => {
     loaded.value = true;
@@ -220,6 +115,18 @@ onMounted(() => {
             scroll.value.getElement().style.height = getScrollHeight();
         }
     });
+
+    setTimeout(() => {
+        isExpanded.value = true;
+    }, 100);
 });
 
 </script>
+
+<style scoped>
+
+.grow-animation {
+  transition: width 0.5s, height 0.5s, opacity 0.25s 0.1s;
+}
+
+</style>

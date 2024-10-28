@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.8.1",
+    "@tailwindcss/typography": "^0.5.15",
     "@tresjs/cientos": "^3.9.0",
     "floating-vue": "^5.2.2",
     "humanize-duration": "^3.32.1",
