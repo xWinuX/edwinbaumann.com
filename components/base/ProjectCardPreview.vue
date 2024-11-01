@@ -1,32 +1,8 @@
 <template>
   <div class="group w-[400px] h-[600px]">
-    <div
-      ref="card"
-      class="h-full w-full rounded-xl bg-cover bg-top bg-no-repeat card group shadow-glow"
-      :style="{
-        transform: cardTransform,
-        transition: 'transform 0.25s ease-out',
-        backgroundImage: `url(/projects/${project.name}/media/thumbnail.${project.thumbnailFormat})`
-      }"
-    >
-      <div class="flex flex-col h-full mr-2 ml-2 pb-2 pt-2">
-        <!-- Title -->
-        <BaseProjectTileContent class="flex-col p-5 text-center">
-          <div class="flex flex-row">
-            <Icon
-              class="transition absolute text-emerald-400 top-[1.1rem] svg-shadow-glow scale-0"
-              name="mingcute:large-arrow-left-fill"
-              size="1.8rem"
-            />
-            <h2 class="m-auto mb-2 text-shadow-normal font-bold">
-              {{ project.displayName }}
-            </h2>
-          </div>
-
-          <BaseGradientLine shadow-type="glow" />
-        </BaseProjectTileContent>
-
-        <div class="mt-auto mb-2 flex">
+    <BaseProjectCard class="w-full h-full" :project="project" :hover-effect="fadeOutDetails">
+      <div class="transition-opacity mt-auto" :class="fadeOutDetails ? 'opacity-100' : 'opacity-0'">
+        <div class="mb-2 flex">
           <BaseProjectTileContent class="font-bold p-2">
             {{ yearSpan }}
           </BaseProjectTileContent>
@@ -47,8 +23,8 @@
           </BaseProjectTileContent>
         </div>
       </div>
-    </div>
-    <div class="relative opacity-0 glow glow-project-tile group-hover:opacity-20" />
+    </BaseProjectCard>
+    <div class="relative opacity-0 glow glow-project-tile group-hover:opacity-10" />
   </div>
 </template>
 
@@ -59,24 +35,13 @@ import { dateToECMAFormat } from "~/utils/date";
 
 export interface ProjectTileProps {
   project: Project;
+  fadeOutDetails?: boolean;
 }
 
 const { locale } = useI18n();
 
-const props = defineProps<ProjectTileProps>();
-
-const card = ref();
-const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(card);
-const cardTransform = computed(() => {
-    if (isOutside.value) {
-        return "";
-    }
-
-    const maxRotation = 6;
-    const rX = (maxRotation / 2 - (elementY.value / elementHeight.value) * maxRotation);
-    const rY = ((elementX.value / elementWidth.value) * maxRotation - maxRotation / 2);
-
-    return `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`;
+const props = withDefaults(defineProps<ProjectTileProps>(), {
+    fadeOutDetails: true,
 });
 
 const description = computed(() => props.project.description[locale.value]);
