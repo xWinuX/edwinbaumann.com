@@ -43,7 +43,7 @@
             ref="scroll"
             class="overflow-y-hidden"
           >
-            <div class="mx-4 mt-4 prose prose-invert max-w-full text-white">
+            <div class="mx-auto mt-4 prose prose-invert max-w-[50%] text-white">
               <ContentRenderer :value="markdownData">
                 <ContentRendererMarkdown :value="markdownData" />
               </ContentRenderer>
@@ -108,7 +108,7 @@ function onClose() {
     }, 1.25 * 1000);
 }
 
-const markdownPath = computed(() => `/projects/cpp-game-engine/_locales/${locale.value}`);
+const markdownPath = computed(() => `/projects/${props.project.name}/_locales/${locale.value}`);
 
 const showContentTransition = computed(() => isExpanding.value ? "show-content-animation opacity-100" : "hide-content-animation opacity-0");
 
