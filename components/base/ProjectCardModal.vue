@@ -8,18 +8,20 @@
   >
     <!-- Background Blur -->
     <div
-      class="fixed w-[100vw] h-[100vh] transition delay-500"
+      class="fixed w-[100vw] h-[100vh] transition delay-500 z-1"
       :class="isExpanding ? ' bg-gray-900/60 backdrop-blur-md': 'bg-gray-900/0 backdrop-blur-0'"
       @click="onClose"
     />
 
     <!-- Actual Content -->
     <div
-      class="absolute rounded-xl bg-cover bg-top bg-no-repeat card group shadow-glow"
-      :class="isExpanding ? 'enter-animation w-[90vw] h-[90vh]' : 'exit-animation w-[400px] h-[600px]'"
+      class="absolute rounded-xl bg-cover bg-top bg-no-repeat card group shadow-glow max-w-[1280px]"
+      :class="isExpanding ? 'enter-animation' : 'exit-animation max-w-[1280px] max-h-[100vh]'"
       :style="{
         left: left,
         top: top,
+        width: isExpanding ? '99vw' : width,
+        height: isExpanding ? '99vh' : height,
         transform: transform,
       }"
     >
@@ -43,7 +45,7 @@
             ref="scroll"
             class="overflow-y-hidden"
           >
-            <div class="mx-auto mt-4 prose prose-invert max-w-[50%] text-white">
+            <div class="mx-auto px-5 mt-4 prose prose-invert max-w-full text-white">
               <ContentRenderer :value="markdownData">
                 <ContentRendererMarkdown :value="markdownData" />
               </ContentRenderer>
@@ -76,6 +78,8 @@ const props = defineProps<Props>();
 const left = ref("");
 const top = ref("");
 const transform = ref("");
+const width = ref("");
+const height = ref("");
 
 const container = ref<InstanceType<typeof BaseProjectTileContent> | null>(null);
 const scroll = ref<InstanceType<typeof OverlayScrollbarsComponent> | null>(null);
@@ -94,6 +98,8 @@ function setStartState() {
     left.value = props.startState.left.toString() + "px";
     top.value = props.startState.top.toString() + "px";
     transform.value = "translate(0, 0)";
+    width.value = props.startState.width.toString() + "px";
+    height.value = props.startState.height.toString() + "px";
 }
 
 function onClose() {

@@ -1,7 +1,7 @@
 <template>
-  <div class="group w-[400px] h-[600px]">
+  <div class="group max-w-[400px] max-h-[600px] w-full h-[100vh]">
     <BaseProjectCard class="w-full h-full" :project="project" :hover-effect="fadeOutDetails">
-      <div class="transition-opacity mt-auto" :class="fadeOutDetails ? 'opacity-100' : 'opacity-0'">
+      <div class="transition-opacity mt-auto pt-2" :class="fadeOutDetails ? 'opacity-100' : 'opacity-0'">
         <div class="mb-2 flex">
           <BaseProjectTileContent class="font-bold p-2">
             {{ yearSpan }}
