@@ -14,7 +14,7 @@
         </BaseProjectTileContent>
 
         <!-- Icons and duration -->
-        <div class="flex flex-row gap-2 justify-self-end">
+        <div class="flex flex-row gap-2">
           <BaseProjectTileContent class="mr-auto p-4 text-center font-bold">
             {{ duration }}
           </BaseProjectTileContent>
