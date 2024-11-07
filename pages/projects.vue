@@ -1,15 +1,16 @@
 <template>
   <div>
     <div class="flex flex-shrink flex-row flex-wrap gap-10 justify-evenly">
-      <div v-for="(project, index) in projects" ref="projectTiles" :key="project.name">
-        <BaseProjectCardPreview
-          :project="project"
-          :fade-out-details="selectedIndex != index"
-          :class="selectedIndex == index && hideSelected ? 'opacity-0' : ''"
-          class="m-auto cursor-pointer"
-          @click="onClick(project, index)"
-        />
-      </div>
+      <BaseProjectCardPreview
+        v-for="(project, index) in projects"
+        ref="projectTiles"
+        :key="project.name"
+        :project="project"
+        :fade-out-details="selectedIndex != index"
+        :class="selectedIndex == index && hideSelected ? 'opacity-0' : ''"
+        class="m-auto cursor-pointer"
+        @click="onClick(project, index)"
+      />
       <ModalsContainer />
     </div>
   </div>
