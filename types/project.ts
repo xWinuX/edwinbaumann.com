@@ -19,7 +19,7 @@ export const Technology: Record<string, TechnologyEntry> = {
         tooltip: "Vulkan",
     },
     gamemaker: {
-        iconName: "simple-icons:gamemaker",
+        iconName: "vscode-icons:file-type-gamemaker2",
         tooltip: "Game Maker Studio",
     },
 } as const;
