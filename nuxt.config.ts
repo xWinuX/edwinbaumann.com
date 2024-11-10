@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
     devtools: { enabled: true },
     ssr: false,
+    extends: [
+        "node_modules/nuxt-content-assets/cache",
+    ],
     css: [
         "vue-select/dist/vue-select.css",
         "overlayscrollbars/overlayscrollbars.css",
