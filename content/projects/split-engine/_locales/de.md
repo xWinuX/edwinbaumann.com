@@ -195,5 +195,5 @@ Die VCPKG-Registry findet sich hier: [https://github.com/xWinuX/vcpkg-registry](
 
 ### Note
 Dieses Projekt diente als Vorbereitung für meine Bachelorarbeit und wurde auch benotet. 
-Die Endnote war eine 1+, was auf der Schweizer Notenskala einer 6 entspricht.
+Die Endnote war eine 1+, was auf der Schweizer Notenskala einer 5.5 entspricht.
 

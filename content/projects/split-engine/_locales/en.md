@@ -188,5 +188,5 @@ The custom VCPKG registry can be found here: https://github.com/xWinuX/vcpkg-reg
 
 ### Grade
 This project was a preparation for my thesis and was also graded.
-The final grade was a 1+ which is a 6 in the Swiss grading scale.
+The final grade was a 1+, which is a 5.5 in the Swiss grading scale.
 
