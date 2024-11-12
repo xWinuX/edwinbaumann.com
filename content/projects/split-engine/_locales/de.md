@@ -149,7 +149,7 @@ Man muss es lediglich in der VCPKG-Konfigurationsdatei hinzufügen.
 }
 ```
 
-## Resultate
+## Reflexion
 Ich bin sehr zufrieden mit den Ergebnissen der Engine, besonders gefällt mir das ECS und wie flexibel die gesamte Engine ist.
 
 ### Was ich gelernt habe
@@ -174,7 +174,7 @@ In meiner alten Engine verwendete ich viele raw Pointer und manuell verwalteten 
 Nun verwende ich wenn möglich Smart-Pointer. 
 Ich habe den Code auch wesentlich besser strukturiert und modularer gestaltet.
 
-### Dinge die besser sein könnten
+### Dinge, die besser sein könnten
 
 #### Mehr ein Framework als eine Engine
 Das ganze project ist mehr ein Framework als eine Engine, da es nicht unbedingt viele vordefinierten Components for sachen wie Rendering oder Audio abspielen besitzt.
@@ -189,11 +189,13 @@ Die engine besitzt keinen Weg, Model-Files zu importieren, der Benuzer müsste d
 #### Besserer Input
 Das Input system an sich ist auch eher simpel und nicht wirklich sauber implementiert. Sachen wie Kontroller-Support fehlen auch noch.
 
+## Resultate
+
 ### Source Code
 Das Projekt ist vollständig Open Source und verfügbar hier: [https://github.com/xWinuX/SplitEngine](https://github.com/xWinuX/SplitEngine)
 Die VCPKG-Registry findet sich hier: [https://github.com/xWinuX/vcpkg-registry](https://github.com/xWinuX/vcpkg-registry)
 
 ### Note
-Dieses Projekt diente als Vorbereitung für meine Bachelorarbeit und wurde auch benotet. 
-Die Endnote war eine 1+, was auf der Schweizer Notenskala einer 5.5 entspricht.
+Dieses Projekt diente als Vorbereitung für meine Bachelorarbeit und wurde auch benotet.
+Die Endnote war eine First+ (University of Hertfordshire Notensystem), was auf der Schweizer Notenskala einer 6.0 entspricht.
 

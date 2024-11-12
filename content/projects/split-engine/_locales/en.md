@@ -144,7 +144,7 @@ I created one, and after a lot of trial and error managed to make it work, you j
 }
 ```
 
-## Results
+## Reflection
 I’m really happy with the results of the engine, I especially like how the ECS turned out and how flexible the overall engine is.
 
 ### What I learned
@@ -182,11 +182,13 @@ The engine itself also doesn’t contain an importer for model files, so the use
 #### Better Input
 The input system itself is also really basic and not really implemented cleanly and stuff like controller support is also missing.
 
+## Results
+
 ### Source Code
 The project is fully open source and available here: [https://github.com/xWinuX/SplitEngine](https://github.com/xWinuX/SplitEngine)
 The custom VCPKG registry can be found here: https://github.com/xWinuX/vcpkg-registry
 
 ### Grade
 This project was a preparation for my thesis and was also graded.
-The final grade was a 1+, which is a 5.5 in the Swiss grading scale.
+The final grade was a First+ (University of Hertfordshire grading scale), which is equivalent to a 6.0 on the Swiss grading scale.
 
