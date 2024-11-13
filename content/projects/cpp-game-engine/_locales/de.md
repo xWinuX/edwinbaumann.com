@@ -83,8 +83,8 @@ Das erlaubt eine große Anzahl von Sprites, die effizient gerendert werden könn
 ### Physics
 Die Engine verwendet [ReactPhysics3D](https://www.reactphysics3d.com) als Physik-Engine.
 
-::auto-video{src="../media/physics.mp4"}::
-
+::auto-video{src="../media/physics.mp4"}
+::
 
 ### Audio
 Für die Audio-Integration wird die FMOD Core API verwendet.
