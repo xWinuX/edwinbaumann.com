@@ -1,0 +1,10 @@
+displayName: REA
+description:
+  en: Interactive pixel simulation inspired by Noita. Made in my own C++ and Vulkan game engine.
+  de: Interaktive Pixel-Simulation inspiriert von Noita. Erstellt in meiner eigenen C++ und Vulkan Game-Engine.
+technologies:
+  - cpp
+  - vulkan
+dateStart: 09.03.2024
+dateEnd: 16.08.2024
+thumbnailFormat: png
