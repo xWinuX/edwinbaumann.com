@@ -25,7 +25,7 @@
         transform: transform,
       }"
     >
-      <BaseProjectCard :project="project" class="flex flex-col h-full">
+      <BaseProjectCard :project="project" class="flex flex-col h-full" pause-animated>
         <template #header-begin>
           <button class="absolute top-[1.1rem] left-0 ml-5 top" @click="onClose">
             <Icon

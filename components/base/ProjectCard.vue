@@ -6,7 +6,7 @@
       :style="{
         transform: cardTransform,
         transition: 'transform 0.25s ease-out',
-        backgroundImage: `url(/projects/${project.name}/media/thumbnail.${project.thumbnailFormat})`
+        backgroundImage: `url(/projects/${project.name}/media/thumbnail.${backgroundImageFormat})`
       }"
     >
       <div class="flex flex-col h-full mr-2 ml-2 pb-2 pt-2">
@@ -39,10 +39,20 @@ import type { Project } from "~/types/project";
 export interface ProjectTileProps {
   project: Project;
   hoverEffect?: boolean;
+  pauseAnimated?: boolean;
 }
 
 const props = withDefaults(defineProps<ProjectTileProps>(), {
     hoverEffect: false,
+    pauseAnimated: false,
+});
+
+const backgroundImageFormat = computed(() => {
+    if (props.project.thumbnailFormat === "gif" && props.pauseAnimated) {
+        return "png";
+    }
+
+    return props.project.thumbnailFormat;
 });
 
 const card = ref();
