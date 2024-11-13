@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
+interface Props {
     shadowType?: "normal" | "glow" | "none";
 }
 

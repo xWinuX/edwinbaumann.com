@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
+interface Props {
     name: string;
     tooltip: string;
     size?: string;

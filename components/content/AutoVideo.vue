@@ -6,8 +6,7 @@
 </template>
 
 <script setup lang="ts">
-
-export interface Props {
+interface Props {
   src: string;
 }
 

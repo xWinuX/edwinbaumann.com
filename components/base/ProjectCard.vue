@@ -36,13 +36,13 @@
 <script setup lang="ts">
 import type { Project } from "~/types/project";
 
-export interface ProjectTileProps {
+interface Props {
   project: Project;
   hoverEffect?: boolean;
   pauseAnimated?: boolean;
 }
 
-const props = withDefaults(defineProps<ProjectTileProps>(), {
+const props = withDefaults(defineProps<Props>(), {
     hoverEffect: false,
     pauseAnimated: false,
 });

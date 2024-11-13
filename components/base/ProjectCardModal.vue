@@ -68,7 +68,7 @@ const { locale } = useI18n();
 
 const emit = defineEmits<{(e: "close"): void }>();
 
-export interface Props {
+interface Props {
   project: ProjectContent;
   startState: VueUseElementBounding;
 }
