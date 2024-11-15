@@ -4,7 +4,7 @@
     <div class="relative w-full overflow-x-clip duration-1000 animate-in fade-in">
       <AppHeader />
     </div>
-    <main class="flex-grow">
+    <main class="flex flex-grow items-stretch">
       <BaseWrapper class="mt-10 mb-10">
         <slot />
       </BaseWrapper>

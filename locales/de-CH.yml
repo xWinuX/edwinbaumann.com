@@ -3,3 +3,16 @@ navbar:
   contact: Kontakt
   aboutMe: Über mich
   home: Home
+contact:
+  labelSubject: 'Betreff:'
+  placeholderContact: Kontakt Informationen (E-Mail, LinkedIn, Telefonnummer etc...)
+  labelEmail: 'E-Mail (Screenreader können das überspringen):'
+  placeholderMessage: Nachricht
+  placeholderSubject: Betreff
+  contactFormHeader: Über Kontaktformular
+  labelContact: 'Deine Kontakt Informationen:'
+  placeholderName: Name
+  labelMessage: 'Nachricht:'
+  buttonSubmit: Senden
+  labelName: 'Name:'
+  contactAppsHeader: Über Apps

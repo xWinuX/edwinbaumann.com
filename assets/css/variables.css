@@ -3,4 +3,7 @@
     --glow-middle-color: #2563ebFF;
     --glow-outer-color: #312e81FF;
     --body-color: #111827FF;
+    --glow-inner-color-faint: #34d39922;
+    --glow-middle-color-faint: #2563eb22;
+    --glow-outer-color-faint: #312e8122;
 }
