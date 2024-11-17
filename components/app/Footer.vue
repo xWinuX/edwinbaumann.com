@@ -10,7 +10,7 @@
               <b>
                 <span class="inline-block">Edwin Baumann&nbsp;</span>
 
-                <span class="inline-block">2022 - 2023</span>
+                <span class="inline-block">2022 - 2024</span>
               </b>
             </p>
             <div class="w-full text-right my-auto">
