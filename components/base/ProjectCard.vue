@@ -2,13 +2,31 @@
   <div>
     <div
       ref="card"
-      class="w-full h-full rounded-xl bg-cover bg-top bg-no-repeat card group shadow-glow"
+      class="w-full h-full rounded-xl bg-cover bg-top bg-no-repeat card group shadow-glow relative"
       :style="{
         transform: cardTransform,
         transition: 'transform 0.25s ease-out',
-        backgroundImage: `url(/projects/${project.name}/media/thumbnail.${backgroundImageFormat})`
       }"
     >
+      <!-- Background -->
+      <NuxtImg
+
+        class="rounded-xl w-full h-full absolute object-cover"
+        width="400px"
+        height="600px"
+        format="webp"
+        placeholder
+        :modifiers="{ animated: project.thumbnailFormat == 'gif'}"
+        :src="`/projects/${project.name}/media/thumbnail.${project.thumbnailFormat}`"
+      />
+      <!-- Overlay higher res static background image on expand (overlaying instead of replacing fixes the flickering on switching) -->
+      <NuxtImg
+        v-if="pauseAnimated"
+        class="rounded-xl w-full h-full absolute object-cover"
+        format="webp"
+        :src="`/projects/${project.name}/media/thumbnail.${backgroundImageFormat}`"
+      />
+
       <div class="flex flex-col h-full mr-2 ml-2 pb-2 pt-2">
         <!-- Title -->
         <BaseProjectTileContent class="flex-col p-5 text-center">
