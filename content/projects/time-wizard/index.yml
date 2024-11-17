@@ -1,9 +1,11 @@
 displayName: Time Wizard
 description:
-  en: A game engine made with Vulkan and C++ and a custom made ECS.
-  de: Eine C++ und Vulkan Game Engine mit einem selbstgeschriebenen ECS.
+  en: 48 Hours game jam game. Everything costs time (literally), you only have 7.5 minutes to defeat the Time Wizard.
+  de: 48 Stunden Game Jame Spiel. Alles kostet Zeit (wortwörtlich), du hast nur 7.5 Minuten Zeit den Time Wizard zu besiegen.
 technologies:
   - gamemaker
+tags:
+  - gamejam
 dateStart: 21.07.2018
 dateEnd: 23.07.2018
 thumbnailFormat: gif
