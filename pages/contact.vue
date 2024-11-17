@@ -6,7 +6,7 @@
         <BaseGradientLine class="mt-1 mb-3" />
       </h2>
       <div class="mt-3 flex flex-row justify-evenly">
-        <a href="https://www.linkedin.com/in/edwinbaumann/">
+        <a href="https://www.linkedin.com/in/edwinbaumann/" target="_blank">
           <Icon size="3.5rem" name="devicon:linkedin" />
         </a>
       </div>
