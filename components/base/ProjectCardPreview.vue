@@ -1,12 +1,22 @@
 <template>
   <div class="group max-w-[400px] max-h-[600px] w-full h-[100vh]">
     <BaseProjectCard class="w-full h-full" :project="project" :hover-effect="fadeOutDetails">
+      <div class="mt-2 transition-opacity h-full relative" :class="fadeOutDetails ? 'opacity-100' : 'opacity-0'">
+        <NuxtImg
+          class="rounded-xl absolute w-full h-full"
+          placeholder
+          format="webp"
+          :modifiers="{ animated: project.thumbnailFormat == 'gif'}"
+          :src="`/projects/${project.name}/media/thumbnail.${project.thumbnailFormat}`"
+        />
+      </div>
       <div class="transition-opacity mt-auto pt-2" :class="fadeOutDetails ? 'opacity-100' : 'opacity-0'">
         <div class="mb-2 flex">
           <BaseProjectTileContent class="font-bold p-2">
             {{ yearSpan }}
           </BaseProjectTileContent>
         </div>
+
         <BaseProjectTileContent
           class="flex-row mb-2 p-4 justify-items-end justify-end align-bottom transition duration-500"
         >

@@ -9,21 +9,14 @@
       }"
     >
       <!-- Background -->
-      <NuxtImg
 
-        class="rounded-xl w-full h-full absolute object-cover"
-        width="400px"
-        height="600px"
-        format="webp"
-        placeholder
-        :modifiers="{ animated: project.thumbnailFormat == 'gif'}"
-        :src="`/projects/${project.name}/media/thumbnail.${project.thumbnailFormat}`"
-      />
       <!-- Overlay higher res static background image on expand (overlaying instead of replacing fixes the flickering on switching) -->
       <NuxtImg
-        v-if="pauseAnimated"
         class="rounded-xl w-full h-full absolute object-cover"
+        width="10px"
+        height="10px"
         format="webp"
+        :modifiers="{blur: '3'}"
         :src="`/projects/${project.name}/media/thumbnail.${backgroundImageFormat}`"
       />
 
