@@ -19,16 +19,14 @@
 const { t } = useI18n();
 
 const navElements: string[] = [
-    "navbar.home",
-    "navbar.projects",
     "navbar.aboutMe",
+    "navbar.projects",
     "navbar.contact",
 ];
 
 const navElementLinks: string[] = [
     "/",
     "/projects",
-    "/about-me",
     "/contact",
 ];
 
@@ -36,13 +34,11 @@ const slideInAnimationDelayClasses: string[] = [
     "delay-75 sm:delay-75",
     "delay-100 sm:delay-200",
     "delay-150 sm:delay-500",
-    "delay-200 sm:delay-700",
 ];
 
 const fadeInAnimationDelayClasses: string[] = [
     "delay-100",
     "delay-200",
     "delay-300",
-    "delay-400",
 ];
 </script>

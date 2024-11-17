@@ -1,6 +1,6 @@
 <template>
-  <nav class="z-10 m-auto w-full lg:w-4/6 lg:flex-none">
-    <ul class="grid w-full rid-cols-1 sm:grid-cols-4">
+  <nav class="z-10 m-auto lg:flex-none">
+    <ul class="grid w-full sm:grid-cols-3">
       <li class="sm:hidden">
         <AppNavigationElement class="mt-3">
           <button class="h-full w-full" @click="onMenuClick">

@@ -1,6 +1,6 @@
 <template>
   <BaseWrapper class="grid grid-cols-1 pt-5 lg:flex">
-    <header class="z-10 m-auto pb-5 lg:w-2/6 lg:flex-1 lg:pb-0">
+    <header class="z-10 m-auto pb-5 lg:w-3/6 lg:flex-1 lg:pb-0">
       <div class="flex duration-1000 animate-in slide-in-from-top fade-in fill-mode-backwards">
         <img src="/edwin-baumann-logo.svg" alt="Edwin Baumann Logo" width="64" height="64">
         <div class="ml-5">
@@ -16,7 +16,7 @@
         </div>
       </div>
     </header>
-    <AppNavigation />
+    <AppNavigation class="w-full lg:w-3/6" />
   </BaseWrapper>
 </template>
 <script setup lang="ts">
