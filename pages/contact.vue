@@ -76,9 +76,9 @@
           required
         />
         <BaseGradientLine class="mt-1 mb-8 h-[0.1rem]" />
-        <button class="custom-btn w-fit ml-auto px-5" type="submit">
+        <BaseButton class="ml-auto" type="submit">
           {{ $t('contact.buttonSubmit') }}
-        </button>
+        </BaseButton>
       </form>
     </div>
   </div>
@@ -95,16 +95,6 @@
   height: 0;
   width: 0;
   z-index: -1;
-}
-
-button {
-  @apply rounded-xl bg-blue-600;
-  transition: box-shadow 0.25s, scale 0.25s;
-}
-
-button:hover {
-  scale: 105%;
-  box-shadow: 0 0 15px 7px var(--glow-inner-color-faint), 0 0 25px 15px var(--glow-middle-color-faint), 0 0 35px 22px var(--glow-outer-color-faint);
 }
 
 input,
