@@ -71,6 +71,3 @@ Ausserdem ist es auf itch.io verfügbar: [https://woxelgames.itch.io/essence](ht
 
 ### Ranking
 Das Projekt wurde auf Platz 10 von 53 gerankt, weitere Details zu dem Ranking kann auf der Webseite des Orignaluploads gefunden werden.
-
-
-Durch Drücken der Wiedergabe-Taste stimmen Sie der Sammlung jeglicher Daten zu, die YouTube sammeln könnte.
