@@ -2,7 +2,7 @@
   <div>
     <div
       ref="card"
-      class="w-full h-full rounded-xl bg-cover bg-top bg-no-repeat card group shadow-glow relative"
+      class="w-full h-full rounded-xl bg-cover bg-top bg-no-repeat card group shadow-normal relative"
       :style="{
         transform: cardTransform,
         transition: 'transform 0.25s ease-out',
@@ -13,11 +13,11 @@
       <!-- Overlay higher res static background image on expand (overlaying instead of replacing fixes the flickering on switching) -->
       <NuxtImg
         class="rounded-xl w-full h-full absolute object-cover"
-        width="10px"
-        height="10px"
+        width="20px"
+        height="20px"
         format="webp"
-        :modifiers="{blur: '3'}"
-        :src="`/projects/${project.name}/media/thumbnail.${backgroundImageFormat}`"
+        :modifiers="{blur: '4'}"
+        :src="`/projects/${project.name}/media/thumbnail.${project.thumbnailFormat}`"
       />
 
       <div class="flex flex-col h-full mr-2 ml-2 pb-2 pt-2">
@@ -56,14 +56,6 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
     hoverEffect: false,
     pauseAnimated: false,
-});
-
-const backgroundImageFormat = computed(() => {
-    if (props.project.thumbnailFormat === "gif" && props.pauseAnimated) {
-        return "png";
-    }
-
-    return props.project.thumbnailFormat;
 });
 
 const card = ref();
