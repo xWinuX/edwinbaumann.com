@@ -1,0 +1,11 @@
+displayName: DIE.ce
+description:
+  en: 48 Hours game jam game. Your girlfriend has been kidnapped! Solve puzzles by dying a lot, like a LOT.
+  de: 48 Stunden Game Jame Spiel. Deine Freundin wurde entführt! Löse Rätsel, indem du sehr oft stirbst, wirklich SEHR oft.
+technologies:
+  - gamemaker
+tags:
+  - gamejam
+dateStart: 20.04.2019
+dateEnd: 22.04.2019
+thumbnailFormat: gif
