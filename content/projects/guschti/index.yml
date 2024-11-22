@@ -1,0 +1,11 @@
+displayName: Guschti
+description:
+  en: 48 Hours game jam game. You're in debt! Gather animals to produce resources you can sell. Upgrade your stables to make even more money.
+  de: 48 Stunden Game Jame Spiel. Du bist verschuldet! Sammle Tiere, um Ressourcen zu produzieren, die du verkaufen kannst. Verbessere deine Ställe, um noch mehr Geld zu verdienen.
+technologies:
+  - gamemaker
+tags:
+  - gamejam
+dateStart: 18.01.2020
+dateEnd: 20.01.2020
+thumbnailFormat: gif
