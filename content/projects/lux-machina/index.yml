@@ -1,0 +1,11 @@
+displayName: Lux Machina
+description:
+  en: 48 Hours game jam game. You awake in a strange facility without your arms. Solve puzzles with laser redirecting robots to escape.
+  de: 48 Stunden Game Jame Spiel. Du wächst in einer seltsamen Umgebung ohne Arme auf. Löse Rätsel mit Laser-umleitenden Robotern um zu flüchten.
+technologies:
+  - gamemaker
+tags:
+  - gamejam
+dateStart: 20.10.2018
+dateEnd: 22.10.2018
+thumbnailFormat: gif
