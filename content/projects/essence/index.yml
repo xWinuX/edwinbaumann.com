@@ -1,0 +1,11 @@
+displayName: Essence
+description:
+  en: 48 Hours game jam game. The red ones stole the blue orb! Get it back by defeating enemies and maybe even friends?
+  de: 48 Stunden Game Jame Spiel. Die Roten haben den blauen Orb gestohlen! Hol ihn zurück, indem du Feinde besiegst und vielleicht sogar Freunde?
+technologies:
+  - gamemaker
+tags:
+  - gamejam
+dateStart: 19.01.2019
+dateEnd: 21.01.2019
+thumbnailFormat: gif
