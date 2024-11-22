@@ -1,0 +1,11 @@
+displayName: Chaos.exe
+description:
+  en: 48 Hours game jam game. A short adventure game inspired by classic .exe creepypasta games and Yume Nikki.
+  de: 48 Stunden Game Jame Spiel. Ein kurzes Adventure Spiel inspiriert von klassischen .exe Creepypasta Spielen und Yume Nikki.
+technologies:
+  - gamemaker
+tags:
+  - gamejam
+dateStart: 16.01.2021
+dateEnd: 18.01.2021
+thumbnailFormat: gif
