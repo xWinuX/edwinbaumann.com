@@ -163,8 +163,8 @@ For future projects, I should probably focus on refining what I already have rat
 ## Results
 
 ### Source Code
-Das Projekt ist vollständig Open Source und verfügbar hier: [https://github.com/xWinuX/CppGameEngine](https://github.com/xWinuX/CppGameEngine) \
-Der Showcase ist unter der Release Sektion verfügbar oder hier: [https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip](https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip)
+The project is fully open source and available here: [https://github.com/xWinuX/CppGameEngine](https://github.com/xWinuX/CppGameEngine) \
+The showcase is also available in the release section or here: [https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip](https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip)
 
 ### Grade
 The final grade was a 2 (University of Middlesex grading scale), which is equivalent to a 5.75 on the Swiss grading scale.
