@@ -15,7 +15,7 @@
 
     <!-- Actual Content -->
     <div
-      class="absolute rounded-xl bg-cover bg-top bg-no-repeat card group shadow-glow max-w-[1280px]"
+      class="absolute group  max-w-[1280px]"
       :class="isExpanding ? 'enter-animation' : 'exit-animation max-w-[1280px] max-h-[100vh]'"
       :style="{
         left: left,
