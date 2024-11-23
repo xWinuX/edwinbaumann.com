@@ -21,8 +21,13 @@ import { ModalsContainer, useModal } from "vue-final-modal";
 import ProjectCardModal from "~/components/base/ProjectCardModal.vue";
 import type { ProjectContent } from "~/types/project";
 import type { VueUseElementBounding } from "~/types/vue-use";
+import { dateToECMAFormat } from "~/utils/date";
 
 const { data: projects }: { data: Ref<ProjectContent[]> } = await useAsyncData("projects", () => queryContent("projects").where({ _partial: false }).find());
+
+projects.value.sort((a, b) => {
+    return new Date(dateToECMAFormat(b.dateStart)) - new Date(dateToECMAFormat(a.dateStart));
+});
 
 const projectTiles = ref([]);
 
