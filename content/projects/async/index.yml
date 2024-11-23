@@ -1,0 +1,11 @@
+displayName: ASYNC
+description:
+  en: 48 Hours game jam game. Solve puzzles by synchronising with the environment.
+  de: 48 Stunden Game Jame Spiel. Löse Puzzles, indem du dich mit der Umgebung synchronisierst.
+technologies:
+  - gamemaker
+tags:
+  - gamejam
+dateStart: 18.07.2020
+dateEnd: 20.07.2020
+thumbnailFormat: gif
