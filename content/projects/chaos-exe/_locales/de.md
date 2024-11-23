@@ -3,7 +3,7 @@ Chaos.exe wurde für den 37. GM48 entwickelt, das Thema des Jams war "Falling Ap
 Ich habe das gesamte Spiel programmiert, ein Kollege von mir hat alle Grafiken gemacht und zusammen haben wir die Music und SFX gemacht.
 Ein vollständiger Playthrough kann im Video unterhalb angesehen werden, oder man kann das Spiel selbst spielen mit dem Link am Ende dieser Seite.
 
-::youtube-embed{videoId="_G9z0w74I8w"}
+::youtube-embed{videoId="lzsH1fZulz0"}
 ::
 
 ## Features

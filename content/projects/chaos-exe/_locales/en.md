@@ -3,7 +3,7 @@ Chaos.exe was a game made for the 37th GM48, the theme of the jam was "Falling A
 I did all the programming, a friend of mine did all the art and we made the audio together.
 A full playthrough can be seen in the video below, or you can play it yourself with the link at the bottom of the page.
 
-::youtube-embed{videoId="_G9z0w74I8w"}
+::youtube-embed{videoId="lzsH1fZulz0"}
 ::
 
 ## Features
