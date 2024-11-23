@@ -4,16 +4,14 @@
       <BaseWrapper class="overflow-clip duration-1000 animate-in slide-in-from-bottom-5">
         <div class="m-auto h-full w-full overflow-clip text-center">
           <BaseGradientLine />
-          <div class="grid grid-cols-3 pt-5 z-10">
-            <div />
+          <div class="relative pt-5 z-10">
             <p>
               <b>
                 <span class="inline-block">Edwin Baumann&nbsp;</span>
-
                 <span class="inline-block">2022 - 2024</span>
               </b>
             </p>
-            <div class="w-full text-right my-auto">
+            <div class="sm:absolute sm:right-0 sm:top-0 sm:pt-5 pt-1 sm:w-auto w-full  mx-auto">
               <AppLanguageSelection />
             </div>
           </div>
