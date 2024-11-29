@@ -1,0 +1,11 @@
+displayName: Iron Ball Run
+description:
+  en: 48 Hours game jam game. Solve puzzles by synchronising with the environment.
+  de: 48 Stunden Game Jame Spiel. Löse Puzzles, indem du dich mit der Umgebung synchronisierst.
+technologies:
+  - gamemaker
+tags:
+  - gamejam
+dateStart: 11.06.2021
+dateEnd: 13.06.2021
+thumbnailFormat: gif
