@@ -10,6 +10,10 @@ export const Technology: Record<string, TechnologyEntry> = {
         iconName: "vscode-icons:file-type-cpp3",
         tooltip: "C++",
     },
+    csharp: {
+        iconName: "devicon:csharp",
+        tooltip: "C#",
+    },
     opengl: {
         iconName: "logos:opengl",
         tooltip: "OpenGL",
@@ -21,6 +25,10 @@ export const Technology: Record<string, TechnologyEntry> = {
     gamemaker: {
         iconName: "vscode-icons:file-type-gamemaker2",
         tooltip: "Game Maker Studio",
+    },
+    unity: {
+        iconName: "skill-icons:unity-dark",
+        tooltip: "Unity",
     },
 } as const;
 
