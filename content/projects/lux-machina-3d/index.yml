@@ -1,0 +1,10 @@
+displayName: Lux Machina 3D
+description:
+  en: A 3D remake of one of my game jam games. You awake in a strange facility without your arms. Solve puzzles with laser redirecting robots to escape.
+  de: Ein 3D Remake von einem meiner Game Jam Spiele. Du wächst in einer seltsamen Umgebung ohne Arme auf. Löse Rätsel mit Laser-umleitenden Robotern um zu flüchten.
+technologies:
+  - unity
+  - csharp
+dateStart: 20.05.2021
+dateEnd: 28.06.2021
+thumbnailFormat: gif
