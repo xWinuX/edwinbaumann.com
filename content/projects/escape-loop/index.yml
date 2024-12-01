@@ -1,7 +1,7 @@
 displayName: Escape Loop
 description:
-  en: A 3D remake of one of my game jam games. You awake in a strange facility without your arms. Solve puzzles with laser redirecting robots to escape.
-  de: Ein 3D Remake von einem meiner Game Jam Spiele. Du wächst in einer seltsamen Umgebung ohne Arme auf. Löse Rätsel mit Laser-umleitenden Robotern um zu flüchten.
+  en: You're trapped inside a space station while time keeps looping back. Find information to use in the next loop to escape.
+  de: Du bist in einer Raumstation gefangen, währendem die Zeit immer wieder zurückspringt. Find information die du im nächsten Loop nutzen kannst um zu fliehen.
 technologies:
   - unity
   - csharp
