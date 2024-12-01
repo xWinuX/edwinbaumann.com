@@ -1,7 +1,7 @@
 displayName: Escape Loop
 description:
-  en: You're trapped inside a space station while time keeps looping back. Find information to use in the next loop to escape.
-  de: Du bist in einer Raumstation gefangen, währendem die Zeit immer wieder zurückspringt. Find information die du im nächsten Loop nutzen kannst um zu fliehen.
+  en: A puzzle game. You're trapped inside a space station while time keeps looping back. Find information to use in the next loop to escape.
+  de: Ein Puzzle Spiel. Du bist in einer Raumstation gefangen, währendem die Zeit immer wieder zurückspringt. Find information die du im nächsten Loop nutzen kannst um zu fliehen.
 technologies:
   - unity
   - csharp
