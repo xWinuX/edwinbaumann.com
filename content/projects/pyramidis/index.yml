@@ -1,0 +1,10 @@
+displayName: Pyramidis
+description:
+  en: A 2D online co-op game were you have to escape a pyramid while reading way too much dialogue.
+  de: Ein 2D-Online-Koop-Spiel, in dem man einer Pyramide entkommen muss, während man viel zu viele Dialoge liest.
+technologies:
+  - unity
+  - csharp
+dateStart: 06.04.2022
+dateEnd: 20.06.2022
+thumbnailFormat: gif
