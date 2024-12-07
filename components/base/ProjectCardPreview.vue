@@ -41,7 +41,7 @@
 <script setup lang="ts">
 import humanizeDuration from "humanize-duration";
 import type { Project } from "~/types/project";
-import { dateToECMAFormat } from "~/utils/date";
+import { createTranslatedYearSpan, dateToECMAFormat } from "~/utils/date";
 
 export interface ProjectTileProps {
   project: Project;
@@ -57,11 +57,7 @@ const props = withDefaults(defineProps<ProjectTileProps>(), {
 const description = computed(() => props.project.description[locale.value]);
 
 const yearSpan = computed(() => {
-    const dateStart = new Date(dateToECMAFormat(props.project.dateStart));
-    const dateEnd = new Date(dateToECMAFormat(props.project.dateEnd));
-    const yearStart = dateStart.toLocaleString(locale.value, { month: "long" }) + " " + dateStart.getFullYear().toString();
-    const yearEnd = dateEnd.toLocaleString(locale.value, { month: "long" }) + " " + dateEnd.getFullYear().toString();
-    return yearStart !== yearEnd ? yearStart + " - " + yearEnd : yearStart;
+    return createTranslatedYearSpan(props.project.dateStart, props.project.dateEnd);
 });
 
 const duration = computed(() => {
