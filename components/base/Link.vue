@@ -1,24 +1,19 @@
 <template>
-  <div class="transition ease-in-out group/link hover:scale-105 shadow">
-    <a class="font-bold gradient-text text-glow-inner text-shadow-normal break-all text-[3vw] sm:text-base" target="_blank" :href="link" rel="noreferrer noopener">
+  <div class="inline-block group/link">
+    <NuxtLink class="font-bold gradient-text " :target="target" :to="link" rel="noreferrer noopener">
       <slot />
-    </a>
-
-    <BaseGradientLine class="!h-[0.1rem]" />
+    </NuxtLink>
+    <BaseGradientLine class="!h-[0.15rem] transition ease-in-out scale-x-0 group-hover/link:scale-x-100" />
   </div>
 </template>
 
 <script setup lang="ts">
 interface Props {
     link: string;
+    target?: string;
 }
 
-defineProps<Props>();
+withDefaults(defineProps<Props>(), {
+    target: "",
+});
 </script>
-
-<style scoped>
-.str{
-    -webkit-text-stroke-width: 0.05rem;
-    -webkit-text-stroke-color: var(--glow-middle-color);
-}
-</style>
