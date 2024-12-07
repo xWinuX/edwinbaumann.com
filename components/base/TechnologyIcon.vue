@@ -1,5 +1,8 @@
 <template>
-  <BaseTooltipIcon class="svg-shadow-normal" :name="Technology[technology].iconName" :tooltip="Technology[technology].tooltip" size="3rem" />
+  <BaseTooltipIcon v-if="Technology[technology]" class="svg-shadow-normal" :name="Technology[technology].iconName" :tooltip="Technology[technology].tooltip" size="3rem" />
+  <div v-else>
+    technology icon {{ technology }} does not exist
+  </div>
 </template>
 
 <script setup lang="ts">
