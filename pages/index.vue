@@ -1,47 +1,203 @@
 <template>
   <div class="flex h-full">
-    <div class="flex flex-col m-auto text-center w-full max-w-lg">
-      <p>Hey!</p>
-      <p>I'm bla bla</p>
+    <div class="m-auto flex w-full max-w-screen-2xl flex-col px-3 lg:pr-3 lg:pl-0">
+      <div class="flex flex-col gap-0 xl:gap-20 xl:flex-row">
+        <!-- Left Side -->
+        <div>
+          <div class="flex flex-col">
+            <!-- General -->
+            <div>
+              <AppH2>
+                About me:
+              </AppH2>
+              <p class="max-w-[818px]">
+                Hi there! I'm Edwin, a passionate programmer with a love for crafting interactive experiences and solving complex challenges.
+                <br>
+                <br>
+                From building immersive worlds in games to developing software solutions, I thrive on exploring new ideas and turning concepts into reality. Whether it’s
+                a tech demo, a game, or a unique tool, every project reflects my curiosity, dedication, and drive to learn and grow as a developer.
+                <br>
+                <br>
+                Take a look around, and feel free to
+                <BaseLink link="/projects">
+                  explore my portfolio of projects.
+                </BaseLink>
+              </p>
+            </div>
+
+            <!-- General -->
+            <div class="mt-10">
+              <AppH2>
+                General:
+              </AppH2>
+              <TwoColumn label="Name" size="8rem" class="mt-2" do-not-wrap-on-mobile>
+                Edwin Baumann
+              </TwoColumn>
+              <TwoColumn label="Date of birth" size="8rem" class="mt-2" do-not-wrap-on-mobile>
+                23.08.2000
+              </TwoColumn>
+
+              <TwoColumn label="Links" size="8rem" class="mt-2" do-not-wrap-on-mobile>
+                <div class="flex flex-row gap-5 lg:mb-0 h-[2rem]">
+                  <IconLink size="1.8rem" tooltip="LinkedIn" link="https://www.linkedin.com/in/edwinbaumann/" icon-name="devicon:linkedin" />
+                  <IconLink size="1.8rem" tooltip="GitHub" link="https://github.com/xWinuX" icon-name="simple-icons:github" />
+                  <IconLink size="1.8rem" tooltip="Itch.io" link="https://winux.itch.io" icon-name="cib:itch-io" />
+                </div>
+              </TwoColumn>
+            </div>
+
+            <!-- Education -->
+            <div class="mt-10">
+              <AppH2>
+                Education:
+              </AppH2>
+              <AppH3 class="mt-3">
+                Emmi Schweiz AG
+              </AppH3>
+              <TwoColumn :label="createTranslatedYearSpan('01.08.2016', '01.07.2020')" size="16rem" class="mt-1">
+                Information Technologist, Federal Diploma of Vocational Education and Training
+              </TwoColumn>
+              <AppH3 class="mt-3">
+                SAE Institute
+              </AppH3>
+              <TwoColumn :label="createTranslatedYearSpan('01.03.2021', '01.03.2023')" size="16rem" class="mt-1">
+                Games Programming Diploma
+              </TwoColumn>
+              <TwoColumn :label="createTranslatedYearSpan('01.03.2023', '01.09.2024')" size="16rem" class="mt-1">
+                Bachelor of Science (Honours), Games Programming
+              </TwoColumn>
+            </div>
+
+            <!-- Experience -->
+            <div class="mt-10">
+              <AppH2 class="mt-3">
+                Experience:
+              </AppH2>
+              <AppH3 class="mt-3">
+                Emmi Schweiz AG
+              </AppH3>
+              <TwoColumn :label="createTranslatedYearSpan('01.08.2020', '01.01.2021')" size="16rem" class="mt-1">
+                ICT Technician
+              </TwoColumn>
+              <AppH3 class="mt-3">
+                Die Mobiliar AG
+              </AppH3>
+              <TwoColumn :label="createTranslatedYearSpan('01.07.2021', '01.03.2025')" size="16rem" class="mt-1">
+                DevSecOps Engineer
+              </TwoColumn>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="mt-10 xl:mt-0">
+          <div v-for="skillSection in skillSections" :key="skillSection.title" class="mb-6">
+            <AppH2 class="mb-5">
+              {{ $t(skillSection.title) }}:
+            </AppH2>
+
+            <TwoColumn v-for="(technologies, skillLevelName) in skillSection.skillLevel" :key="skillLevelName" :label="$t(`skills.${skillLevelName}`)" class="mb-10">
+              <div class="flex flex-row flex-wrap gap-2 mt-2 lg:mt-0 lg:place-content-start">
+                <TechnologyIcon v-for="technology in technologies" :key="technology" :technology="technology" class="svg-shadow-normal" />
+              </div>
+            </TwoColumn>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <!--div>
-    <div class="grid grid-cols-1 grid-rows-1 gap-2 sm:grid-cols-2">
-      <img src="/me.png" width="400" height="400" class="m-auto">
-      <BaseTable class="m-auto" :table-data="generalTableData" />
-    </div>
-    <div class="relative m-auto mb-3">
-      <BaseGradientLine class="mb-5" />
-      <h2 class="text-center text-xl col-span-0">
-        Hard Skills:
-      </h2>
-    </div>
-    <div class="mb-10 hidden w-full grid-cols-1 place-items-center lg:grid lg:grid-cols-2">
-      <div class="mb-5 lg:m-auto">
-        <BaseTable :table-data="coreSkillsTableData" />
-      </div>
-      <div class="mb-5 lg:m-auto">
-        <BaseTable :table-data="minorSkillsTableData" />
-      </div>
-    </div>
-    <div class="mb-12 grid grid-cols-1 place-items-center lg:hidden">
-      <BaseTable :table-data="{...coreSkillsTableData, ...minorSkillsTableData}" />
-    </div>
-    <div class="mb-20 grid w-full grid-cols-1 place-items-center">
-      <div class="w-full lg:w-1/2">
-        <div class="relative mb-5">
-          <BaseGradientLine class="mb-5" />
-          <h2 class="text-center text-xl">
-            Soft Skills:
-          </h2>
-        </div>
-        <BaseTable class="m-auto" :table-data="softSkillsTableData" />
-      </div>
-    </div>
-  </div--->
 </template>
+
 <script setup lang="ts">
+import TwoColumn from "~/components/base/TwoColumn.vue";
+import { type TechnologyKey } from "~/types/project";
+import TechnologyIcon from "~/components/base/TechnologyIcon.vue";
+import { createTranslatedYearSpan } from "~/utils/date";
+
+interface SkillSection {
+  title: string;
+  skillLevel: Record<string, TechnologyKey[]>
+}
+
+const skillSections: SkillSection[] = [
+    {
+        title: "skills.titleProgrammingLanguage",
+        skillLevel: {
+            advanced: [
+                "cpp",
+                "csharp",
+                "gml",
+            ],
+            proficient: [
+                "python",
+                "html",
+                "css",
+                "javascript",
+                "typescript",
+                "glsl",
+                "powershell",
+            ],
+            familiar: [
+                "php",
+                "sql",
+                "bash",
+            ],
+        },
+    },
+    {
+        title: "skills.titleFrameworks",
+        skillLevel: {
+            advanced: [
+                "unity",
+                "gamemaker",
+
+            ],
+            proficient: [
+                "opengl",
+                "vulkan",
+                "vuejs",
+                "nuxtjs",
+                "blazor",
+                "flask",
+                "tailwind",
+                "bootstrap",
+                "quasar",
+            ],
+            familiar: [
+                "unreal",
+                "drone",
+                "docker",
+            ],
+        },
+    },
+    {
+        title: "skills.titleTools",
+        skillLevel: {
+            advanced: [
+                "rider",
+                "clion",
+                "phpstorm",
+                "pycharm",
+                "visualstudio",
+            ],
+            proficient: [
+                "git",
+                "github",
+                "ansible",
+                "aseprite",
+                "jira",
+                "confluence",
+            ],
+            familiar: [
+                "blender",
+                "dbeaver",
+                "photoshop",
+                "premiere",
+            ],
+        },
+    },
+];
+
 const generalTableData = {
     Name: "Edwin Baumann",
     Birthday: "23.08.2000",

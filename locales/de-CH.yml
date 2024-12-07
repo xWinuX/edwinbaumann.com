@@ -1,3 +1,10 @@
+skills:
+  advanced: Fortgeschritten
+  titleProgrammingLanguage: Programmiersprachen
+  familiar: Vertraut
+  titleFrameworks: Frameworks / Engines / APIs
+  titleTools: Tools
+  proficient: Kompetent
 navbar:
   projects: Projekte
   contact: Kontakt

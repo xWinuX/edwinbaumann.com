@@ -1,3 +1,10 @@
+skills:
+  advanced: Advanced
+  titleProgrammingLanguage: Programming Languages
+  familiar: Familiar
+  titleFrameworks: Frameworks / Engines / APIs
+  titleTools: Tools
+  proficient: Proficient
 navbar:
   projects: Projects
   contact: Contact
