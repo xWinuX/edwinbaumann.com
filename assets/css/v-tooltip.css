@@ -1,5 +1,5 @@
 .v-popper--theme-tooltip .v-popper__inner {
-    background: linear-gradient(90deg, #34d399cc 0%, #2563ebcc 100%) !important;
+    background: linear-gradient(90deg, #34D399FF 0%, #2563EBFF 100%) !important;
     box-shadow: 0 0 6px var(--body-color);
 }
 
