@@ -1,20 +1,17 @@
 <template>
   <div class="flex h-full">
-    <div class="flex flex-col m-auto  w-full max-w-lg">
-      <h2 class="text-xl font-bold text-center">
+    <div class="flex flex-col m-auto w-full max-w-lg">
+      <Heading class="text-center mb-3" level="2">
         {{ $t('contact.contactAppsHeader') }}
-        <BaseGradientLine class="mt-1 mb-3" />
-      </h2>
-      <div class="mt-3 flex flex-row justify-evenly">
-        <a href="https://www.linkedin.com/in/edwinbaumann/" target="_blank">
-          <Icon size="3.5rem" name="devicon:linkedin" />
-        </a>
+      </Heading>
+
+      <div class="flex flex-row justify-evenly">
+        <IconLink link="https://www.linkedin.com/in/edwinbaumann/" icon-name="devicon:linkedin" />
       </div>
 
-      <h2 class="mt-20 text-xl font-bold text-center">
+      <Heading level="2" class="text-center mt-20 mb-3">
         {{ $t('contact.contactFormHeader') }}
-      </h2>
-      <BaseGradientLine class="mt-1 mb-3" />
+      </Heading>
 
       <form
         id="contact-form"
@@ -85,6 +82,7 @@
 </template>
 
 <script setup lang="ts">
+import Heading from "~/components/base/Heading.vue";
 </script>
 <style scoped>
 .hide-label {
