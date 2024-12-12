@@ -1,17 +1,17 @@
 <template>
   <div class="flex h-full">
     <div class="flex flex-col m-auto w-full max-w-lg">
-      <Heading class="text-center mb-3" level="2">
+      <AppH2 class="text-center mb-3">
         {{ $t('contact.contactAppsHeader') }}
-      </Heading>
+      </AppH2>
 
       <div class="flex flex-row justify-evenly">
         <IconLink link="https://www.linkedin.com/in/edwinbaumann/" icon-name="devicon:linkedin" />
       </div>
 
-      <Heading level="2" class="text-center mt-20 mb-3">
+      <AppH2 class="text-center mt-20 mb-3">
         {{ $t('contact.contactFormHeader') }}
-      </Heading>
+      </AppH2>
 
       <form
         id="contact-form"
