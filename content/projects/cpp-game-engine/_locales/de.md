@@ -160,8 +160,8 @@ Bei zukünftigen Projekten sollte ich mich wahrscheinlich darauf konzentrieren, 
 ## Resultate
 
 ### Source Code
-The project is fully open source and available here: [https://github.com/xWinuX/CppGameEngine](https://github.com/xWinuX/CppGameEngine) \
-The showcase is also available in the release section or here: [https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip](https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip)
+Das Projekt ist vollständig Open Source und verfügbar hier: [https://github.com/xWinuX/CppGameEngine](https://github.com/xWinuX/CppGameEngine) \
+Der Showcase ist unter der Release Sektion verfügbar oder hier: [https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip](https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip)
 
 ### Note
 Die Endnote war eine 2 (University of Middlesex Notensystem), was auf der Schweizer Notenskala einer 5.75 entspricht.
