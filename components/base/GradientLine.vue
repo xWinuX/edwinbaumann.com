@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 interface Props {
-    shadowType?: "normal" | "glow" | "none";
+    shadowType?: "normal" | "glow" | "black" | "none";
 }
 
 withDefaults(defineProps<Props>(), {

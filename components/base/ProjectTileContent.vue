@@ -1,5 +1,5 @@
 <template>
-  <div ref="content" class="rounded-xl bg-gray-900/80 backdrop-blur-md text-shadow-normal shadow-normal">
+  <div ref="content" class="rounded-xl bg-black/40 backdrop-blur-md text-shadow-normal shadow-black">
     <slot />
   </div>
 </template>

@@ -71,6 +71,10 @@
     box-shadow: 0 0 6px var(--glow-outer-color);
 }
 
+.shadow-black {
+    box-shadow: 0 0 6px black;
+}
+
 .shadow-normal {
     box-shadow: 0 0 6px var(--body-color);
 }
