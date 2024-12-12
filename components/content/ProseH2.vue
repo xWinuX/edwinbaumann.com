@@ -1,5 +1,5 @@
 <template>
-  <AppH2 class="mb-3">
+  <AppH2 class="mt-3 mb-3">
     <slot />
   </AppH2>
 </template>
