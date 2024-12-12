@@ -1,0 +1,9 @@
+displayName: Monster Fight Simulator
+description:
+  en: A really small game about two monsters fighting were the player can customize their stats. All powered by a small custom console engine.
+  de: Ein sehr kleines Spiel über zwei kämpfende Monster, bei denen der Spieler die Werte anpassen kann. Angetrieben von einer kleinen, benutzerdefinierten Konsolen-Engine.
+technologies:
+  - csharp
+dateStart: 16.03.2021
+dateEnd: 03.05.2021
+thumbnailFormat: gif
