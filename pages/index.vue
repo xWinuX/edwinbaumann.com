@@ -8,32 +8,29 @@
             <!-- General -->
             <div>
               <AppH2>
-                About me:
+                {{ $t('aboutMe.titleAboutMe') }}
               </AppH2>
-              <p class="max-w-[818px]">
-                Hi there! I'm Edwin, a passionate programmer with a love for crafting interactive experiences and solving complex challenges.
-                <br>
-                <br>
-                From building immersive worlds in games to developing software solutions, I thrive on exploring new ideas and turning concepts into reality. Whether it’s
-                a tech demo, a game, or a unique tool, every project reflects my curiosity, dedication, and drive to learn and grow as a developer.
-                <br>
-                <br>
-                Take a look around, and feel free to
-                <BaseLink link="/projects">
-                  explore my portfolio of projects.
-                </BaseLink>
-              </p>
+              <i18n-t tag="p" class="max-w-[818px] mt-2" keypath="aboutMe.aboutMeIntroduction">
+                <template #br>
+                  <br>
+                </template>
+                <template #link>
+                  <BaseLink link="/projects">
+                    {{ $t('aboutMe.aboutMeIntroductionLink') }}
+                  </BaseLink>
+                </template>
+              </i18n-t>
             </div>
 
             <!-- General -->
             <div class="mt-10">
               <AppH2>
-                General:
+                {{ $t('aboutMe.titleGeneral') }}
               </AppH2>
               <TwoColumn label="Name" size="8rem" class="mt-2" do-not-wrap-on-mobile>
                 Edwin Baumann
               </TwoColumn>
-              <TwoColumn label="Date of birth" size="8rem" class="mt-2" do-not-wrap-on-mobile>
+              <TwoColumn :label="$t('aboutMe.columnDateOfBirth')" size="8rem" class="mt-2" do-not-wrap-on-mobile>
                 23.08.2000
               </TwoColumn>
 
@@ -49,13 +46,13 @@
             <!-- Education -->
             <div class="mt-10">
               <AppH2>
-                Education:
+                {{ $t('aboutMe.titleEducation') }}
               </AppH2>
               <AppH3 class="mt-3">
-                Emmi Schweiz AG
+                {{ $t('aboutMe.educationEmmiAndGibb') }}
               </AppH3>
               <TwoColumn :label="createTranslatedYearSpan('01.08.2016', '01.07.2020')" size="16rem" class="mt-1">
-                Information Technologist, Federal Diploma of Vocational Education and Training
+                {{ $t('aboutMe.educationIT') }}
               </TwoColumn>
               <AppH3 class="mt-3">
                 SAE Institute
@@ -71,7 +68,7 @@
             <!-- Experience -->
             <div class="mt-10">
               <AppH2 class="mt-3">
-                Experience:
+                {{ $t('aboutMe.titleExperience') }}
               </AppH2>
               <AppH3 class="mt-3">
                 Emmi Schweiz AG
@@ -93,7 +90,7 @@
         <div class="mt-10 xl:mt-0">
           <div v-for="skillSection in skillSections" :key="skillSection.title" class="mb-6">
             <AppH2 class="mb-5">
-              {{ $t(skillSection.title) }}:
+              {{ $t(skillSection.title) }}
             </AppH2>
 
             <TwoColumn v-for="(technologies, skillLevelName) in skillSection.skillLevel" :key="skillLevelName" :label="$t(`skills.${skillLevelName}`)" class="mb-10">

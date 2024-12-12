@@ -25,3 +25,21 @@ contact:
   contactAppsHeader: Über Apps
 YoutubeEmbedConsent: Durch das Drücken des Play-Knopfst stimmst du der Sammlung jeglicher
   Daten zu, die YouTube sammeln könnte.
+aboutMe:
+  titleAboutMe: Über mich
+  aboutMeIntroduction: |
+    Hallo! Ich bin Edwin, ein leidenschaftlicher Programmierer mit einer Vorliebe dafür, interaktive Erlebnisse zu schaffen und komplexe Herausforderungen zu lösen.
+    {br}
+    {br}
+    Von der Entwicklung von Spielen bis hin zu Softwarelösungen begeistert es mich, neue Ideen zu erforschen und Konzepte in die Realität umzusetzen.
+    Ob es sich um eine Tech-Demo, ein Spiel oder ein Tool handelt, jedes Projekt spiegelt meine Neugier, Hingabe und meinen Antrieb wider, als Entwickler zu lernen und zu wachsen.
+    {br}
+    {br}
+    Schau dich um und {link}
+  columnDateOfBirth: Geburtsdatum
+  educationIT: Informatiker Fachrichtung Systemtechnik EFZ
+  titleExperience: Praktische Erfahrung
+  aboutMeIntroductionLink: entdecke mein Portfolio an Projekten!
+  educationEmmiAndGibb: Emmi Schweiz AG & GIBB Berufsschule Bern
+  titleGeneral: Allgemein
+  titleEducation: Bildungsweg

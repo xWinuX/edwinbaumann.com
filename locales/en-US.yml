@@ -25,3 +25,22 @@ contact:
   contactAppsHeader: Contact over apps
 YoutubeEmbedConsent: By pressing the play button you consent to any data YouTube may
   collect
+aboutMe:
+  titleAboutMe: About me
+  aboutMeIntroduction: |
+    Hi there! I'm Edwin, a passionate programmer with a love for crafting interactive experiences and solving complex challenges.
+    {br}
+    {br}
+    From building games to developing software solutions, I thrive on exploring new ideas and turning concepts into reality.
+    Whether it’s a tech demo, a game, or a tool, every project reflects my curiosity, dedication, and drive to learn and grow as a developer.
+    {br}
+    {br}
+    Take a look around, and feel free to {link}
+  columnDateOfBirth: Date of birth
+  educationIT: Information Technologist, Federal Diploma of Vocational Education and
+    Training
+  titleExperience: Experience
+  aboutMeIntroductionLink: explore my portfolio of projects!
+  educationEmmiAndGibb: Emmi Schweiz AG & GIBB vocational school Bern
+  titleGeneral: General
+  titleEducation: Education
