@@ -14,6 +14,10 @@ export const Technology: Record<string, TechnologyEntry> = {
         iconName: "devicon:csharp",
         tooltip: "C#",
     },
+    dotnet: {
+        iconName: "logos:dotnet",
+        tooltip: ".NET",
+    },
     opengl: {
         iconName: "logos:opengl",
         tooltip: "OpenGL",
