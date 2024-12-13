@@ -15,7 +15,7 @@
         class="rounded-xl w-full h-full absolute object-cover"
         width="20px"
         height="20px"
-        format="webp"
+        format="png"
         :modifiers="{blur: '4'}"
         :src="`/projects/${project.name}/media/thumbnail.${project.thumbnailFormat}`"
       />
@@ -35,7 +35,7 @@
             </div>
           </div>
 
-          <BaseGradientLine shadow-type="glow" />
+          <BaseGradientLine shadow-type="black" />
         </BaseProjectTileContent>
 
         <slot :project="project" />
@@ -58,10 +58,14 @@ const props = withDefaults(defineProps<Props>(), {
     pauseAnimated: false,
 });
 
+function isTouchDevice() {
+    return window.matchMedia("(pointer: coarse)").matches;
+}
+
 const card = ref();
 const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(card);
 const cardTransform = computed(() => {
-    if (isOutside.value || !props.hoverEffect) {
+    if (isOutside.value || !props.hoverEffect || isTouchDevice()) {
         return "";
     }
 

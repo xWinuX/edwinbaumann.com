@@ -15,7 +15,7 @@
 
     <!-- Actual Content -->
     <div
-      class="absolute group  max-w-[1280px]"
+      class="absolute group max-w-[1280px]"
       :class="isExpanding ? 'enter-animation' : 'exit-animation max-w-[1280px] max-h-[100vh]'"
       :style="{
         left: left,
@@ -38,7 +38,7 @@
         </template>
         <BaseProjectTileContent
           ref="container"
-          class="mt-2 flex-shrink flex-grow overflow-y-hidden"
+          class="mt-2 bg-black/60 flex-shrink flex-grow overflow-y-hidden"
           :class="showContentTransition"
         >
           <OverlayScrollbarsComponent
@@ -46,7 +46,7 @@
             class="overflow-y-hidden"
           >
             <div class="mx-auto px-5 mt-4 prose prose-invert max-w-full text-white">
-              <ContentRenderer :value="markdownData">
+              <ContentRenderer v-if="markdownData" :value="markdownData">
                 <ContentRendererMarkdown :value="markdownData" />
               </ContentRenderer>
             </div>
@@ -61,15 +61,16 @@
 import { VueFinalModal } from "vue-final-modal";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
 import { BaseProjectTileContent } from "#components";
-import type { ProjectContent } from "~/types/project";
+import type { Project } from "~/types/project";
 import type { VueUseElementBounding } from "~/types/vue-use";
+import LanguageSelection from "~/components/app/LanguageSelection.vue";
 
 const { locale } = useI18n();
 
 const emit = defineEmits<{(e: "close"): void }>();
 
 interface Props {
-  project: ProjectContent;
+  project: Project;
   startState: VueUseElementBounding;
 }
 
