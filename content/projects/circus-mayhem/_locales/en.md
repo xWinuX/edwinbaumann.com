@@ -1,6 +1,6 @@
 # Circus Mayhem
 Circus Mayhem was a game made for the GMTK Game Jam 2020 , the theme of the jam was "Out of Control".
-I participated alone, so everything was made by me.
+I did all the programming and audio, and a friend of mine did all the art.
 A playthrough can be seen in the video below, or you can play it yourself with the link at the bottom of the page.
 
 ::youtube-embed{videoId="WVrcoyM7tNM"}
