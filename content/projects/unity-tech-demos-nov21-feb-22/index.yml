@@ -1,0 +1,10 @@
+displayName: Unity Tech Demos
+description:
+  en: Some unity tech demos including insect-like movement system, boids, Marching Squares/Cubes and more.
+  de: Einige Unity-Tech-Demos, darunter insektenartiges Movement-System, Boids, Marching Squares/Cubes und mehr.
+technologies:
+  - unity
+  - csharp
+dateStart: 02.11.2021
+dateEnd: 25.02.2022
+thumbnailFormat: gif
