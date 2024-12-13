@@ -1,0 +1,10 @@
+displayName: C# Socket Chat
+description:
+  en: A small C# WPF chat application that uses network-sockets.
+  de: Eine kleine C# WPF Chat-App die Network-Sockets verwendet
+technologies:
+  - csharp
+  - dotnet
+dateStart: 15.04.2022
+dateEnd: 19.04.2022
+thumbnailFormat: gif
