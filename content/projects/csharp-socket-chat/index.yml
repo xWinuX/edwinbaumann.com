@@ -5,6 +5,8 @@ description:
 technologies:
   - csharp
   - dotnet
+roles:
+  - solo
 dateStart: 15.04.2022
 dateEnd: 19.04.2022
 thumbnailFormat: gif

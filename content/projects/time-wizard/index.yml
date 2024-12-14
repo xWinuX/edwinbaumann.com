@@ -6,6 +6,9 @@ technologies:
   - gamemaker
 tags:
   - gamejam
+roles:
+  - leadProgrammer
+  - leadAudio
 dateStart: 21.07.2018
 dateEnd: 23.07.2018
 thumbnailFormat: gif

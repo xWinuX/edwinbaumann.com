@@ -4,6 +4,8 @@ description:
   de: Ein sehr kleines Spiel über zwei kämpfende Monster, bei denen der Spieler die Werte anpassen kann. Angetrieben von einer kleinen, benutzerdefinierten Konsolen-Engine.
 technologies:
   - csharp
+roles:
+  - solo
 dateStart: 16.03.2021
 dateEnd: 03.05.2021
 thumbnailFormat: gif

@@ -5,6 +5,8 @@ description:
 technologies:
   - unity
   - csharp
+roles:
+  - solo
 dateStart: 20.05.2021
 dateEnd: 28.06.2021
 thumbnailFormat: gif

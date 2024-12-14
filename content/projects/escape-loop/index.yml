@@ -5,6 +5,10 @@ description:
 technologies:
   - unity
   - csharp
+roles:
+  - programmer
+  - leadAudio
+  - leadArtist
 dateStart: 12.08.2021
 dateEnd: 22.10.2021
 thumbnailFormat: png

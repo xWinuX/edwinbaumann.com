@@ -5,6 +5,18 @@ interface TechnologyEntry {
     tooltip: string;
 }
 
+export const Role: Record<string, string> = {
+    solo: "Solo",
+    programmer: "Programmer",
+    leadProgrammer: "Lead Programmer",
+    audio: "Audio Producer",
+    leadAudio: "Lead Audio Producer",
+    artist: "Artist",
+    leadArtist: "Lead Artist",
+};
+
+export type RoleKey = keyof typeof Role;
+
 export const Technology: Record<string, TechnologyEntry> = {
     cpp: {
         iconName: "devicon:cplusplus",
@@ -182,15 +194,12 @@ export const Technology: Record<string, TechnologyEntry> = {
 
 export type TechnologyKey = keyof typeof Technology;
 
-export interface Tag {
-    name: string;
-    category: string;
-}
-
 export interface Project {
     displayName: string;
     description: Record<string, string>;
-    technologies: TechnologyKey[]
+    technologies: TechnologyKey[];
+    tags: string[];
+    roles: RoleKey[];
     dateStart: string;
     dateEnd: string;
     name: string;
