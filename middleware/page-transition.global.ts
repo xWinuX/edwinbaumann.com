@@ -1,13 +1,12 @@
 const navigationOrder: string[] = [
-    "/",
-    "/projects",
-    "/about-me",
-    "/contact",
+    "",
+    "projects",
+    "contact",
 ];
 
 export default defineNuxtRouteMiddleware((to, from) => {
-    const fromIndex: number = navigationOrder.findIndex((s: string) => s === from.fullPath);
-    const toIndex: number = navigationOrder.findIndex((s: string) => s === to.fullPath);
+    const fromIndex: number = navigationOrder.findIndex((s: string) => s === from.name);
+    const toIndex: number = navigationOrder.findIndex((s: string) => s === to.name);
 
     const transitionName: string = fromIndex > toIndex ? "slide-left" : "slide-right";
 
