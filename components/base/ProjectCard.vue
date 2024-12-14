@@ -22,7 +22,10 @@
 
       <div class="flex flex-col h-full mr-2 ml-2 pb-2 pt-2">
         <!-- Title -->
-        <BaseProjectTileContent class="flex-col p-5 text-center">
+        <BaseProjectTileContent
+          class="flex-col p-5 text-center transition-colors duration-500"
+          :class="darkenHeader ? 'bg-black/60' : ''"
+        >
           <div class="flex">
             <div>
               <slot name="header-begin" />
@@ -51,11 +54,13 @@ interface Props {
   project: Project;
   hoverEffect?: boolean;
   pauseAnimated?: boolean;
+  darkenHeader?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
     hoverEffect: false,
     pauseAnimated: false,
+    darkenHeader: false,
 });
 
 function isTouchDevice() {

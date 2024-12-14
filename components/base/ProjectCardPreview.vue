@@ -10,24 +10,26 @@
           :src="`/projects/${project.name}/media/thumbnail.${project.thumbnailFormat}`"
         />
       </div>
-      <div class="transition-opacity mt-auto pt-2" :class="fadeOutDetails ? 'opacity-100' : 'opacity-0'">
-        <div class="mb-2 flex">
+      <div class="transition-opacity mt-auto" :class="fadeOutDetails ? 'opacity-100' : 'opacity-0'">
+        <div class="mt-2 mb-2 flex">
           <BaseProjectTileContent class="font-bold p-2">
             {{ yearSpan }}
           </BaseProjectTileContent>
         </div>
 
         <BaseProjectTileContent
-          class="flex-row mb-2 p-4 justify-items-end justify-end align-bottom transition duration-500"
+          class="flex-row mt-2 mb-2 p-4 justify-items-end justify-end align-bottom transition duration-500"
         >
           {{ description }}
         </BaseProjectTileContent>
 
         <!-- Icons and duration -->
-        <div class="flex flex-row gap-2">
-          <BaseProjectTileContent class="mr-auto p-4 text-center font-bold">
-            {{ duration }}
-          </BaseProjectTileContent>
+        <div class="flex flex-row gap-2 h-[3.5rem]">
+          <div class="flex flex-col gap-2 flex-wrap place-content-evenly mr-auto">
+            <BaseProjectTileContent v-for="role in project.roles" :key="role" class="text-xs text-center font-bold px-4 py-1">
+              {{ Role[role] }}
+            </BaseProjectTileContent>
+          </div>
           <BaseProjectTileContent v-for="technology in project.technologies" :key="technology" class="p-1">
             <BaseTechnologyIcon :technology="technology" />
           </BaseProjectTileContent>
@@ -40,7 +42,7 @@
 
 <script setup lang="ts">
 import humanizeDuration from "humanize-duration";
-import type { Project } from "~/types/project";
+import { type Project, Role } from "~/types/project";
 import { createTranslatedYearSpan, dateToECMAFormat } from "~/utils/date";
 
 export interface ProjectTileProps {
