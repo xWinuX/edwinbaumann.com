@@ -22,7 +22,8 @@ jobs:
       run: |
         npm install
         npm run generate
-    
+
+    # NOTE: this fails when there isn't an empty .ftp-deploy-sync-state.json (or state-name attribute) on the server, see: https://github.com/SamKirkland/FTP-Deploy-Action/issues/153
     - name: FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
