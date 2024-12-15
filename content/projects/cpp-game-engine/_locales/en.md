@@ -23,23 +23,23 @@ The engine also supports smooth and metallic shading, though this is just an app
 
 ![no metallic](../media/no-metallic.png)
 
-<p style="margin-top: -2rem"><i>Specular tint with metallic set to 0%</i></p>
+<p style="margin-top: -1rem"><i>Specular tint with metallic set to 0%</i></p>
 
 ![metallic](../media/metallic.png)
 
-<p style="margin-top: -2rem"><i>Specular tint with metallic set to 100%</i></p>
+<p style="margin-top: -1rem"><i>Specular tint with metallic set to 100%</i></p>
 
 #### Reflections
 Depending on the material’s smoothness, the skybox can be reflected on surfaces.
 
 ![skybox reflection with 100% smoothness and 0% metallic](../media/reflection-100s-0m.png)
-<p style="margin-top: -2rem"><i>smoothness 100% | metallic 0%</i></p>
+<p style="margin-top: -1rem"><i>smoothness 100% | metallic 0%</i></p>
 
 ![skybox reflection with 100% smoothness and 100% metallic](../media/reflection-100s-100m.png)
-<p style="margin-top: -2rem"><i>smoothness 100% | metallic 100%</i></p>
+<p style="margin-top: -1rem"><i>smoothness 100% | metallic 100%</i></p>
 
 ![skybox reflection with 50% smoothness and 50% metallic](../media/reflection-50s-50m.png)
-<p style="margin-top: -2rem"><i>smoothness 50% | metallic 50%</i></p>
+<p style="margin-top: -1rem"><i>smoothness 50% | metallic 50%</i></p>
 
 #### Normal Maps
 Normal maps are supported and interact correctly with lighting effects.
