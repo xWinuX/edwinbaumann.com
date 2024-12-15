@@ -41,11 +41,23 @@ export default defineNuxtConfig({
             { code: "de", language: "de-CH", file: "de-CH.yml" },
         ],
         strategy: "no_prefix",
+        detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: "i18n_redirected",
+            redirectOn: "root",
+            alwaysRedirect: true,
+        },
     },
     image: {
         dir: "assets/images",
     },
     content: {
+        highlight: {
+            langs: ["cpp", "csharp"],
+            theme: {
+                default: "dark-plus",
+            },
+        },
         experimental: {
             clientDB: true,
         },
