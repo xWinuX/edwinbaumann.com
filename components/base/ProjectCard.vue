@@ -9,8 +9,6 @@
       }"
     >
       <!-- Background -->
-
-      <!-- Overlay higher res static background image on expand (overlaying instead of replacing fixes the flickering on switching) -->
       <NuxtImg
         class="rounded-xl w-full h-full absolute object-cover"
         width="20px"
