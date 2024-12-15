@@ -1,15 +1,17 @@
 <template>
-  <a v-for="(l, index) in locales" :key="l.code" @click="() => setLocale(l.code)">
-    {{ index == 0 ? "" : " / " }}
-    <b v-if="l.code == locale" class="cursor-pointer">
-      <u>
+  <div>
+    <span v-for="(l, index) in locales" :key="l.code" @click="() => setLocale(l.code)">
+      {{ index == 0 ? "" : " / " }}
+      <b v-if="l.code == locale" class="cursor-pointer">
+        <u>
+          {{ l.code }}
+        </u>
+      </b>
+      <span v-else class="cursor-pointer">
         {{ l.code }}
-      </u>
-    </b>
-    <span v-else class="cursor-pointer">
-      {{ l.code }}
+      </span>
     </span>
-  </a>
+  </div>
 </template>
 
 <script setup lang="ts">
