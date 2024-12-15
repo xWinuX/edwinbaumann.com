@@ -1,5 +1,5 @@
 <template>
-  <video autoplay loop>
+  <video autoplay loop preload="none">
     <source :src="src" type="video/mp4">
     Your browser does not support videos.
   </video>

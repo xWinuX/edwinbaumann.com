@@ -4,6 +4,7 @@
       <div class="mt-2 transition-opacity h-full relative" :class="fadeOutDetails ? 'opacity-100' : 'opacity-0'">
         <NuxtImg
           class="rounded-xl absolute w-full h-full"
+          loading="lazy"
           placeholder
           format="webp"
           :modifiers="{ animated: project.thumbnailFormat == 'gif'}"
