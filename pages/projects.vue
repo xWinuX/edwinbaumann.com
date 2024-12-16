@@ -26,7 +26,7 @@ import { dateToECMAFormat } from "~/utils/date";
 const { data: projects }: { data: Ref<ProjectContent[]> } = await useAsyncData("projects", () => queryContent("projects").where({ _partial: false }).find());
 
 projects.value.sort((a, b) => {
-    return new Date(dateToECMAFormat(b.dateStart)) - new Date(dateToECMAFormat(a.dateStart));
+    return new Date(dateToECMAFormat(b.dateEnd)) - new Date(dateToECMAFormat(a.dateEnd));
 });
 
 const projectTiles = ref([]);
