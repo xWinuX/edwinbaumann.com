@@ -2,23 +2,23 @@
 Split Engine ist eine Game-Engine, geschrieben in C++ mit Vulkan als Graphics-API.
 Ich habe sie erstellt, um mich auf meine Bachelorarbeit vorzubereiten und mein Verständnis von C++ zu vertiefen sowie Vulkan zu lernen, 
 basierend auf meiner vorherigen Erfahrung mit OpenGL aus meiner letzten Spiel-Engine.
-(Siehe Projekt C++ Game Engine für mehr Informationen dazu.)
+(Siehe Projekt C++ Game Engine für mehr Informationen dazu)
 
 ## Features
 
 ### Build-System
-Anstelle der ausschließlichen Nutzung der Visual Studio-Projektdatei, wie bei meiner letzten Engine, 
+Anstelle der ausschliesslichen Nutzung einer Visual Studio-Projektdatei, wie bei meiner letzten Engine, 
 habe ich [CMake](https://cmake.org) zusammen mit [VCPKG](https://vcpkg.io) verwendet, um das Build-System und die Abhängigkeiten zu verwalten.
 
 ### Rendering
-Die Spiel-Engine verwendet Vulkan für das Rendering, speziell die C++-Header der API.
+Die Game-Engine verwendet Vulkan für das Rendering, um genauer zu sein C++-Header der API.
 Zusätzlich zu diesen Headern nutze ich [SPIRV-Cross](https://github.com/KhronosGroup/SPIRV-Cross), um automatisch Vulkan-Pipelines und Descriptor-Sets aus Shadern zu generieren.
 
 ### Audio
-Audio war bei der Erstellung der Engine definitiv kein Schwerpunkt, daher enthält sie nur eine grundlegende Implementierung der [SoLoud](https://solhsa.com/soloud/) Bibliothek.
+Audio war bei der Erstellung der Engine definitiv kein Schwerpunkt, daher enthält sie nur eine grundlegende Implementierung der [SoLoud](https://solhsa.com/soloud/) Library.
 
 ### Input
-Wie Audio wurde das Input-System auch eher simpel implementiert. Alles ist über eine Statische Klasse managed und basiert auf vom Benuzer vordefinierten Actions.
+Wie Audio wurde das Input-System auch eher simpel implementiert. Alles ist über eine statische Klasse verwaltet und basiert auf Actions.
 
 ```cpp
 enum class InputAction
@@ -43,16 +43,16 @@ glm::vec2 flyDirection = Input::GetAxis2DActionDown(InputAction::Fly);
 
 
 ### GameObject Management
-Der größte und komplexeste Teil der Engine ist das selbst entwickelte Entity Component System (ECS).
+Der grösste und komplexeste Teil der Engine ist das selbst entwickelte Entity Component System (ECS).
 Es besteht aus den folgenden Komponenten:
 
 #### Entities
-Eine Entität besteht logisch aus Components, ist in der Praxis jedoch nur eine ID, 
+Eine Entity besteht logisch aus Components, ist in der Praxis jedoch nur eine ID, 
 die verwendet wird, um in der ECS-Registry nach ihren Components zu suchen, 
-da diese nicht individuell durch jede Entität verwaltet werden.
+da diese nicht individuell durch jede Entität selbst verwaltet werden.
 
 #### Components
-Eine Komponente ist typischerweise reine Daten und ist immer einer Entität zugeordnet.
+Ein Component besteht typischerweise nur aus reinen Daten und ist immer einer Entity zugeordnet.
 ```cpp
 struct SpriteRenderer
 {
@@ -63,10 +63,10 @@ struct SpriteRenderer
 };
 ```
 
-Eine Komponente kann auch Funktionen enthalten, die auf Daten wirken, aber die meisten Operationen sollten innerhalb eines Systems durchgeführt werden.
+Ein Component kann auch Funktionen enthalten, die auf Daten wirken, aber die meisten Operationen sollten innerhalb eines Systems durchgeführt werden.
 
 #### Systems
-Ein System arbeitet auf einer bestimmten Menge von Komponenten, die über Template-Argumente definiert sind.
+Ein System arbeitet auf spezifischen Components, die über Template-Argumente definiert sind.
 
 ```cpp
 class PlayerAnimation final : public ECS::System<Component::Player, Component::SpriteRenderer>
@@ -80,10 +80,10 @@ class PlayerAnimation final : public ECS::System<Component::Player, Component::S
 };
 ```
 
-In diesem Beispiel wirkt es nur auf Entitäten, die sowohl eine Player- als auch eine SpriteRenderer-Komponente besitzen.
+In diesem Beispiel arbeitet es nur auf Entities, die sowohl einen Player- als auch einen SpriteRenderer-Component besitzen.
 
 #### Contexts
-Kontexte werden über einen Context Provider, der in jedes System übergeben wird, abgerufen. 
+Contexts werden über einen Context Provider, der in jedes System übergeben wird, abgerufen. 
 Sie ermöglichen das Teilen von Daten zwischen Systemen ohne direkte Referenzen.
 
 ```cpp
@@ -102,7 +102,7 @@ ecs.RegisterContext<Context::ImGui>({});
 #### Stages
 Wie oben zu sehen, wird ein Stage-Parameter an die Execute-Funktion jedes Systems übergeben. Dieser Parameter ist nützlich, wenn ein System mehrmals pro Frame ausgeführt werden soll. 
 Zum Beispiel werden in Unity die Funktionen Update und LateUpdate zu unterschiedlichen Zeitpunkten im Frame ausgeführt. 
-Mit dem Stufensystem kann eine einfache If-Abfrage in der Execute-Funktion bestimmen, welche Stufe gerade aktiv ist.
+Mit dem Stage-System kann eine einfache If-Abfrage in der Execute-Funktion bestimmen, welche Stufe gerade aktiv ist.
 
 ```cpp
 if (stage == Stage::Update)
@@ -117,14 +117,14 @@ if (stage == Stage::LateUpdate)
 ```
 
 Für fortgeschrittenere Anwendungen kann die System-Klasse erweitert werden, 
-um Stufen in eigene Funktionen zu abstrahieren, die dann in abgeleiteten Klassen überschrieben werden können.
-Dieses System bietet Benutzern große Flexibilität, um eigene Stufen zu definieren und sich in die Stufen der Engine einzuklinken.
+um Stages in eigene Funktionen zu abstrahieren, die dann in abgeleiteten Klassen überschrieben werden können.
+Dieses System bietet Benutzern grosse Flexibilität, um eigene Stages zu definieren und sich in die Stages der Engine einzuklinken.
 
 #### Groups
 Gruppen sind eine Möglichkeit, ein Level-System mit dem ECS-System zu realisieren. 
-Gruppen sind nichts weiter als ein Identifikator. 
-Jede Entität gehört standardmäßig immer zu einer Gruppe, die ich als primäre Gruppe bezeichne. 
-Die primäre Gruppe kann geändert werden, sodass alle folgenden Entitäten in ihr erstellt werden. 
+Gruppen sind nichts weiter als eine ID. 
+Jede Entity gehört standardmässig immer zu einer Gruppe, die ich als primäre Gruppe bezeichne. 
+Die primäre Gruppe kann geändert werden, sodass alle folgenden Entities in ihr erstellt werden. 
 Benutzer können auch eine bestimmte Gruppe bei der Erstellung von Entitäten angeben, um mehrere Level gleichzeitig aktiv zu haben oder ein Level immer aktiv zu halten. 
 Um beispielsweise ein Level zu wechseln, kann eine Funktion in der ECS-Registrierung aufgerufen werden, die alle Entitäten einer bestimmten Gruppe löscht.
 
@@ -150,44 +150,43 @@ Man muss es lediglich in der VCPKG-Konfigurationsdatei hinzufügen.
 ```
 
 ## Reflexion
-Ich bin sehr zufrieden mit den Ergebnissen der Engine, besonders gefällt mir das ECS und wie flexibel die gesamte Engine ist.
 
 ### Was ich gelernt habe
 
 #### Vulkan
-Das war mein erster Einsatz von Vulkan, sodass alles damit Verbundene für mich neu war. 
-Es gibt noch viele Dinge, die ich nicht umgesetzt habe, aber ich bin zuversichtlich in Bezug auf die allgemeinen Konzepte.
+Das war mein erster Einsatz von Vulkan und deswegen war alles neu im Bezug zu dem. 
+Es gibt noch viele Dinge, die ich nicht umgesetzt habe, aber ich verstehe die Grundkonzepte der API.
 
 #### CMake
 Auch CMake habe ich zum ersten Mal verwendet.
-Der Einstieg war etwas schwierig, aber letztendlich ist es viel flexibler und besser als die alleinige Nutzung von Visual Studio-Projektdateien, 
+Der Einstieg war etwas schwierig, aber letztendlich ist es viel flexibler und besser als die alleinige Nutzung von Visual Studio-Projektdateien
 und ich werde es in zukünftigen C++-Projekten weiter verwenden.
 
 #### VCPKG
-VCPKG habe ich schon bei meinem ersten Spiel-Engine-Projekt ausprobiert, mich damals jedoch entschieden, meine Abhängigkeiten manuell zu verwalten, was ein großer Fehler war.
+VCPKG habe ich schon bei meinem ersten Spiel-Engine-Projekt ausprobiert, mich damals jedoch entschieden, meine Abhängigkeiten manuell zu verwalten, was ein grosser Fehler war.
 Diesmal habe ich mir die Zeit genommen, es richtig zu lernen, und es hat mir viel Zeit gespart und das Abhängigkeitsmanagement erheblich erleichtert. 
 Der einzige Nachteil ist, dass nicht jede Abhängigkeit, die ich nutze, ein Paket darin hat, wie z.B. SoLoud.
 
 #### C++
 Das ist mein zweites Projekt in C++, und ich habe viel aus meinem vorherigen Projekt gelernt, um die Codequalität zu verbessern.
 In meiner alten Engine verwendete ich viele raw Pointer und manuell verwalteten Speicher. 
-Nun verwende ich wenn möglich Smart-Pointer. 
+Nun verwende ich wenn möglich Smart-Pointer und STD-Container. 
 Ich habe den Code auch wesentlich besser strukturiert und modularer gestaltet.
 
 ### Dinge, die besser sein könnten
 
 #### Mehr ein Framework als eine Engine
-Das ganze project ist mehr ein Framework als eine Engine, da es nicht unbedingt viele vordefinierten Components for sachen wie Rendering oder Audio abspielen besitzt.
+Das ganze Projekt ist mehr ein Framework als eine Engine, da es nicht unbedingt viele vordefinierten Components for sachen wie Rendering oder Audio abspielen besitzt.
 Der Benuzer sollte diese selbst implementieren, damit er diese strukturieren kann, wie er es will.
 
 #### Audio
-Audio, wie vorher bereits erwähnt, is recht simpel implementiert, das ist bestimmt ein Punk wo die Engine noch massiv verbessert werden könnte.
+Audio, wie vorher bereits erwähnt, ist recht simpel implementiert, das ist bestimmt ein Punkt wo die Engine noch massiv verbessert werden könnte.
 
 #### Model Importer
-Die engine besitzt keinen Weg, Model-Files zu importieren, der Benuzer müsste dies selbst machen.
+Die Engine besitzt keinen Weg, Model-Files (FBX, GLTF, OBJ) zu importieren, der Benutzer müsste dies selbst machen.
  
 #### Besserer Input
-Das Input system an sich ist auch eher simpel und nicht wirklich sauber implementiert. Sachen wie Kontroller-Support fehlen auch noch.
+Das Input System an sich ist auch eher simpel und nicht wirklich sauber implementiert. Sachen wie Kontroller-Support fehlen auch noch.
 
 ## Resultate
 

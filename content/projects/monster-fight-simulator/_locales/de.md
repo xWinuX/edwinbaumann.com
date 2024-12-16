@@ -1,23 +1,22 @@
-# C++ Game Engine
+# Monster Fight Simulator
 Monster Fight Simulator war ein kleines Projekt, das ich für mein Studium machen musste.
 Es beinhaltete die Erstellung einer Konsolenanwendung, in der der Benutzer zwei verschiedene Monster verschiedener Rassen erstellen, deren Werte anpassen und sie dann gegeneinander kämpfen lassen konnte.
 Da ich etwas mehr Zeit hatte und mich selbst herausfordern wollte, habe ich eine kleine Engine darum herumgebaut, die vollständig in einem Windows-Konsolenfenster läuft.
-Das Spiel selbst kann unten angesehen werden:
+Ein vollständiger Playthrough kann im Video unterhalb angesehen werden.
 
 ::video-player{src="../media/gameplay.mp4"}
 ::
 
 ## Features
 Das Spiel selbst ist einfach. Der Benutzer kann zwischen drei Rassen wählen und dann jedem Monster einen Namen geben und seine Werte anpassen.
-Jedes Volk hat unterschiedliche Bereiche in jeder Statistik, daher haben manche beispielsweise eine höhere maximale Lebenspunktezahl als andere.
-\
-\
+Jedes Volk hat unterschiedliche Stärken und Schwächen, daher haben manche beispielsweise eine höhere maximale Lebenspunktezahl als andere.
+
 Das Interessante an dem Projekt selbst ist die Konsolen-Engine, in der es läuft.
 
-
 ### Rendering
-Da die gesamte Engine in einem Konsolenfenster läuft, besteht das gesamte Rendering im darin, herauszufinden, wo bestimmte Zeichen in der Konsole angezeigt werden müssen.
-Es gibt eine Liste von Strings, die den aktuellen Frame darstellt.  Dabei entspricht die Länge jedes Strings der Fensterbreite und die Anzahl der Strings in der Liste der Fensterhöhe.
+Da die gesamte Engine in einem Konsolenfenster läuft, besteht das gesamte Rendering daraus, herauszufinden, wo bestimmte Zeichen in der Konsole angezeigt werden müssen.
+Es gibt eine Liste von Strings, die den aktuellen Frame darstellt.  
+Dabei entspricht die Länge jedes Strings der Fensterbreite und die Anzahl der Strings in der Liste der Fensterhöhe.
 Für das Zeichnen der Objekte selbst gibt es Sprites, die ebenfalls nur Listen von Strings sind und mehrere Frames für Animationen haben können.
 
 
@@ -41,10 +40,9 @@ new SpriteData(1f, OriginHelper.Preset.MiddleCenter, new[]
 
 Bei jedem Frame füllt die Engine die aktuelle Liste der Strings mit leeren Zeichen und rendert dann jeden Sprite darauf.
 Sprites können unterschiedliche Tiefen haben, sodass sie sich über oder unter anderen Sprites befinden können.
-Standardmäßig zeichnen Sprites immer die gesamte Fläche, die sie bedecken, auch wenn der Sprite "transparente" Bereiche enthält.
+Standardmässig zeichnen Sprites immer die gesamte Fläche, die sie bedecken, auch wenn der Sprite "transparente" Bereiche enthält.
 Dies kann geändert werden, indem man ein "&"-Zeichen verwendet, das in echte Transparenz umgewandelt wird, sodass Sprites durch andere Sprites sichtbar sind.
-\
-\
+
 Es ist auch möglich, Strings direkt im aktuellen Frame darzustellen, ohne einen Sprite zu verwenden.
 Dies macht das Rendern dynamischer Daten wesentlich einfacher.
 ```csharp
@@ -154,7 +152,7 @@ Es war sehr zufriedenstellend, als der erste Sprite korrekt gerendert wurde.
 ### Dinge, die besser sein könnten
 
 #### Bessere Game Objects
-Die Spielobjekte sind ziemlich starr, und ich wünschte irgendwie, ich hätte ein Komponentensystem hinzugefügt.
+Die Spielobjekte sind nicht so modular wie, sie sein könnten, und ich wünschte irgendwie, ich hätte ein Komponentensystem hinzugefügt.
 Da dieses Projekt aber nicht benotet wurde und andere Projekte höhere Priorität hatten, musste ich einige Kompromisse eingehen.
 
 ## Resultate

@@ -2,7 +2,7 @@
 C++ Game Engine ist ein Projekt, das ich als Game-Engine und Showcase entwickelt habe, geschrieben in C++ mit OpenGL als Grafik-API.
 In meinem Studium haben wir gelernt, Rendering von Grund auf mit OpenGL und C++ zu erstellen, aber später mussten wir für die Aufgabe auf C# umsteigen.
 Da ich aber schon viel C# konnte und unbedingt C++ lernen wollte, bekam ich die Erlaubnis, das Projekt in C++ zu schreiben.
-Statt nur einen einfachen Renderer zu bauen, habe ich gleich eine kleine Game-Engine drumherum entwickelt, auch wenn der Fokus auf dem Rendering lag.
+Statt nur einen einfachen Renderer zu bauen, habe ich gleich eine kleine Game-Engine entwickelt, auch wenn der Fokus auf dem Rendering lag.
 
 ## Features
 
@@ -10,7 +10,7 @@ Statt nur einen einfachen Renderer zu bauen, habe ich gleich eine kleine Game-En
 Die Engine verwendet OpenGL fürs Rendering.
 
 #### Lighting
-Das Rendering unterstützt ein Umgebungslicht, ein Directional-Light und bis zu 16 Point-Lights.
+Das Rendering unterstützt ein Ambient-Light, ein Directional-Light und bis zu 16 Point-Lights.
 ![lighting](../media/lighting.png)
 
 Highlights werden mit der Blinn-Methode umgesetzt, die für Directional- und Point-Lights funktioniert.
@@ -22,11 +22,11 @@ Die Engine unterstützt auch Smooth- und Metallic-Shading, wobei das nur eine An
 
 ![no metallic](../media/no-metallic.png)
 
-<p style="margin-top: -1rem"><i>Specular tint with metallic set to 0%</i></p>
+<p style="margin-top: -1rem"><i>Specular Tint mit metallic auf 0%</i></p>
 
 ![metallic](../media/metallic.png)
 
-<p style="margin-top: -1rem"><i>Specular tint with metallic set to 100%</i></p>
+<p style="margin-top: -1rem"><i>Specular Tint with metallic auf 100%</i></p>
 
 #### Reflections
 Je nach smoothness des Materials wird die Skybox reflektiert.
@@ -48,13 +48,13 @@ Normal Maps werden unterstützt und interagieren korrekt mit den Lichteffekten.
 
 
 #### Shadows
-Schatten werden durch eine Cascaded-Shadow-Map umgesetzt, die sich je nach Winkel des Richtungslichts anpasst.
+Schatten werden durch eine Cascaded-Shadow-Map umgesetzt, die sich je nach Winkel des Directional-Lights anpassen.
 
 ![shadows around noon](../media/shadows-0.png)
 ![shadows at dawn](../media/shadows-1.png)
 
 #### Material System
-Das Rendering-System basiert auf einem Material-System, wie man es auch in anderen Engines findet. 
+Der Renderer basiert auf einem Material-System, wie man es auch in anderen Engines findet. 
 Jedes Material hat vordefinierte Parameter, die man nachträglich anpassen kann.
 
 ```cpp
@@ -77,8 +77,8 @@ litShader->GetUniformStorage()->CopyFrom(&litUniforms);
 
 #### Batched Sprite Renderer
 Die Engine unterstützt 2D- und 3D-Sprites.
-Sprites werden registriert und in einen Texture-Atlas geladen, sodass sie alle im selben Draw-Call gerendert werden, wenn sie zur gleichen Atlas-Seite gehören.
-Das erlaubt eine große Anzahl von Sprites, die effizient gerendert werden können.
+Sprites werden registriert und in einen Texture-Atlas geladen, sodass sie alle im selben Draw-Call gerendert werden können, solange sie auf der selben Atlas Page sind.
+Das erlaubt eine grosse Anzahl von Sprites, die effizient gerendert werden können.
 
 ### Physics
 Die Engine verwendet [ReactPhysics3D](https://www.reactphysics3d.com) als Physik-Engine.
@@ -97,12 +97,12 @@ Die Werte von Game-Objekten und deren Komponenten, inklusive Material-Parameter,
 ::
 
 ### Input
-Die Eingabe ist ziemlich einfach gehalten und wird über eine einzelne statische Klasse verwaltet, die prüft, ob eine Taste gedrückt oder gehalten wird.
+Die Eingabe ist ziemlich simpel gehalten und wird über eine einzelne statische Klasse verwaltet, die prüft, ob eine Taste gedrückt oder gehalten wird.
 
 ### Game Object Management
 Das Game-Objekt-Management ähnelt dem von Unity: 
-Es gibt Game-Objekte, die Komponenten enthalten können, und die Komponenten haben vordefinierte Funktionen wie OnStart und OnUpdate, um Logik auszuführen.
-Jedes Game-Objekt lebt in einer Szene und hat immer eine Transform-Komponente.
+Es gibt Game-Objekte, die Components beinhalten können, und die Components haben vordefinierte Funktionen wie OnStart und OnUpdate, um Logik auszuführen.
+Jedes Game-Objekt lebt in einer Szene und hat immer einen Transform-Component.
 
 ```cpp
 GameObject* playerObject = new GameObject("Player");
@@ -127,24 +127,24 @@ void POVCharacterController::OnStart()
 #### OpenGL
 Das war mein erster Kontakt mit OpenGL und mein erstes Mal, einen Renderer von Grund aufzuschreiben.
 Ich habe dabei viel über die Rendering-Pipeline gelernt, die von Engines normalerweise abstrahiert wird.
-Ich habe herausgefunden, wie Vertex-Daten strukturiert, in Shader übergeben und dort manipuliert werden.
+Ich habe gelernt, wie Vertex-Daten strukturiert, in Shader übergeben und dort manipuliert werden.
 Zusätzlich musste ich mich auch intensiv mit Matrizen beschäftigen, da sie die grundlegenden Bausteine fürs Rendering sind.
 
 #### C++
 Das war auch mein erstes Mal mit C++, also war die Sprache komplett neu für mich.
 Vieles in der Syntax kam mir aus C# bekannt vor, aber Sachen wie Header, Pointer, manuelles Speichermanagement und Mehrfachvererbung waren mir völlig fremd.
-Die Trennung zwischen Header- und Quell-Dateien fand ich etwas nervig – ich verstehe, warum es so gemacht wird, aber es fühlt sich manchmal redundant an.
-Ein weiteres Aha-Erlebnis war, dass nicht initialisierte Variablen wirklich zufälligen Speicher enthalten und nicht automatisch auf Standardwerte gesetzt werden, wie es in anderen Sprachen oft der Fall ist.
+Die Trennung zwischen Header- und Quell-Dateien fand ich etwas nervig, verstehe aber, warum es so gemacht wird, aber es fühlt sich manchmal etwas redundant an.
+Was mich auch erstaunt hat, ist, dass nicht initialisierte Variablen zufälligen Speicher enthalten und nicht automatisch auf Standardwerte gesetzt werden, wie es in anderen Sprachen oft der Fall ist.
 
 ### Dinge, die besser sein könnten
 
 #### Dependencies
-Ein großer Unterschied zwischen C++ und anderen Sprachen ist der Mangel an einem standardisierten Paketmanager.
+Ein grosser Unterschied zwischen C++ und anderen Sprachen ist der Mangel an einem standardisierten Paketmanager.
 Es gibt zwar Drittanbieter-Lösungen wie VCPKG und Conan, aber die sind nicht ganz leicht zugänglich, und ich hatte nicht die Zeit, mich da tiefer einzuarbeiten.
 Letztendlich habe ich die Abhängigkeiten manuell verwaltet, was sich als schlechte Idee herausstellte und das Ganze unnötig kompliziert machte.
-Für mein nächstes Projekt werde ich definitiv nach besseren Möglichkeiten zur Verwaltung der Abhängigkeiten suchen.
+Für mein nächstes Projekt werde ich definitiv nach besseren Möglichkeiten suchen.
 
-#### Separation
+#### Separierung Engine / Showcase
 Aufgrund meiner Art, die Abhängigkeiten zu verwalten, war es nicht möglich, den Showcase von der Engine zu trennen,
 und beide befinden sich nun im gleichen Git-Repository, was nicht ideal ist.
 
@@ -153,15 +153,15 @@ Die Codequalität könnte definitiv besser sein, aber da dies mein erstes Projek
 Ich habe in diesem Projekt viel gelernt und werde das Wissen in meinem nächsten C++-Projekt nutzen, um den Code sauberer und effizienter zu schreiben.
 
 #### Quantität über Qualität
-Die Engine hat viele Features – manche habe ich noch nicht mal erwähnt, wie z.B. das SDF-Text-Rendering.
+Die Engine hat viele Features, manche habe ich noch nicht mal erwähnt, wie z.B. das SDF-Text-Rendering.
 Viele dieser Features sind jedoch nur teilweise implementiert und ein wenig buggy.
-Bei zukünftigen Projekten sollte ich mich wahrscheinlich darauf konzentrieren, vorhandene Funktionen zu verfeinern, statt so viele wie möglich hinzuzufügen.
+Bei zukünftigen Projekten sollte ich mich wahrscheinlich darauf konzentrieren, vorhandene Funktionen zu verfeinern, anstatt so viele wie möglich hinzuzufügen.
 
 ## Resultate
 
 ### Source Code
-Das Projekt ist vollständig Open Source und verfügbar hier: [https://github.com/xWinuX/CppGameEngine](https://github.com/xWinuX/CppGameEngine) \
-Der Showcase ist unter der Release Sektion verfügbar oder hier: [https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip](https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip)
+Das Projekt ist vollständig Open Source und verfügbar unter folgendem Link: [https://github.com/xWinuX/CppGameEngine](https://github.com/xWinuX/CppGameEngine) \
+Der Showcase ist unter der Release Sektion verfügbar unter folgendem Link: [https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip](https://github.com/xWinuX/CppGameEngine/releases/download/v1.0/CppGameEngineV1.0.zip)
 
 ### Note
 Die Endnote war eine 2 (University of Middlesex Notensystem), was auf der Schweizer Notenskala einer 5.75 entspricht.

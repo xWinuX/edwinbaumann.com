@@ -41,7 +41,7 @@ Es erforderte viele Checks, um sicherzustellen, dass die Entities nicht ineinand
 ### Was besser sein könnte
 
 #### Visualization of the syncing and controlling character
-Es hätte eine bessere visuelle Darstellung davon geben sollen, welcher character gerade gesteuert wird. 
+Es hätte eine bessere visuelle Darstellung davon geben sollen, welcher Character gerade gesteuert wird. 
 Manchmal ist es auch etwas schwierig zu erkennen, welche Entities sich auf beiden Seiten überschneiden. 
 Dazu würde ein Ghost-System, das die Entities der anderen Seite auf der jetzigen Seite leicht transparent anzeigt, wahrscheinlich helfen. 
 Einige Leute waren auch ein wenig verwirrt von der Sync-Mechanik an sich, daher hätte ein Text-Tutorial wahrscheinlich geholfen, anstatt durch das Leveldesign es versuchen zu erklären.

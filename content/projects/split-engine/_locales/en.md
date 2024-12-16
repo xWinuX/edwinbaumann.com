@@ -145,7 +145,6 @@ I created one, and after a lot of trial and error managed to make it work, you j
 ```
 
 ## Reflection
-I’m really happy with the results of the engine, I especially like how the ECS turned out and how flexible the overall engine is.
 
 ### What I learned
 

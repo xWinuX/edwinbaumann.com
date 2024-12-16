@@ -15,7 +15,7 @@ Das Ziel des Spiels ist es, die Clown-Statue vollständig wiederaufzubauen, dahe
 ::
 
 Das Gimmick von Circus Mayhem ist, dass jeder Gegner seine Waffe fallen lässt, sobald er besiegt ist.
-Waffen werden automatisch aufgehoben, wenn man sie berührt, deshalb wechselt also ständig die Waffe, wenn man nicht aufpasst.
+Waffen werden automatisch aufgehoben, wenn man sie berührt, deshalb wechselt man also ständig die Waffe, wenn man nicht aufpasst.
 
 ::auto-video{src="../media/weapon-chaos.mp4"}
 ::
@@ -42,11 +42,10 @@ Das Spiel ist viel zu schwer, ich konnte es selbst beim Replay für die Videoauf
 Das Spiel selbst ist wirklich schwer zu testen, da jeder Spieldurchgang anders und sehr lang sein kann,
 aber einige Gegner haben definitiv zu viel Leben und verursachen zu viel Schaden.
 
-
 #### Der Spieler sollte in der Lage sein, Wellen zu überspringen.
 Nach jeder Welle muss der Spieler 30 Sekunden warten, bevor die nächste beginnt.
 Am Anfang des Spiels ist es ziemlich langweilig, 30 Sekunden warten zu müssen, da man in dieser Zeit wenig tun kann.
-Am Ende sind 30 Sekunden zu wenig, da man viel Loot einsammeln muss, der über die gesamte Map verteilt liegt, sodass ein Großteil einfach despawnt.
+Am Ende sind 30 Sekunden zu wenig, da man viel Loot einsammeln muss, der über die gesamte Map verteilt liegt, sodass ein Grossteil einfach despawnt.
 
 ## Resultate
 

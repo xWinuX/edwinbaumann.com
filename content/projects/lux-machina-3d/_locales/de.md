@@ -1,7 +1,7 @@
 # Lux Machina 3D
 Lux Machina 3D ist ein 3D-"Remake" von Lux Machina, einem Spiel, das ich für den 28. GM48 Game Jam entwickelt habe.
 Es war mein erster Versuch, ein 3D-Spiel zu erstellen, und auch mein erster Einsatz von Unity.
-Ausserdem war es das erste richtige Projekt in meinem Studium das benotet wurde.
+Ausserdem war es das erste richtige Projekt in meinem Studium, das benotet wurde.
 Ein vollständiger Playthrough kann im Video unterhalb angesehen werden, oder man kann das Spiel selbst spielen mit dem Link am Ende dieser Seite.
 
 ::youtube-embed{videoId="rHljpWTegm4"}
@@ -9,14 +9,14 @@ Ein vollständiger Playthrough kann im Video unterhalb angesehen werden, oder ma
 
 ## Features
 Das Spiel enthält die meisten Mechaniken des ursprünglichen Game-Jam-Spiels, nur diesmal in 3D. 
-Der größte Unterschied besteht darin, dass das Spiel, wenn man als Hauptcharakter spielt, 
+Der grösste Unterschied besteht darin, dass das Spiel, wenn man als Hauptcharakter spielt, 
 jetzt aus der First-Person-Perspektive statt aus der Vogelperspektive wie im Original gespielt wird.
 
 
 ::auto-video{src="../media/first-person.mp4"}
 ::
 
-Bei der Steuerung des Roboters wechselt das Spiel in eine Third-Person-Perspektive, um die Steuerung und Überblick der Laser zu erleichtern.
+Bei der Steuerung des Roboters wechselt das Spiel in eine Third-Person-Perspektive, um die Steuerung und den Überblick der Laser zu erleichtern.
 Die Steuerung des Roboters hat sich ebenfalls etwas verändert.
 Er kann nun durch Drücken von Space/Shift auf-/absteigen und durch Drücken von E/Q drehen.
 
@@ -32,8 +32,8 @@ Das war mein erster Einsatz von Unity, daher musste ich natürlich alles Engine-
 Die einzige Engine, die ich vorher benutzt habe, war Game Maker Studio, das etwas anders funktioniert als Unity.
 Die Art und Weise, wie Unity Game Objects und Komponenten handhabt, war komplett neu für mich, aber ich mag die Flexibilität dieses Systems sehr.
 Da Game Maker eigentlich nur für 2D verwendet wird, war es auch mein erstes 3D-Spiel.
-Es macht die Dinge etwas schwieriger und zeitaufwendiger, insbesondere das Modellieren und Animieren von allem. \
-\
+Es macht die Dinge etwas schwieriger und zeitaufwendiger, insbesondere das Modellieren und Animieren von allem.
+
 Was mir an Unity wahrscheinlich am besten gefällt, ist die Möglichkeit, den Editor mit benutzerdefinierten Tools zu erweitern.
 Ich habe im Laufe der Projektentwicklung einige kleinere Tools erstellt.
 Wie dieses System, das mir anzeigt, welches Puzzle-Element aktiviert ist.
@@ -63,7 +63,7 @@ Ich muss noch viel lernen, besonders in der Animation, da sie im Moment etwas st
 
 ### Was besser sein könnte
 
-#### Mehr content
+#### Mehr Content
 Das Spiel hat nicht die gleiche Anzahl an Leveln wie die Originalversion, die in 48 Stunden erstellt wurde. 
 Vieles davon ist darauf zurückzuführen, dass ich während des Erstellens noch zusätzlich Unity lernen musste und die zusätzliche Zeit, die die Erstellung von 3D-Modellen benötigt.
 Es gibt viele verworfene Elemente, wie den zweiten Roboter aus dem Original oder Spiegel, die es nicht ins Spiel geschafft haben.

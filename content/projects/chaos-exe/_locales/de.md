@@ -8,13 +8,13 @@ Ein vollständiger Playthrough kann im Video unterhalb angesehen werden, oder ma
 
 ## Features
 In Chaos.exe kann man bewegen, springen und mit einigen Dingen interagieren.
-Man bewegt sich in einer kleinen Welt und erleben Events, die immer dazu führen werden, dass sein Charakter stirbt.
-Die Welt wird immer korrupter, je mehr man stirbt, was zufällige Events wie komische Stimmen und Korrupte Animationen zur Folge hat.
+Man bewegt sich in einer kleinen Welt und erlebt Events, die immer dazu führen werden, dass sein Charakter stirbt.
+Die Welt wird immer korrupter, je mehr Events man erlebt, was zusätzliche Events wie komische Stimmen und korrupte Animationen zur Folge hat.
 
 ::auto-video{src="../media/effects.mp4"}
 ::
 
-Ab einer gewissen Anzahl Event erhält er Spieler einen Schlüssel, mit dem er das Spiel abschliessen kann.
+Ab einer gewissen Anzahl Event erhält der Spieler einen Schlüssel, mit dem er das Spiel abschliessen kann.
 Je nachdem wie viele Events der Spieler erlebt hat, gibt es verschiedene Endings.
 Das Spiel ist mechanisch ziemlich einfach, die komplexen Dinge sind das gesamte Event-System und die Persistenz des Weltzustands.
 
@@ -24,12 +24,12 @@ Das Spiel ist mechanisch ziemlich einfach, die komplexen Dinge sind das gesamte 
 
 #### Shader Effekte
 Das Spiel verwendet verschiedene Shader, um seine Korruptionseffekte zu erzielen.
-Ich habe Shader schon ein paar Mal verwendet, aber es ist das erste Mal, dass ich mich wirklich darauf fokusiere.
+Ich habe Shader schon ein paar Mal verwendet, aber es ist das erste Mal, dass ich mich wirklich darauf fokussiere.
 Ich denke, dass das Programmieren von Shadern ziemlich viel anspruchsvoller ist als das Schreiben von normalem Gameplay-Code, da man oft kein sofortiges Feedback bekommt, wenn etwas nicht funktioniert.
 Aber ich bin ziemlich stolz auf die finalen Effekte im Spiel.
 
 #### Level Persistenz
-Die Welt verändert sich, wenn man stirbt, aber einige Dinge bleiben gleich oder werden von seienn Entscheidungen beeinflusst.
+Die Welt verändert sich, wenn man stirbt, aber einige Dinge bleiben gleich oder werden von seinen Entscheidungen beeinflusst.
 Die Welt ist im Grunde in mehrere Layer unterteilt, die jeweils bestimmte Objekte aktivieren und deaktivieren, abhängig von den Events, die der Spieler auslöst.
 Zum Beispiel wird die Höhle auf der linken Seite von Stühlen blockiert, wenn der Spieler das Ereignis bereits erlebt hat, sodass er sich dort nicht erneut einsperren kann.
 

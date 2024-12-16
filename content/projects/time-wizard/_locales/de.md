@@ -1,5 +1,5 @@
 # Time Wizard
-Time Wizard war das Spiel, dass ich während meines ersten Game Jams erstellt habe, das Thema des Jams war "Countdown".
+Time Wizard war das Spiel, das ich während meines ersten Game Jams erstellt habe, das Thema des Jams war "Countdown".
 Ich habe das gesamte Spiel programmiert und die Music und Soundeffekte erstellt und ein Kollege von mir hat alle Grafiken erstellt.
 
 Ein vollständiger Playthrough kann im Video unterhalb angesehen werden, oder man kann das Spiel selbst spielen mit dem Link am Ende dieser Seite.
@@ -9,7 +9,7 @@ Ein vollständiger Playthrough kann im Video unterhalb angesehen werden, oder ma
 
 ## Features
 In Time Wizard hat man 7.5 Minuten Zeit den Time Wizard, der am Ende eines Dungeons voller Gegner wartet, zu besiegen.
-Jede Aktion, die du ausführst (ausser Bewegen), zieht zusätzliche Zeit vom Timer ab.
+Jede Aktion, die ma ausführt (ausser Bewegen), zieht zusätzliche Zeit vom Timer ab.
 Diese Aktionen sind:
 
 - Ausweichen
@@ -40,23 +40,23 @@ Es gab am Anfang einige Probleme, aber wir haben ziemlich schnell eine Lösung g
 
 #### Etwas fertigstellen
 Dies war auch das erste Mal, dass ich wirklich ein Spiel "fertiggestellt" habe, auch wenn es nur ein kleines ist.
-Bei der Arbeit an großen Spielen ohne echte Deadline verliere ich mich oft in Details und Polishing.
+Bei der Arbeit an grossen Spielen ohne echte Deadline verliere ich mich oft in Details und Polishing.
 Mit nur 48 Stunden habe ich den gesamten Prozess vom Prototyping bis zur Veröffentlichung eines Spiels durchlaufen, und das war eine wirklich wertvolle Erfahrung.
 
 ### Was besser sein könnte
 
 #### Zeitmanagement
-Natürlich hatte ich als Neuling in meinem ersten Game Jam wirklich keine Ahnung, wie ich die 48 Stunden am besten managen sollte.
+Natürlich hatte ich in meinem ersten Game Jam wirklich keine Ahnung, wie ich die 48 Stunden am besten managen sollte.
 Dadurch dauerten bestimmte Dinge länger als erwartet, weshalb andere Dinge gekürzt oder ganz entfernt werden mussten.
-Der Mangel an ordnungsgemäßem Zeitmanagement verursachte die meisten der unten aufgelisteten Probleme.
+Der Mangel an ordnungsgemässem Zeitmanagement verursachte die meisten der unten aufgelisteten Probleme.
 
 #### Mangel an Testen verursachte Probleme mit dem Balancing
 Das Testen ist etwas, für das wir während der Entwicklung wirklich keine Zeit hatten, daher ist das Spiel nicht besonders gut balanced.
-Die beste Strategie ist einfach, an allen Gegner vorbeizurennen und direkt zum Boss zu gehen, was das gesamte Level und die Gegner eher nutzlos macht.
-Das Testen ist definitiv etwas, das ich unterschätzt habe, es kostet zwar viel Zeit, ist aber auch äußerst wichtig.
+Die beste Strategie ist einfach, an allen Gegnern vorbeizurennen und direkt zum Boss zu gehen, was das gesamte Level und die Gegner eher nutzlos macht.
+Das Testen ist definitiv etwas, das ich unterschätzt habe, es kostet zwar viel Zeit, ist aber auch äusserst wichtig.
 
 #### Unfertige Mechaniken
-Das Spiel hatte ursprünglich die Puzzles als Feature geplant, aber es wurde nicht wirklich gut umgesetzt und integriert, wegen des Zeitmangels.
+Das Spiel hatte ursprünglich Puzzles als Feature geplant, aber es wurde nicht wirklich gut umgesetzt und integriert, wegen des Zeitmangels.
 
 ## Resultate
 

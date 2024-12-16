@@ -1,7 +1,7 @@
 # C# Socket Chat
 C# Socket Chat war ein kleines Projekt, das ich für mein Studium erstellen musste.
 Es ging darum, eine Konsolen-Chat-Anwendung nur mit Sockets zu erstellen.
-Da ich mir die Formularerstellung in C# ansehen wollte, habe ich auch WPF verwendet, um eine Benutzeroberfläche dafür zu erstellen.
+Da ich mir die Formularerstellung in C# ansehen wollte, habe ich auch WPF verwendet, um eine UI dafür zu erstellen.
 Eine Demo ist unten zu sehen:
 
 ::video-player{src="../media/demo.mp4"}
@@ -9,8 +9,8 @@ Eine Demo ist unten zu sehen:
 
 ## Features
 Wenn die Anwendung startet, kann der Benutzer auswählen, ob er einen Server hosten oder einem beitreten möchte.
-Die Benutzeroberflächen sehen fast gleich aus, der Benutzer kann eine IP-Adresse und einen Port auswählen, um den Server zu hosten oder zu joinen.
-Der einzige Unterschied besteht in der Join UI, ein Benutzer auch einen Namen auswählen kann.
+Die UI's sehen fast gleich aus, der Benutzer kann eine IP-Adresse und einen Port auswählen, um den Server zu hosten oder zu joinen.
+Der einzige Unterschied besteht in der Join UI, dort kann ein Benutzer auch einen Namen auswählen.
 
 ## Reflexion
 

@@ -7,7 +7,7 @@ Ein vollständiger Playthrough kann im Video unterhalb angesehen werden, oder ma
 ::
 
 ## Features
-In Iron Ball Run konntest du es endlich schaffen, deine Gefängniszelle zu entkommen, aber du musst immer noch aus dem Gefängnis selbst entkommen.
+In Iron Ball Run konntest du es endlich schaffen, deiner Gefängniszelle zu entkommen, aber du musst immer noch aus dem Gefängnis selbst entkommen.
 Leider hast du immer noch eine Eisenkugel an dir befestigt, aber das kannst du zu deinem Vorteil nutzen.
 Da der Eisenball sehr schwer ist, kann man zwar immer noch springen, ihn aber dafür nicht mitnehmen.
 
@@ -31,7 +31,7 @@ Und man kann sogar den Ball als Waffe benutzen, um Wachen auszuschalten.
 #### Iron ball physik
 Die Physik der Eisenkugel war definitiv das herausforderndste zu implementieren.
 Zwei miteinander verbundene Elemente zu haben, war etwas, was ich zuvor noch nicht wirklich gemacht habe. 
-Aber insgesamt bin ich ziemlich zufrieden damit, wie sich die Bewegung entwickelt hat, und es treten keine größeren Fehler auf.
+Aber insgesamt bin ich ziemlich zufrieden damit, wie sich die Bewegung entwickelt hat, und es treten keine grösseren Fehler auf.
 
 ::auto-video{src="../media/iron-ball-testing.mp4"}
 ::

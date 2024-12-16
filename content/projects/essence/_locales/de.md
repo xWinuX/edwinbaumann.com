@@ -13,9 +13,8 @@ Die Welt von Essence besteht aus vier Rassen.
 - Die Orangen.
 - Die Roten
 
-
-Jede Rasse hat einen Orb, die ihnen ihre Macht verleiht, aber die Roten haben den Orb der Blauen gestohlen, und es ist deine Aufgabe, ihn zurückzuholen.
-Man wird durch mehrere Räume gehen, die mit Feinden und freundlichen NPCs gefüllt sind, mit denen man sprechen kannst.
+Jede Rasse hat einen Orb, der ihnen ihre Macht verleiht, aber die Roten haben den Orb der Blauen gestohlen, und es ist deine Aufgabe, ihn zurückzuholen.
+Man wird durch mehrere Räume gehen, die mit Feinden und freundlichen NPCs gefüllt sind, mit denen man sprechen kann.
 Der Charakter kann die typischen Plattformbewegungen wie Springen und Doppelspringen, Bewegen und Ducken ausführen.
 Ausserdem besitzt man einen Bogen, der entweder einen normalen Schuss, einen Doppelschuss oder einen piercing Schuss abfeuern kann.
 
@@ -31,7 +30,7 @@ um sich zu heilen und mehr Verteidigung zu bekommen?
 ::auto-video{src="../media/defeating.mp4"}
 ::
 
-Man wird auch jedes Mal Essenz verlieren, wenn man getroffen wird.
+Man verliert auch jedes Mal Essenz, wenn man getroffen wird.
 
 ::auto-video{src="../media/taking-damage.mp4"}
 ::
@@ -42,7 +41,8 @@ Man wird auch jedes Mal Essenz verlieren, wenn man getroffen wird.
 
 #### Platforming Physik
 Dies war das erste Mal, dass ich ein Plattformspiel gemacht habe.
-Also war die gesamte Physik des Springens und der Schwerkraft für mich neu, auf einfacher ebenem Terrain ist es ziemlich unkompliziert.
+Also war die gesamte Physik des Springens und der Schwerkraft neu für mich.
+Auf ebenem Terrain ist es ziemlich unkompliziert, deswegen gibt es keine Slopes :D.
 
 #### Persistent data
 Obwohl es nicht wirklich sinnvoll genutzt wird, speichert jeder Raum seinen Zustand, damit der Spieler in den Raum zurück kann ohne das z.B. Gegner respawnen.
@@ -56,7 +56,7 @@ aber wir hatten keine Zeit mehr, also hindert einem nichts daran, einfach jeden 
 
 #### Vorspulen von Dialogen
 Die Dialoge im Spiel können nicht vorgespult werden und müssen vollständig abgespielt werden, bevor man sich wieder bewegen kann.
-Dies ist definitiv etwas, das umgesetzt worden sein sollte, es wäre wirklich auch nicht schwer gewesen.
+Dies ist definitiv etwas, das einfach hätte hinzugefügt werden.
 
 #### Mangel an SFX
 SFX und Musikproduktion sind Dinge, in denen weder ich noch mein Kollege gut sind.

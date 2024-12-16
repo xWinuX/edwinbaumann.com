@@ -7,31 +7,30 @@ Ein vollständiger Playthrough kann im Video unterhalb angesehen werden, oder ma
 ::
 
 ## Features
-In Lux Machina wächst du in einer komischen Einrichtung auf und merkst das du keine Arme mehr hast.
-Ausserdem hörst du eine ominöse Stimme die dir Instruktionen gibt.
+In Lux Machina wächst du in einer komischen Einrichtung auf und merkst, dass du keine Arme mehr hast.
+Ausserdem hörst du eine ominöse Stimme, die dir Instruktionen gibt.
 Man wird durch mehrere Räume voller Puzzleelemente gehen, manche kann man selbst aktivieren wie z.B. Druckplatten
 
 ::auto-video{src="../media/pressure-plate.mp4"}
 ::
 
-Für andere hingegen, benötigts du Hilfe von dem fliegenden Roboter der dir folgt.
+Für andere hingegen benötigt man die Hilfe von dem fliegenden Roboter der einem folgt.
 
 ::auto-video{src="../media/buddy.mp4"}
 ::
 
-Der Roboter kann Orte erreichen die der Spieler selbst nicht kann, ausserdem kann er Laser umleiten um damit andere Elemente zu aktivieren
+Der Roboter kann Orte erreichen, die der Spieler selbst nicht kann, zudem kann er Laser umleiten, um damit andere Elemente zu aktivieren
 
 ::auto-video{src="../media/lasers.mp4"}
 ::
 
 Das Spiel beinhaltet die folgenden Puzzleelemente:
-
-- Druckplatten, die aktiviert bleiben sobald sie einmal aktiviert wurden
-- Druckplatten, die nur aktiv sind wenn man darauf stehen bleibt.
-- Knöpfe die nur die Roboter bedienen können
+- Druckplatten, die aktiviert bleiben, sobald sie einmal aktiviert wurden
+- Druckplatten, die nur aktiv sind, wenn man darauf stehen bleibt.
+- Knöpfe, die nur die Roboter bedienen können
 - Lasers
-- Türen die durch andere Elemente geöffnet werden können
-- Zwei Roboter die horizontal und vertikal Laser umleiten
+- Türen, die durch andere Elemente geöffnet werden können
+- Zwei Roboter, die horizontal und vertikal Laser umleiten
 
 ## Reflexion
 
@@ -57,9 +56,9 @@ Deswegen ist es immer eine gute Idee Feedback von einer Person zu erhalten, die 
 
 #### Debug Tasten drin gelassen
 Während der Entwicklung habe ich die Pfeiltasten links und rechts verwendet, um schnell zwischen Level zu wechseln und sie effizienter zu testen.
-Dies ist eine Debug-Only Funktion und sollte nicht im endgültigen Release enthalten sein, aber sie haben sich dennoch eingeschlichen und bei manchen Spielern zu Verwirrung gesorgt, 
-wenn sie versucht haben sich mit den Pfeiltasten zu bewegen.
-Beim nächsten Mal sollte ich einige flags verwenden, um ein Debug-Build zu überprüfen, anstatt darauf zu vertrauen, dass ich sie vor der Veröffentlichung lösche.
+Dies ist eine Debug-Only Funktion und sollte nicht im endgültigen Release enthalten sein, aber sie haben sich dennoch eingeschlichen.
+Es hat bei ein paar Spielern zu Verwirrung gesorgt, wenn sie versucht sich mit den Pfeiltasten, anstatt WASD zu bewegen.
+Beim nächsten Mal sollte ich Debug-Flags nutzen, um solche Funktionen automatisch aus dem Release Build zu entfernen.
 
 ## Resultate
 
