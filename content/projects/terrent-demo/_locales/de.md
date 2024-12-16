@@ -6,7 +6,7 @@ Wir haben auch gemeinsam an der Story und dem allgemeinen Game-Design gearbeitet
 
 Ein vollständiger Playthrough kann im Video unterhalb angesehen werden.
 
-::youtube-embed{videoId="rHljpWTegm4"}
+::youtube-embed{videoId="21QgUA9LKYI"}
 ::
 
 ## Features
