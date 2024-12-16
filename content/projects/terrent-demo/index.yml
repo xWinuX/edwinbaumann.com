@@ -1,0 +1,14 @@
+displayName: Terrent Demo
+description:
+  en: A demo of horror puzzle game with N64 inspired graphics. You haven't hear from your brother in a while and go to check on him.
+  de: Eine Demo eines Horror-Puzzle-Spiels mit von N64 inspirierter Grafik. Du hast seit einer Weile nichts mehr von deinem Bruder gehört und gehst in deswegen besuchen.
+technologies:
+  - unity
+  - csharp
+  - fmod
+roles:
+  - leadProgrammer
+  - leadArtist
+dateStart: 29.06.2022
+dateEnd: 24.10.2022
+thumbnailFormat: png

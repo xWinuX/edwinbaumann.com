@@ -190,6 +190,10 @@ export const Technology: Record<string, TechnologyEntry> = {
         iconName: "logos:adobe-premiere",
         tooltip: "Premiere",
     },
+    fmod: {
+        iconName: "simple-icons:fmod",
+        tooltip: "FMOD",
+    },
 } as const;
 
 export type TechnologyKey = keyof typeof Technology;
