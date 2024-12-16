@@ -66,7 +66,6 @@ function onClick(project: ProjectContent, index: number) {
 }
 
 async function onClose() {
-    console.log("close");
     await closeModal();
     selectedIndex.value = -1;
     hideSelected.value = false;
