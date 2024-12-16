@@ -1,7 +1,8 @@
 displayName: Iron Ball Run
 description:
-  en: 48 Hours game jam game. Solve puzzles by synchronising with the environment.
-  de: 48 Stunden Game Jame Spiel. Löse Puzzles, indem du dich mit der Umgebung synchronisierst.
+  en: 48 Hours game jam game. You escaped your cell, but are still attached to an iron ball, maybe you can use it to your advantage?
+  de: 48 Stunden Game Jame Spiel. Du bist aus deiner Zelle ausgebrochen, aber du bist immer noch an einer Eisenkugel befestigt. Vielleicht kannst du sie zu deinem Vorteil nutzen?
+
 technologies:
   - gamemaker
 tags:
