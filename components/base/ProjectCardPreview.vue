@@ -26,11 +26,18 @@
 
         <!-- Icons and duration -->
         <div class="flex flex-row gap-2 h-[3.5rem]">
-          <div class="flex flex-col gap-2 flex-wrap place-content-evenly mr-auto">
+          <div class="flex flex-col gap-2 flex-wrap place-content-evenly mr-auto sm:hidden">
+            <BaseProjectTileContent v-tooltip="{content: project.roles.length > 1 ? roleTooltip : '', html: true}" class="text-xs text-center font-bold px-4 py-1">
+              {{ Role[project.roles[0]] }}<span v-if="project.roles.length > 1">...</span>
+            </BaseProjectTileContent>
+          </div>
+
+          <div class="sm:flex flex-col gap-2 flex-wrap place-content-evenly mr-auto hidden">
             <BaseProjectTileContent v-for="role in project.roles" :key="role" class="text-xs text-center font-bold px-4 py-1">
               {{ Role[role] }}
             </BaseProjectTileContent>
           </div>
+
           <BaseProjectTileContent v-for="technology in project.technologies" :key="technology" class="p-1">
             <BaseTechnologyIcon :technology="technology" />
           </BaseProjectTileContent>
@@ -61,6 +68,15 @@ const description = computed(() => props.project.description[locale.value]);
 
 const yearSpan = computed(() => {
     return createTranslatedYearSpan(props.project.dateStart, props.project.dateEnd);
+});
+
+const roleTooltip = computed(() => {
+    let str = "";
+    for (const role of props.project.roles) {
+        str += `${Role[role]}<br>`;
+    }
+
+    return str;
 });
 
 const duration = computed(() => {
