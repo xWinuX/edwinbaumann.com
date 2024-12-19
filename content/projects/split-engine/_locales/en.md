@@ -1,6 +1,6 @@
 # Split Engine
 Split Engine is a game engine written in C++ with Vulkan as its graphics API.
-I created it to prepare for my bachelor's s thesis and to deepen my understanding of C++ in addition to learning Vulkan,
+I created it to prepare for my bachelor's thesis and to deepen my understanding of C++ in addition to learning Vulkan,
 building upon my previous experience with OpenGL from my last game engine.
 (See project C++ Game Engine for more info on that.)
 
