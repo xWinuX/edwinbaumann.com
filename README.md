@@ -1,1 +1,3 @@
-# W.I.P Portfolio Website
+# Portfolio Website
+
+My portfolio website made with NuxtJS and Tailwind.
