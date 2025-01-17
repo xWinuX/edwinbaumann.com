@@ -41,7 +41,7 @@ The library was intuitive, and I quickly adapted to it.
 #### Prozedural Generation
 
 Procedural generation was a smaller aspect of the project, but I learned extensively from it.
-Using the[FastNoise2](https://github.com/Auburn/FastNoise2) library, I generated noise maps that were essential in creating terrain, caves, and other elements like ores and water.
+Using the [FastNoise2](https://github.com/Auburn/FastNoise2) library, I generated noise maps that were essential in creating terrain, caves, and other elements like ores and water.
 I also developed a recursive approach for generating trees.
 
 ### Things that could be better
