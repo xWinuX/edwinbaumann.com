@@ -121,8 +121,9 @@ const skillSections: SkillSection[] = [
         title: "skills.titleProgrammingLanguage",
         skillLevel: {
             advanced: [
-                "cpp",
                 "csharp",
+                "cpp",
+                "vuejs",
                 "gml",
             ],
             proficient: [
@@ -146,14 +147,13 @@ const skillSections: SkillSection[] = [
         skillLevel: {
             advanced: [
                 "unity",
+                "nuxtjs",
                 "gamemaker",
 
             ],
             proficient: [
                 "opengl",
                 "vulkan",
-                "vuejs",
-                "nuxtjs",
                 "blazor",
                 "flask",
                 "tailwind",
