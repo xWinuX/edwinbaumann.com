@@ -8,7 +8,7 @@
             <p>
               <b>
                 <span class="inline-block">Edwin Baumann&nbsp;</span>
-                <span class="inline-block">2022 - {{ year }}</span>
+                <span class="inline-block">2022 - 2025</span>
               </b>
             </p>
             <div class="sm:absolute sm:right-0 sm:top-0 sm:pt-5 pt-1 sm:w-auto w-full  mx-auto">
@@ -20,6 +20,3 @@
     </div>
   </footer>
 </template>
-<script setup lang="ts">
-const year = new Date().getFullYear();
-</script>
