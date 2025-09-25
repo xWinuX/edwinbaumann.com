@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <p class="text-center text-red-400 italic">
-      {{ $t('YoutubeEmbedConsent') }}
+      {{ $t('youtubeEmbedConsent') }}
     </p>
     <div class="aspect-ratio">
       <iframe

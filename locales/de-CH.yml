@@ -23,8 +23,7 @@ contact:
   buttonSubmit: Senden
   labelName: 'Name:'
   contactAppsHeader: Über Apps
-YoutubeEmbedConsent: Durch das Drücken des Play-Knopfst stimmst du der Sammlung jeglicher
-  Daten zu, die YouTube sammeln könnte.
+youtubeEmbedConsent: Durch das Drücken des Play-Knopfst stimmst du der Sammlung jeglicher Daten zu, die YouTube sammeln könnte.
 aboutMe:
   titleAboutMe: Über mich
   aboutMeIntroduction: |
@@ -43,3 +42,4 @@ aboutMe:
   educationEmmiAndGibb: Emmi Schweiz AG & GIBB Berufsschule Bern
   titleGeneral: Allgemein
   titleEducation: Bildungsweg
+dateSpanToday: Heute
