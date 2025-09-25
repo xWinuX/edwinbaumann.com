@@ -71,16 +71,22 @@
                 {{ $t('aboutMe.titleExperience') }}
               </AppH2>
               <AppH3 class="mt-3">
-                Emmi Schweiz AG
+                Emmi Schweiz
               </AppH3>
               <TwoColumn :label="createTranslatedYearSpan('01.08.2020', '01.01.2021')" size="16rem" class="mt-1">
                 ICT Technician
               </TwoColumn>
               <AppH3 class="mt-3">
-                Die Mobiliar AG
+                Die Mobiliar
               </AppH3>
               <TwoColumn :label="createTranslatedYearSpan('01.07.2021', '01.03.2025')" size="16rem" class="mt-1">
                 DevSecOps Engineer
+              </TwoColumn>
+              <AppH3 class="mt-3">
+                Swiss Post
+              </AppH3>
+              <TwoColumn :label="createTranslatedYearSpan('01.07.2025', '01.07.2025') + ' - ' + $t('dateSpanToday')" size="16rem" class="mt-1">
+                Software Engineer
               </TwoColumn>
             </div>
           </div>
