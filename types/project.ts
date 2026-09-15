@@ -126,22 +126,6 @@ export const Technology: Record<string, TechnologyEntry> = {
         iconName: "devicon:docker",
         tooltip: "Docker",
     },
-    rider: {
-        iconName: "devicon:rider",
-        tooltip: "Rider",
-    },
-    phpstorm: {
-        iconName: "devicon:phpstorm",
-        tooltip: "PhpStorm ",
-    },
-    clion: {
-        iconName: "devicon:clion",
-        tooltip: "CLion",
-    },
-    pycharm: {
-        iconName: "devicon:pycharm",
-        tooltip: "PyCharm",
-    },
     visualstudio: {
         iconName: "devicon:visualstudio",
         tooltip: "Visual Studio",
@@ -193,6 +177,22 @@ export const Technology: Record<string, TechnologyEntry> = {
     fmod: {
         iconName: "simple-icons:fmod",
         tooltip: "FMOD",
+    },
+    java: {
+        iconName: "devicon:java",
+        tooltip: "Java",
+    },
+    angular: {
+        iconName: "devicon:angular",
+        tooltip: "Angular",
+    },
+    jetbrains: {
+        iconName: "devicon:jetbrains",
+        tooltip: "JetBrains IDEs",
+    },
+    spring: {
+        iconName: "devicon:spring",
+        tooltip: "Spring / Spring Boot",
     },
 } as const;
 

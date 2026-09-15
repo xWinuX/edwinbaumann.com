@@ -133,6 +133,8 @@ const skillSections: SkillSection[] = [
                 "gml",
             ],
             proficient: [
+                "java",
+                "angular",
                 "python",
                 "html",
                 "css",
@@ -158,6 +160,7 @@ const skillSections: SkillSection[] = [
 
             ],
             proficient: [
+                "spring",
                 "opengl",
                 "vulkan",
                 "blazor",
@@ -177,10 +180,7 @@ const skillSections: SkillSection[] = [
         title: "skills.titleTools",
         skillLevel: {
             advanced: [
-                "rider",
-                "clion",
-                "phpstorm",
-                "pycharm",
+                "jetbrains",
                 "visualstudio",
             ],
             proficient: [
